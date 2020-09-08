@@ -277,7 +277,7 @@ early_battleship = {
 		
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = 1 }
+			position = { x = 0 y = 1 }
 		}
 		
 		ai_will_do = {
@@ -326,7 +326,7 @@ early_battleship = {
 		
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = 13 }
+			position = { x = 0 y = 13 }
 		}
 		
 		ai_will_do = {
@@ -398,7 +398,7 @@ early_battleship = {
 		start_year = 1944
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = 19 }
+			position = { x = 0 y = 19 }
 		}
 		
 		ai_will_do = {
