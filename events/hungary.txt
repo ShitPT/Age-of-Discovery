@@ -1,0 +1,26 @@
+###########################
+# Hungarian Events
+###########################
+
+add_namespace = hungary
+
+country_event = {
+	country_event = {
+	id = hungary.7
+	title = hungary.7.t
+	desc = hungary.7.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.7.a
+		add_to_faction = HUN
+		HRE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "HUN"
+				value = 200
+
+		}
+	}

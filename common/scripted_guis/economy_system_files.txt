@@ -1,0 +1,19 @@
+scripted_gui = {
+	economysystem1 = {
+	
+		context_type = player_context
+		
+		window_name = "economysystem1_container"
+		
+		visible = {
+			has_country_flag = economy_enabled
+		}
+		
+		effects = {
+			colonize10_click = {
+			
+			}
+		}
+	}
+}
+

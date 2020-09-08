@@ -1,0 +1,201 @@
+add_namespace = england
+
+country_event = {
+	id = england.1
+	title = england.1.t
+	desc = england.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ENG
+		date > 1501.6.1
+		has_start_date < 1500.01.02
+		HRE = { 
+                        has_completed_focus = HRE_Devalue_the_currency
+                }
+	 	OR = {
+		HRE = { 
+                        has_completed_focus = HRE_Disolve_the_empire_Austria
+                        }
+	        }
+        }	
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = england.1.a
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+				generator = { 15 } 
+                                }
+		}
+		hidden_effect = {
+
+	}
+}
+	option = {
+		name = england.1.b
+
+		}
+		hidden_effect = {
+                }
+	}
+}
+
+country_event = {
+	id = england.2
+	title = england.2.t
+	desc = england.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = england.2.a
+		ai_chance = { factor = 100 }
+		ENG = { 
+		       declare_war_on = {
+				target = FRA
+				type = annex_everything
+				generator = { 103 }
+
+                                }
+                        }
+		}
+		hidden_effect = {
+	
+	}
+}
+country_event = {
+	id = england.3
+	title = england.3.t
+	desc = england.3.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = FRA
+		has_war_with = ENG
+		surrender_progress > 0.35
+		has_civil_war = no
+		}
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = england.3.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			country_event = { id = england.4 }
+		}
+		effect_tooltip = {
+			FRA = { 
+				white_peace = {
+					tag = ENG
+				} 
+			}
+                        ENG = { 
+			     transfer_state = 15
+
+			if = {
+				limit = {
+					
+					}
+				}
+				FRA = { remove_state_core = 15 }
+		}
+	}
+	#Never give up!
+	option = {
+		name = england.3.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = england.4
+	title = england.4.t
+	desc = england.4.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = england.4.a
+		ai_chance = {
+			base = 10
+		}
+		white_peace = FRA
+		ENG = { transfer_state = 15 }  
+		if = {
+			limit = {
+
+				}
+			}
+		FRA = { remove_state_core = 15 }  
+
+		}
+		FRA = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+		}
+		ENG = {
+			country_event = { id = england.5 }
+		hidden_effect = {
+                        }
+
+
+		}
+	}
+}
+
+country_event = {
+	id = england.5
+	title = england.5.t
+	desc = england.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = england.5.a
+		NRM = { 
+			transfer_state = 15
+		}
+		ENG = { 
+		        puppet = NRM
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = england.5.b
+
+		}
+		hidden_effect = {
+
+		}
+	}
+}

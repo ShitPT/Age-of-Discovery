@@ -1,0 +1,43 @@
+add_namespace = hannover
+
+country_event = {
+	id = hannover.1
+	title = hannover.1.t
+	desc = hannover.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = hannover.1.a
+                add_manpower = 25000
+		HAN = { add_state_core = 59 }
+		HAN = { add_state_core = 57 }
+		HAN = { add_state_core = 56 }
+		59 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = HAN
+				allow_spawning_on_enemy_provs = no
+				count = 6
+
+			      
+			}
+		}
+		57 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = HAN
+				allow_spawning_on_enemy_provs = no
+				count = 3
+			}
+		}
+		56 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = HAN
+				allow_spawning_on_enemy_provs = no
+				count = 5					
+		}
+	}
+}

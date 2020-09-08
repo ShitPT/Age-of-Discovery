@@ -1,0 +1,81 @@
+scripted_gui = {
+	portugal1 = {
+	
+		context_type = selected_state_context
+		
+		window_name = "portugal1_container"
+		
+		visible = {
+			AND = {
+				OR = {
+				is_fully_controlled_by = AFC
+				is_fully_controlled_by = BUC
+				is_fully_controlled_by = ART
+				is_fully_controlled_by = CEA
+				}
+				FROM = {
+					OR={
+						any_country = {
+							AND = {
+								is_subject_of = ROOT
+								any_owned_state = {
+									any_neighbor_state = {
+										state = PREV.PREV.PREV
+
+									}
+								}
+							}
+						}
+						any_neighbor_state = { is_owned_by = ROOT }
+						AND={
+							is_coastal = yes
+							ROOT = {
+								any_owned_state = {is_coastal = yes}
+							}
+						}
+					}
+				}
+			}
+			ROOT = {
+				has_idea = colonizer
+				has_completed_focus = POR_put_more_resources_into_colonization
+			}
+		}
+		
+		effects = {
+			colonize21_click = {
+			ROOT = {
+				transfer_state = PREV
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+				producer = ROOT
+				}
+				add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+				producer = ROOT
+				}
+				add_political_power = -125
+				country_event = {
+				id = colonising.1
+				days = 0
+				}
+				country_event = {
+				id = colonising.2
+				days = 130
+				}
+				add_manpower = -500
+				}
+			}
+		}
+		
+		triggers = {
+			colonize21_click_enabled = {
+				check_variable = { ROOT.political_power > 125 }
+			}
+		}
+	}
+}
+		
+

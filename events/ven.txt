@@ -1,0 +1,30 @@
+add_namespace = ven
+
+country_event = {
+	id = ven.1
+	title = ven.1.t
+	desc = ven.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ven.1.a
+		add_stability -0.05
+		}
+		hidden_effect = { 
+
+		
+	}
+}
+	option = {
+		name = ven.1.b
+		add_stability = 0.05
+		}
+		hidden_effect = {
+                }
+	        news_event = { id = news.340 }			
+			
+		}
+	}
+}

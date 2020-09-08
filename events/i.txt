@@ -1,0 +1,37 @@
+add_namespace = i
+
+country_event = {
+	id = i.1
+	title = i.1.t
+	desc = i.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = i.1.a
+		ai_chance = { factor = 100 }
+		ITA = { 
+			transfer_state = 114
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = i.1.b
+                ITA = {
+		create_wargoal = {
+			type = take_state
+			target = SPA
+			generator = { 114 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+
+		}
+	}
+}

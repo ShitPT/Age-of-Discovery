@@ -1,0 +1,32 @@
+state={
+	id=836
+	name="STATE_836"
+	history={
+		owner = TUR
+		victory_points = {
+			3686 20 
+		}
+		victory_points = {
+			9680 1 
+		}
+		victory_points = {
+			6704 1 
+		}
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			3686 = {
+				naval_base = 6
+
+			}
+
+		}
+		add_core_of = TUR
+
+	}
+	provinces={
+		3686 6704 9677 9680 
+	}
+	manpower=150000
+	buildings_max_level_factor=1.000
+}

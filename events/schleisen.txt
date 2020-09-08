@@ -1,0 +1,34 @@
+add_namespace = schleisen
+
+country_event = {
+	id = schleisen.1
+	title = schleisen.1.t
+	desc = schleisen.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = schleisen.1.a
+                add_manpower = 25000
+		SCH = { add_state_core = 66 }
+		SCH = { add_state_core = 67 }
+		66 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = SCH
+				allow_spawning_on_enemy_provs = no
+				count = 4
+
+			      
+			}
+		}
+		67 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = SCH
+				allow_spawning_on_enemy_provs = no
+				count = 3				
+		}
+	}
+}

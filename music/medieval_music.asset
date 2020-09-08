@@ -1,0 +1,32 @@
+#medieval
+
+
+music = {
+	name = "village"
+	file = "medieval/vilagge.ogg"
+	volume = 1
+}
+
+music = {
+	name = "construction"
+	file = "medieval/construction.ogg"
+	volume = 1
+}
+
+music = {
+	name = "coffin"
+	file = "medieval/coffin.ogg"
+	volume = 1
+}
+
+music = {
+	name = "egypt"
+	file = "medieval/egypt.ogg"
+	volume = 1
+}
+
+music = {
+	name = "viking"
+	file = "medieval/viking.ogg"
+	volume = 1
+}

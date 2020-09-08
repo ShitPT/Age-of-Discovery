@@ -1,0 +1,45 @@
+add_namespace = aragon
+
+country_event = {
+	id = aragon.1
+	title = aragon.1.t 
+	desc = aragon.1.d 
+	picture = GFX_report_event_molotov_signing_pact
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "We Dont Have Another Option"
+		diplomatic_relation = {
+    country = SPA
+    relation = non_aggression_pact
+    active = yes
+}
+				add_stability= -0.05
+				add_war_support=-0.2
+				add_ideas= ARA_constant_paranoia
+				
+
+
+
+}
+	
+	option={
+	
+	name= "Hell With The Spanish Crown"
+	add_war_support=0.2
+	add_stability=0.2
+	add_ideas= AR_rage_to_the_spanish_crown
+	       SPA = {
+		create_wargoal = {
+			type = take_state
+			target = ARA
+			generator = { 165 }
+		}
+		
+		}
+		
+	
+	}
+}

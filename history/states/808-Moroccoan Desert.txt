@@ -1,0 +1,15 @@
+state={
+	id=808
+	name="STATE_808"
+	history={
+		owner = MOR
+		add_core_of = MOR
+	}
+	provinces={
+		1958 8088 10731
+	}
+	manpower=123000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	impassable = yes
+}

@@ -1,0 +1,23 @@
+ideas = {
+
+country = {
+	DEN_The_will_of_the_King = {
+	
+		allowed = {
+			original_tag = DEN
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			justify_war_goal_time = -0.25
+			generate_wargoal_tension = -0.4
+			war_support_factor = 0.05
+		}
+	}

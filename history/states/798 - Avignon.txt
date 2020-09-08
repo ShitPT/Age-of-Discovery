@@ -1,0 +1,36 @@
+state={
+	id=798
+	name="STATE_798"
+	resources={
+		steel=2 # was: 20.000
+	}
+
+	state_category = town
+
+
+	history={
+		owner = PAP
+		buildings = {
+			infrastructure = 10
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 0
+			11711 = {
+				bunker = 1
+			}
+
+		}
+		add_core_of = FRA
+		add_core_of = PAP
+		victory_points = {
+			958 5 
+		}
+
+	}
+
+	provinces={
+		958
+	}
+	manpower=12000
+	buildings_max_level_factor=1.000
+}

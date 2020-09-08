@@ -1,0 +1,32 @@
+
+state={
+	id=269
+	name="STATE_269"
+
+	history={
+		victory_points = {
+			10833 1 
+		}
+		victory_points = {
+			5068 1 
+		}
+		owner = NON
+		add_core_of = NON
+		buildings = {
+			infrastructure = 3
+			10833 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1905 1964 1966 4909 8094 10818 10891 10921 12759 12812 12814 12840 
+	}
+	manpower=344700
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

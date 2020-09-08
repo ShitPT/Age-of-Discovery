@@ -1,0 +1,15 @@
+state={
+	id=826
+	name="STATE_826"
+	history={
+		owner = DEN
+		add_core_of = DEN
+		add_core_of = SWE
+	}
+	provinces={
+		9095 9134 11026 6152 9175 11152 11058 58 3044 11112 190 6155
+	}
+	manpower=123000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

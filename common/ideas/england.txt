@@ -1,0 +1,1270 @@
+ideas = {
+
+	country = {
+
+                BRI_England_will_never_surrender = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+			        surrender_limit = 0.4
+				planning_speed = 0.20
+			}
+		}
+                BRI_Position = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+				conscription = 0.01
+				consumer_goods_factor = -0.05
+			}
+		}
+                BRI_Instability_in_London = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+				political_power_gain = -0.75
+				weekly_stability = -0.05
+			}
+		}
+	BRI_Weak_monarchy = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        stability_weekly = -0.010
+			consumer_goods_factor = 0.10
+			production_speed_industrial_complex_factor = -0.25
+			production_speed_infrastructure_factor = -0.25
+		}
+	}
+	BRI_Weak_monarchy2 = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        stability_weekly = -0.005
+			consumer_goods_factor = 0.05
+			production_speed_industrial_complex_factor = -0.15
+			production_speed_infrastructure_factor = -0.15
+		}
+	}
+
+	BRI_Weak_monarchy3 = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_speed_industrial_complex_factor = -0.05
+			production_speed_infrastructure_factor = -0.05
+		}
+	}
+
+	BRI_English_monarchy = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        stability_weekly = 0.0025
+			consumer_goods_factor = -0.05
+			production_speed_industrial_complex_factor = 0.10
+			production_speed_infrastructure_factor = 0.10
+		}
+	}
+	BRI_Weak_military = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_arms_factory_factor = -0.15
+		}
+	}
+
+	BRI_Our_army = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        conscription = 0.01
+		}
+	}
+
+	BRI_German_English_tech = {
+		
+		removal_cost = -1
+			
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		picture = generic_research_bonus
+			
+		modifier = {
+			research_speed_factor = 0.05
+		}
+	}
+
+	BRI_Fleet = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+
+		}
+
+		removal_cost = -1
+
+		picture = generic_navy_bonus
+
+		equipment_bonus = {
+			ship_hull_light = {
+				build_cost_ic = -0.15 instant = yes
+			}
+			convoy = {
+				build_cost_ic = -0.15 instant = yes
+			}
+			destroyer = {
+				build_cost_ic = -0.15 instant = yes
+			}
+		}
+	}
+	BRI_Construction = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_industrial_complex_factor = 0.10
+		}
+	}
+
+	BRI_English_production_front = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.10
+			industrial_capacity_factory = 0.10
+		}
+	}
+
+	BRI_For_England = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			political_power_cost = 0.05
+			weekly_manpower = 500
+		}
+	}
+	BRI_Danish_English_fleet_tech = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			industrial_capacity_dockyard = 0.10
+		}
+	}
+
+	BRI_Ottoman_English_strategies = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			army_core_attack_factor = 0.10
+		}
+	}
+	BRI_English_Aragonese_defense = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			army_core_defence_factor = 0.10
+			production_speed_bunker_factor = 0.15
+		}
+	}
+	BRI_Beacon_of_liberty = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			democratic_drift = 0.2
+		}
+	}
+	BRI_Break_off_with_the_crown = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			stability_weekly = 0.005
+		}
+	}
+
+	BRI_Colony_dream = {
+                picture = America
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        monthly_population = 2.75
+		}
+	}
+	BRI_American_spirit = {
+                picture = America
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+		}
+	}
+	BRI_Conscript_the_nation = {
+                picture = idea_america
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        conscription = 0.025
+			weekly_manpower = 250
+		}
+	}
+	BRI_Build_a_new_nation = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.30
+		}
+	}
+	BRI_Military_power = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_arms_factory_factor = 0.05
+		}
+	}
+	BRI_Civilian_care = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_industrial_complex_factor = 0.05
+		}
+	}
+	BRI_Louisiana_Purchase = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			consumer_goods_factor = 0.20
+		}
+	}
+	BRI_Help_Acadia = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        autonomy_gain = 2
+		}
+	}
+	BRI_Weapon_production = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+
+		}
+
+		removal_cost = -1
+
+		picture = generic_navy_bonus
+
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+			artillery_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+	}
+	BRI_Build_a_great_state = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.10
+		}
+	}
+	BRI_Build_a_great_state1 = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.10
+		}
+	}
+	BRI_A_large_scaled_army = {
+			
+		removal_cost = -1
+			
+		allowed = {
+			always = yes # Added via focus
+		}
+
+		allowed_civil_war = {
+
+		}
+			
+		research_bonus = {
+				
+		}
+
+		modifier = {
+                        conscription = 0.025
+		        army_morale_factor = 0.10
+		}
+	}	
+        BRI_Help_from_the_gods = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			justify_war_goal_time = -0.30
+			generate_wargoal_tension = -0.2
+			war_support_factor = 0.10
+		}
+	}
+        BRI_A_strong_democracy = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			stability_weekly = 0.0050
+		}
+	}
+	BRI_Influence_in_the_Americas = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			democratic_drift = 0.3
+		}
+	}
+	BRI_Stronger_nation = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_buildings_factor = 0.10
+                        conscription = 0.01
+		}
+	}
+	BRI_Show_loyality = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			stability_weekly = 0.0050
+		}
+	}
+	BRI_Economy = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+	BRI_A_new_state = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_buildings_factor = 0.25
+		}
+	}
+	BRI_Strong_army1 = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        attrition = -0.05
+                        conscription = 0.02
+		}
+	}
+	BRI_Strong_army2 = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        attrition = -0.10
+                        conscription = 0.025
+		}
+	}
+	BRI_Productive_state = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        industrial_capacity_factory = 0.10
+		        industrial_capacity_dockyard = 0.10
+		}
+	}
+	BRI_Conscript_more = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+                        army_speed_factor = 0.10
+                        conscription = 0.025
+		}
+	}
+	BRI_AngloFrench_army_strat = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        attrition = -0.05
+			production_speed_bunker_factor = 0.20
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+		}
+	}
+	BRI_AngloFrench_trade_and_production = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		        industrial_capacity_factory = 0.10
+		        industrial_capacity_dockyard = 0.10
+		        trade_opinion_factor = 0.10
+		}
+	}
+	BRI_Construction1 = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			production_speed_buildings_factor = 0.15
+		        industrial_capacity_factory = 0.05
+		}
+	}
+	BRI_Better_planning = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			planning_speed = 0.15
+		}
+	}
+	BRI_Expansion_policy = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			justify_war_goal_time = -0.30
+			generate_wargoal_tension = -0.2
+                        conscription = 0.015
+		}
+	}
+	BRI_Naval = {
+		picture = usa_great_depression_3
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+		naval_speed_factor = 0.10
+		}
+		equipment_bonus = {
+			carrier = {
+				carrier_size = 0.25 naval_range = 0.25
+			}
+			capital_ship = {
+				naval_range = 0.25
+			}
+			screen_ship = {
+				naval_range = 0.25
+			}
+			submarine = {
+				naval_range = 0.25
+			}
+		}
+	}
+	BRI_Research_focus = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			research_speed_factor = 0.05
+		}
+	}
+	BRI_Weaponry = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+		        production_factory_max_efficiency_factor = 0.1
+		}
+	}
+	BRI_Weaponry2 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+		        production_factory_max_efficiency_factor = 0.05
+		}
+	}
+	BRI_Foreign_volunteers = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+                        conscription = 0.005
+		}
+	}
+	BRI_AngloGerman_defense = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			army_core_defence_factor = 0.10
+		}
+	}
+	BRI_AngloGerman_attack = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			army_core_attack_factor = 0.10
+		}
+	}
+	BRI_Focus_on_the_economy1 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			consumer_goods_factor = -0.05
+		}
+	}
+	BRI_Focus_on_the_economy2 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			consumer_goods_factor = -0.10
+		}
+	}
+	BRI_Focus_on_the_production1 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+		        industrial_capacity_factory = 0.05
+		}
+	}
+	BRI_Arms_boost1 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			production_speed_arms_factory_factor = 0.05
+		}
+	}
+	BRI_Arms_boost2 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			production_speed_arms_factory_factor = 0.075
+		}
+	}
+	BRI_Civilian_boost1 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			production_speed_industrial_complex_factor = 0.05
+		}
+	}
+	BRI_Civilian_boost2 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			production_speed_industrial_complex_factor = 0.075
+		}
+	}
+	BRI_Infantry = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+				
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+	}
+	BRI_Cannon = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		equipment_bonus = {		
+			artillery_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+	}
+	BRI_Focus_on_the_production2 = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+		        industrial_capacity_factory = 0.10
+		}
+	}
+	BRI_Greater_military = {
+	
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+		        production_factory_max_efficiency_factor = 0.10
+		}
+	}
+
+

@@ -1,0 +1,71 @@
+###########################
+# Colonising Events
+###########################
+
+add_namespace = colonising
+
+country_event = {
+	id = colonising.1
+	title = colonising.1.t
+	desc = colonising.1.d
+	picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = colonising.1.a
+		remove_ideas = colonizer
+	}
+}
+
+country_event = {
+	id = colonising.2
+	title = colonising.2.t
+	desc = colonising.2.d
+	picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = colonising.2.a
+		add_ideas = colonizer
+	}
+}
+
+
+country_event = {
+	id = colonising.5
+	title = colonising.5.t
+	desc = colonising.5.d
+	picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = colonising.5.a
+		remove_ideas = asia_colonizer
+	}
+}
+
+country_event = {
+	id = colonising.6
+	title = colonising.6.t
+	desc = colonising.6.d
+	picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = colonising.6.a
+		add_ideas = asia_colonizer
+	}
+}
+

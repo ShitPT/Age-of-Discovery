@@ -1,0 +1,2642 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = hre_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HRE
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = HRE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = HRE_Devalue_the_currency
+		icon = GFX_focus_fra_devalue_the_franc
+		mutually_exclusive = { focus = HRE_Disolve_the_empire_Austria }
+		mutually_exclusive = { focus = HRE_Disolve_the_empire_Prussia }
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 125
+                        add_stability = -0.05
+		}
+	}
+	focus = {
+		id = HRE_Protect_civil_rights
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = HRE_Devalue_the_currency }
+		x = 8
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	
+	focus = {
+		id = HRE_More_power_to_the_emperor
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = HRE_Protect_civil_rights }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 5
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 200
+                        add_war_support = 0.05
+                        add_stability = -0.05
+		}
+	}
+	focus = {
+		id = HRE_The_emperor_will_guide_the_people
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = HRE_More_power_to_the_emperor }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 4
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_war_support = 0.05
+                        add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HRE_A_new_century
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		prerequisite = { focus = HRE_The_emperor_will_guide_the_people }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 4
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Militarism
+		}
+	}
+	focus = {
+		id = HRE_Expand_cities
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = HRE_A_new_century }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 4
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = HRE_A_strong_leader
+		icon = GFX_focus_max
+		prerequisite = { focus = HRE_More_power_to_the_emperor }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 6
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Strong_emperor
+		}
+	}
+	focus = {
+		id = HRE_A_great_empire
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = HRE_A_strong_leader }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 6
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = POL_polish_revanchism_focus
+			#grants a -10% PP cost to war goal justification
+		}
+	}
+	focus = {
+		id = HRE_Better_equipment
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = HRE_A_great_empire }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 6
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+                            type = infantry_equipment_1
+
+                            amount = 15000
+
+                        }
+		}
+	}
+	focus = {
+		id = HRE_Create_Anti_france_pact
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = HRE_Better_equipment }
+		prerequisite = { focus = HRE_Expand_cities }
+		mutually_exclusive = { focus = HRE_Less_power_to_the_emperor }
+		x = 5
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_rule = { can_create_factions = yes }
+			create_faction = Anti_france_pact
+
+			
+		}
+	}
+
+	focus = {
+		id = HRE_Less_power_to_the_emperor
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = HRE_Protect_civil_rights }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 11
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 200
+                        add_stability = 0.05
+                        add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = HRE_Settle_religous_conflict
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		prerequisite = { 
+			focus = HRE_Create_Anti_france_pact focus = HRE_Create_National_defense_front
+		}
+		x = 8
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			 has_idea = HRE_Religous_differences 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			remove_ideas = HRE_Religous_differences
+			army_experience = 10
+			add_tech_bonus = {
+				name = FRA_army_reform
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = HRE_The_peoples_votes_matter
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = HRE_Less_power_to_the_emperor }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_stability = 0.05
+                        add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HRE_A_great_power
+		icon = GFX_focus_eng_imperial_federation
+		prerequisite = { focus = HRE_The_peoples_votes_matter }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 10
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = british_austerity_idea
+		}
+	}
+	focus = {
+		id = HRE_Defend_our_homeland
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = HRE_A_great_power }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 10
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Fortification
+		}
+	}
+	focus = {
+		id = HRE_A_step_away_from_monarchism
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = HRE_Less_power_to_the_emperor }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 12
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_politics = { ruling_party = democratic }
+			hold_election = HRE
+
+			add_ideas = {
+				add_idea = HRE_his_majestys_government
+			}
+		}
+	}
+	focus = {
+		id = HRE_Protect_our_neighbours
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = HRE_A_step_away_from_monarchism }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 12
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        give_guarantee = DEN
+                        give_guarantee = POL
+                        give_guarantee = HUN
+                        give_guarantee = ITA
+                        give_guarantee = PAP
+                        add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = HRE_Create_National_defense_front
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = HRE_Get_better_forces }
+		prerequisite = { focus = HRE_Defend_our_homeland }
+		x = 11
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_rule = { can_create_factions = yes }
+			create_faction = National_defense_front
+
+			
+		}
+	}
+	focus = {
+		id = HRE_Get_better_forces
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = HRE_Protect_our_neighbours }
+		mutually_exclusive = { focus = HRE_More_power_to_the_emperor }
+		x = 12
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPA_emergency_munitions_corporations_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPA_emergency_munitions_corporations_1mil }
+				}
+				set_state_flag = SPA_emergency_munitions_corporations_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPA_emergency_munitions_corporations_1mil }
+				}
+				set_state_flag = SPA_emergency_munitions_corporations_1mil
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+  
+	focus = {
+		id = HRE_Prepare_for_a_war_with_the_french
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = HRE_Settle_religous_conflict }
+		x = 8
+		y = 8
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        HRE = { add_state_claim = 21 }
+                        HRE = { add_state_claim = 32 }
+                        HRE = { add_state_claim = 17 }
+                        HRE = { add_state_claim = 20 }
+		}
+	}
+	focus = {
+		id = HRE_War_plan_blue
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = HRE_Prepare_for_a_war_with_the_french }
+		x = 8
+		y = 9
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			unlock_decision_tooltip = { decision = USA_execute_war_plan_gold show_effect_tooltip = yes show_modifiers = yes }
+			create_wargoal = { type = annex_everything target = FRA }
+		}
+	}
+		
+	focus = {
+		id = HRE_Build_a_strong_government
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = HRE_Expand_Our_Influence }
+		x = 0
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HRE_Disolve_the_empire_Austria
+		icon = GFX_focus_hre_split
+		mutually_exclusive = { focus = HRE_Devalue_the_currency }
+		mutually_exclusive = { focus = HRE_Disolve_the_empire_Prussia }
+		x = 24
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_war_support = -0.05
+                        add_stability = 0.20
+			set_cosmetic_tag = HRE_AUSTRIA
+                        country_event = { id = holyroman.8 }
+			remove_ideas = HRE_Protests_in_the_country
+			remove_ideas = HRE_Religous_differences
+			}
+			hidden_effect = {
+				news_event = { hours = 12 id = news.405 }
+		}
+	}
+	focus = {
+		id = HRE_Dreams_of_a_Austrian_Empire
+		icon = GFX_focus_austrian_empire
+		prerequisite = { focus = HRE_Disolve_the_empire_Austria }
+		x = 24
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = AUS_IMPERIUM
+		}
+	}
+	focus = {
+		id = HRE_Build_up_Austria
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HRE_Dreams_of_a_Austrian_Empire }
+		x = 24
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_timed_idea = { idea = HRE_build_up_country days = 365 }
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = HRE_Our_own_empire
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Build_up_Austria }
+		mutually_exclusive = { focus = HRE_A_dual_monarchy_dream }
+		x = 22
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = HRE_Our_Empire
+		}
+	}
+	focus = {
+		id = HRE_Enemy_in_the_east
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Our_own_empire }
+		x = 22
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = HUN }
+		70 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		109 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		104 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		107 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+                                }
+			}
+		}
+	}
+	focus = {
+		id = HRE_Conscript_the_nation
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Enemy_in_the_east }
+		x = 22
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Conscript_the_nation
+                        army_experience = 20
+		}
+	}
+	focus = {
+		id = HRE_A_dual_monarchy_dream
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Build_up_Austria }
+		mutually_exclusive = { focus = HRE_Our_own_empire }
+		x = 26
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HUN = { country_event = { id = holyroman.9 } }
+		}
+	}
+	focus = {
+		id = HRE_Militaristic_guidance
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_A_dual_monarchy_dream }
+		x = 26
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Strong_militaristic_guidance
+                        army_experience = 20
+		}
+	}
+	focus = {
+		id = HRE_Better_gear
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Militaristic_guidance }
+		x = 26
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = HRE_Demand_South_Tyrol
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Our_own_empire focus = HRE_A_dual_monarchy_dream }
+		x = 24
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			ITA = { country_event = { id = holyroman.17 } }
+		}
+	}
+	focus = {
+		id = HRE_Integrate_South_Tyrol
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Demand_South_Tyrol }
+		x = 24
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 103
+			controls_state = 163
+			controls_state = 39
+			controls_state = 736
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HRE = { add_state_core = 103 }
+			HRE = { add_state_core = 163 }
+			HRE = { add_state_core = 39 }
+			HRE = { add_state_core = 736 }
+			HRE = { add_state_core = 160 }
+		}
+	}
+	focus = {
+		id = HRE_Venetian_puppet
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Integrate_South_Tyrol }
+		prerequisite = { focus = HRE_Better_gear focus = HRE_Conscript_the_nation }
+		x = 24
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 103
+			controls_state = 163
+			controls_state = 39
+			controls_state = 736
+			num_of_factories > 85
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			ITA = { country_event = { id = holyroman.20 } }
+		}
+	}
+	focus = {
+		id = HRE_Strike_South
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Venetian_puppet }
+		x = 24
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_state_claim = 81
+			add_state_claim = 108
+			add_state_claim = 105
+		        create_wargoal = {
+			      target = TUR
+			      type = take_state_focus
+			      generator = { 81 108 105 }
+			      expire = 0
+                	}
+		}
+	}
+	focus = {
+		id = HRE_Annex_Schleisen
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Strike_South }
+		x = 22
+		y = 8
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                        PRS = { 
+                                controls_state = 66
+                                controls_state = 67
+		        }
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			SCH = { country_event = { id = holyroman.21 } }
+		}
+	}
+
+	focus = {
+		id = HRE_Better_planning
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = HRE_Strike_South }
+		x = 26
+		y = 8
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HRE_Planning
+		}
+	}
+
+	focus = {
+		id = HRE_Disolve_the_empire_Prussia
+		icon = GFX_focus_hre_split
+		mutually_exclusive = { focus = HRE_Devalue_the_currency }
+		mutually_exclusive = { focus = HRE_Disolve_the_empire_Austria }
+		x = 32
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_war_support = -0.05
+                        add_stability = 0.20
+			set_cosmetic_tag = HRE_PRUSSIA
+                        country_event = { id = holyroman.11 }
+                        country_event = { id = holyroman.12 }
+			remove_ideas = HRE_Protests_in_the_country
+			remove_ideas = HRE_Religous_differences
+                        add_manpower = 75000
+			}
+			hidden_effect = {
+				news_event = { hours = 12 id = news.405 }
+		}
+	}
+	focus = {
+		id = HRE_Prepare_the_german_war_machine
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HRE_Disolve_the_empire_Prussia }
+		x = 34
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        63 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			85 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			763 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = HRE_Prussian_militarism 
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = HRE_Disolve_the_empire_Prussia }
+		x = 32
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = HRE_Prussian_militarism
+                        add_threat = 5
+		}
+	}
+	focus = {
+		id = HRE_Create_Austro_Prussian_Alliance
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = HRE_Disolve_the_empire_Prussia }
+		x = 30
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+                        controls_state = 58
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_rule = { can_create_factions = yes }
+			create_faction = Austro_Prussian_Alliance
+			AUS = { country_event = { id = holyroman.24 } }
+                        add_threat = 10
+		}
+	}
+	focus = {
+		id = HRE_Partition_Poland
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = HRE_Create_Austro_Prussian_Alliance }
+		x = 30
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		date > 1501.6.1
+ 		AUS = {
+ 			is_in_faction = YES
+ 			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			POL = { country_event = { id = hrome.17 } }                        
+                        add_threat = 5
+		}
+	}
+	focus = {
+		id = HRE_Prepare_for_war_with_german_brothers
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = HRE_Prussian_militarism }
+		x = 32
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = HRE_Prussian_warfare
+		}
+	}
+	focus = {
+		id = HRE_Build_up_Königsberg
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HRE_Prepare_for_war_with_german_brothers }
+		x = 32
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_timed_idea = { idea = HRE_build_up_country days = 365 }
+			763 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 6
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+
+			}
+		}
+	}
+	focus = {
+		id = HRE_Take_control_in_Mecklenburg
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Build_up_Königsberg }
+		x = 32
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			annex_country = { target = MEK transfer_troops = yes }
+                        add_war_support = 0.05
+		}
+	}	
+        focus = {
+		id = HRE_Demand_Brandenburg
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Take_control_in_Mecklenburg }
+		x = 34
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BRN }
+
+		}
+	}
+        focus = {
+		id = HRE_Demand_Schleisen
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Take_control_in_Mecklenburg }
+		x = 30
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = SCH }
+
+		}
+	}
+        focus = {
+		id = HRE_Prussian_war_hunger
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Take_control_in_Mecklenburg }
+		x = 32
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+        focus = {
+		id = HRE_Schleswig_Holstein_or_war
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Demand_Schleisen }
+		prerequisite = { focus = HRE_Demand_Brandenburg }
+		prerequisite = { focus = HRE_Prussian_war_hunger }
+		x = 32
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			DEN = { country_event = { id = holyroman.14 } }
+		}
+	}
+        focus = {
+		id = HRE_Take_control_in_Saxony
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Schleswig_Holstein_or_war }
+		x = 30
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			annex_country = { target = SAX transfer_troops = yes }
+		}
+	}
+        focus = {
+		id = HRE_Take_control_in_Hessen
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Schleswig_Holstein_or_war }
+		x = 34
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			annex_country = { target = HES transfer_troops = yes }
+		}
+	}
+        focus = {
+		id = HRE_End_Bavaria_and_Mosselland
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Demand_control_in_Hannover }
+		x = 32
+		y = 9
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BAY }
+			create_wargoal = { type = annex_everything target = MOS }
+		}
+	}
+        focus = {
+		id = HRE_Prepare_for_a_european_war
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_End_Bavaria_and_Mosselland }
+		x = 32
+		y = 10
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+        focus = {
+		id = HRE_Declare_war_on_the_french
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Prepare_for_a_european_war }
+		x = 32
+		y = 11
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 66
+			controls_state = 67
+			controls_state = 86
+			controls_state = 68
+			controls_state = 65
+			controls_state = 64
+			controls_state = 62
+			controls_state = 61
+			controls_state = 59
+			controls_state = 56
+			controls_state = 57
+			controls_state = 60
+			controls_state = 55
+			controls_state = 51
+			controls_state = 42
+			controls_state = 50
+			controls_state = 52
+			controls_state = 53
+			controls_state = 54
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = FRA }
+		}
+	}
+        focus = {
+		id = HRE_Demand_Poznan
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Schleswig_Holstein_or_war }
+		x = 32
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			POL = { country_event = { id = holyroman.15 } }
+		}
+	}
+        focus = {
+		id = HRE_Demand_control_in_Hannover
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = HRE_Demand_Poznan }
+		x = 32
+		y = 8
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HAN = { country_event = { id = holyroman.16 } }
+		}
+	}
+	focus = {
+		id = HRE_Expand_Our_Influence
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = HRE_Devalue_the_currency }
+		x = 0
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        DEN = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+                        POL = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+                        HUN = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+                        ITA = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+                        PAP = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+                        FRA = { 
+                           add_opinion_modifier = { target = HRE modifier = large_increase }
+
+

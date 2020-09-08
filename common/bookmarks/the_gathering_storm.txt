@@ -1,0 +1,192 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1500.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "HRE"
+		default = yes
+		
+		"HRE"={
+			history = "HRE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			available = { NOT = { has_dlc = "La Resistance" } }
+			ideas = {
+		                HRE_Religous_differences
+                                HRE_Protests_in_the_country
+			}
+			focuses = {
+				HRE_Disolve_the_empire_Prussia
+				HRE_Expansion_plans
+				HRE_Create_Anti_france_pact
+			}
+		}
+		"HRE"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			available = { has_dlc = "La Resistance" } 
+			ideas = {
+                                HRE_Religous_differences
+                                HRE_Protests_in_the_country
+			}
+			focuses = {
+				HRE_A_new_century
+				HRE_Expansion_plans
+				HRE_Create_Anti_france_pact
+			}
+		}
+		"POL"={
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { has_dlc = "Man the Guns" }
+			ideas = {
+				BRI_Instability_in_London
+				BRI_Weak_monarchy
+                                BRI_Weak_military
+			}
+			focuses = {
+
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { NOT = { has_dlc = "Man the Guns" } }
+			ideas = {
+				BRI_Instability_in_London
+				BRI_Weak_monarchy
+                                BRI_Weak_military
+			}
+			focuses = {
+
+			}
+		}
+		"DEN"={
+			history = "DEN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			available = { has_dlc = "Waking the Tiger" }
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"DEN"={
+			history = "DEN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			available = { NOT = { has_dlc = "Waking the Tiger" } }
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FRA_Strong_army
+                                FRA_A_great_nation
+			}	
+			focuses = {
+				FRA_Fund_Canadian_colony
+                                FRA_Restoration_of_the_franks	
+                                FRA_AngloFrench_Alliance			
+			}		
+		}
+		"TUR"={
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+
+			}			
+		}
+		"SPA"={
+			history = "SPA_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+                                SPA_Atlantic_trade
+			}
+			focuses = {
+
+			}	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				POL_the_baltic_alliance
+				POL_draw_closer_to_britain
+				POL_seek_accommodation_with_germany
+			}
+		}
+		"SOV"={
+			minor = yes
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				POL_the_baltic_alliance
+				POL_draw_closer_to_britain
+				POL_seek_accommodation_with_germany
+			}
+		}
+		"POR"={
+			minor = yes
+			history = "POR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				SPA_Atlantic_trade
+			}
+			focuses = {
+				
+			}
+		}
+		"ITA"={
+			minor = yes
+			history = "POR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+
+			}
+			focuses = {
+				ITA_Realize_Rome
+                                ITA_A_united_Italy
+                                ITA_Demand_Sardinia
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

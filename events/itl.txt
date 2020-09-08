@@ -1,0 +1,33 @@
+add_namespace = itl
+
+country_event = {
+	id = itl.1
+	title = itl.5.t
+	desc = itl.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itl.1.a
+		ai_chance = { factor = 30 }
+		ITA = { 
+			transfer_state = 182
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = itl.1.b
+		ITA = { 
+		create_wargoal = {
+			type = take_state
+			target = TUR
+			generator = { 182 }
+	
+			
+		}
+	}
+}

@@ -1,0 +1,41 @@
+ideas = {
+
+country = {
+
+	colonizer = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = colonizer
+		
+		modifier = {		
+			
+		}
+	}
+	
+	asia_colonizer = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			
+		}
+	}

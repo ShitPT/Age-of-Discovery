@@ -1,0 +1,205 @@
+ideas = {
+
+country = {
+	TUR_Recruit_the_nation = {
+	
+		allowed = {
+			original_tag = TUR
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				conscription = 0.0050
+		}
+	}
+	TUR_Construction = {
+	
+		allowed = {
+			original_tag = TUR
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_infrastructure_factor = 0.25
+		}
+	}
+	TUR_Road_concern = {
+			
+		allowed = {
+			always = no
+		}
+			
+		removal_cost = -1
+
+		allowed_civil_war = {
+				always = yes
+		}
+
+		picture = generic_goods_red_bonus
+			
+		modifier = {
+			production_speed_infrastructure_factor = 0.10
+		}
+	}
+	TUR_Quantity = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+
+		}
+
+		removal_cost = -1
+
+		picture = generic_navy_bonus
+
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+			artillery_equipment = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+	}
+	TUR_Navy = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+
+		}
+
+		removal_cost = -1
+
+		picture = generic_navy_bonus
+
+		equipment_bonus = {
+			ship_hull_light = {
+				build_cost_ic = -0.1 instant = yes
+			}
+			convoy = {
+				build_cost_ic = -0.1 instant = yes
+			}
+			destroyer = {
+				build_cost_ic = -0.1 instant = yes
+			}
+		}
+	}
+	TUR_Empire = {
+		picture = generic_constitutional_guarantees
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			stability_weekly = 0.0050
+		}
+	}
+	TUR_Ottoman_warfare = {
+			
+		allowed = {
+			always = yes
+			original_tag = TUR
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+		}
+		rule = {
+
+		}
+	}
+
+	TUR_Sultan = {
+	
+		allowed = {
+			original_tag = OTO
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			justify_war_goal_time = -0.20
+			generate_wargoal_tension = -0.3
+		}
+	}
+
+	TUR_Attack = {
+			
+		allowed = {
+			always = no
+		}
+			
+		removal_cost = -1
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		picture = generic_goods_red_bonus
+			
+		modifier = {
+			army_attack_factor = 0.05
+
+		}
+	}
+	TUR_Defense = {
+			
+		allowed = {
+			always = no
+		}
+			
+		removal_cost = -1
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		picture = generic_goods_red_bonus
+			
+		modifier = {
+			army_defence_factor = 0.05
+
+		}
+	}
+

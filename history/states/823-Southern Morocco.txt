@@ -1,0 +1,14 @@
+state={
+	id=823
+	name="STATE_823"
+	history={
+		owner = MOR
+		add_core_of = MOR
+	}
+	provinces={
+		4920 8111
+	}
+	manpower=123000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,122 @@
+ideas = {
+
+	country = {
+	        PRS_Prussian_monarchy = {
+		        picture = generic_constitutional_guarantees
+		        allowed = {
+			       always = yes
+		        }
+
+		        allowed_civil_war = {
+
+		        }
+
+		        removal_cost = -1
+			
+		        modifier = {
+				conscription = 0.01
+			        stability_weekly = 0.0050
+		        }
+	        }
+	        PRS_Prussian_democracy = {
+		        picture = generic_constitutional_guarantees
+		        allowed = {
+			       always = yes
+		        }
+
+		        allowed_civil_war = {
+
+		        }
+
+		        removal_cost = -1
+			
+		        modifier = {
+			        democratic_drift = 0.15
+		        }
+	        }
+                PRS_Prussian_Glory = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+				war_support_weekly = 0.0050
+				consumer_goods_factor = -0.05
+			}
+		}
+                PRS_Tensions_In_Gdansk = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+				stability_weekly = -0.0100
+				consumer_goods_factor = 0.10
+			        production_speed_buildings_factor = -0.15
+			}
+		}
+                PRS_Tensions_In_Gdansk2 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+				stability_weekly = -0.0100
+				consumer_goods_factor = 0.10
+			        production_speed_buildings_factor = -0.15
+			}
+		}
+                PRS_Urbanisation = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+		                global_building_slots_factor = 0.05
+		                industrial_capacity_factory = 0.05
+			}
+		}

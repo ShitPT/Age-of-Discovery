@@ -1,0 +1,26 @@
+scripted_gui = {
+	economysystembutton = {
+	
+		context_type = player_context
+		
+		window_name = "economysystembutton_container"
+		
+		visible = {
+			always = no
+		}
+		
+		effects = {
+			economy_button_click = {
+				if = {
+					limit = { NOT = { has_country_flag = economy_enabled } }
+					set_country_flag = economy_enabled
+				}
+				else = {
+					clr_country_flag = economy_enabled
+				}
+			}
+		}
+	}
+}
+
+	

@@ -1,0 +1,92 @@
+division_template = {
+	name = "Infantry Brigade"			# Infantry Brigade
+
+	division_names_group = AZE_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"			# Cavalry Brigade
+
+	division_names_group = AZE_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	##### Aztec Warriors #####
+	division = { 
+		name =  "1. Infantry Division"
+		location = 2021  
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { # "2. Infantry Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 8236  
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { # "1. Infantry Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1965  
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { 
+		name =   "2. Infantry Division"
+		location = 12873
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = { 
+		name =   "2. Infantry Division"
+		location = 5015
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = { 
+		name =   "2. Infantry Division"
+		location = 2051
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = { 
+		name =   "2. Infantry Division"
+		location = 2051
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+}
+

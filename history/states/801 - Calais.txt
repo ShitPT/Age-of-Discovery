@@ -1,0 +1,33 @@
+state={
+	id=801
+	name="STATE_801"
+	resources={
+
+	}
+
+	state_category = town
+
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 5
+			dockyard = 2
+			11548 = {
+				naval_base = 6
+			}
+
+		}
+		add_core_of = FRA
+		victory_points = {
+			11548 15 
+		}
+
+	}
+
+	provinces={
+		11548
+	}
+	manpower=12500
+	buildings_max_level_factor=1.000
+}

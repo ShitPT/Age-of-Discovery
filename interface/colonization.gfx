@@ -1,0 +1,16 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_colonization"
+		texturefile = "gfx/interface/colonization.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_colonizebutton"
+		texturefile = "gfx/interface/colonizebutton.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_colonizesettler"
+		texturefile = "gfx/interface/global_colonial_growth.dds"
+	}

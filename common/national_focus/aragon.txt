@@ -1,0 +1,2030 @@
+focus_tree = {
+	id = hun_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ARA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = ARA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+	
+	
+	focus = {
+		id = "Royal Assembly"
+		icon = GFX_focus_generic_monarchy_2
+		x = 5
+		y = 0
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 150
+                        
+		}
+	}
+	focus = {
+		id = "Army Effort"
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = "Royal Assembly" }
+		x = -2
+		y =  1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+
+		}
+	}
+	focus = {
+		id = "Royal Sea"
+		
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = "Army Effort" }
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = "Naval Experiments"
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = "Royal Sea" }
+		
+		x = -12
+		y = 3
+		relative_position_id = naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+			
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = "Local Smithies"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = "Army Effort" }
+		x = -15
+		y = 1
+		relative_position_id = production_effort
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = "Reorganize The Army"
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = "Local Smithies" }
+		x = -1
+		y =  3
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		completion_reward = {
+		remove_ideas = ARA_military_incompetence
+			}
+
+		}
+		
+		focus = {
+		id = "Selective Army"
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = "Reorganize The Army" }
+		mutually_exclusive = { focus = ARA_all_welcome }
+		x = 0
+		y = 4
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				add_ideas= ARA_selective_army
+		
+		
+		}
+	}focus = {
+		id = "All Welcome"
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = "Reorganize The Army" }
+		mutually_exclusive = { focus = "Selective Army" }
+		x = -2
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				add_ideas= ARA_all_welcome
+				add_war_support= 0.05
+		
+		
+		}
+	}
+	focus = {
+		id = "New Tactics"
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = "All Welcome" focus= "Selective Army" }
+		
+		x = -1
+		y =  5
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		completion_reward = {
+				add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			}
+
+		}
+					focus = {
+		id = "For The Crown"
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = "New Tactics" }
+	
+		x = -1
+		y = 6
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				add_ideas= ARA_the_crown
+			
+		
+		
+		}
+	}
+	focus = {
+		id = "Morale Boost"
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = "For The Crown" }
+	
+		x = -1
+		y = 7
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				add_ideas= ARA_morale_boost
+			
+		
+		
+		}
+	}
+	focus = {
+		id = "Our Sovereignty"
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = "Royal Assembly" }
+	
+		x = 6
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				num_of_factories= 8
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_stability= 0.05
+			add_war_support=0.05
+			
+		
+		
+		}
+	}
+	focus = {
+		id = "Aragon Stand"
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = "Our Sovereignty" }
+	
+		x = 8
+		y = 2
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+				num_of_factories= 8
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_political_power = 100
+			
+		
+		
+		}
+	
+	
+		}
+		focus = {
+		id = "The Jaws Of The Wolf"
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = "Our Sovereignty"}
+	
+		x = 4
+		y = 2
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			country_event={
+			id=aragon.1
+			days=0
+			
+			}
+		
+		
+		}
+	}
+	focus = {
+		id = "Emergency Plan"
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = "The Jaws Of The Wolf"}
+		mutually_exclusive = { focus = "Demand Navarra" }
+		x = 3
+		y = 3
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+				has_idea= AR_rage_to_the_spanish_crown
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2000
+    producer = ARA
+}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+		
+		}
+	}
+	focus = {
+		id = "Demand Navarra"
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = "The Jaws Of The Wolf"}
+		mutually_exclusive = { focus = "Emergency Plan" }
+		x = 5
+		y = 3
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			has_idea= ARA_constant_paranoia
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+		add_state_core= 172
+		set_state_owner=172
+		
+		}
+	}
+	focus = {
+		id = "Protect Barcelona"
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = "Emergency Plan"}
+		mutually_exclusive = { focus = "Emergency Plan" }
+		x = 3
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+		add_building_construction = {
+    type = bunker
+    level = 5
+    instant_build = yes
+    province = 9764
+}
+		add_stability= 0.1
+		add_war_support=0.45
+		
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+		}
+	}
+	focus = {
+		id = "Share Education"
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = "Demand Navarra"}
+		
+		x = 5
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+		add_research_slot=1
+		add_stability=0.05
+		
+		}
+	}
+		focus = {
+		id = "Europe Struggle"
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = "Share Education"}
+		
+		x = 5
+		y = 5
+	
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+		add_war_support=0.1
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = "Our Own"
+		icon = GFX_focus_usa_honor_the_confederacy
+		prerequisite = { focus = "Aragon Stand"}
+		mutually_exclusive = { focus = "Clash The Bigger" }
+		x = 7
+		y = 3
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_ideas= ARA_Big_Little_Nation
+		
+		
+		}
+	}
+	focus = {
+		id = "Prepare For The Inevitable"
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = "Our Own"}
+		
+		x = 7
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 1500
+    producer = ARA
+}
+		army_experience= 15
+		add_ideas=ARA_We_Are_Prepared
+		
+		}
+		
+	}
+	focus = {
+		id = "Build Barcelona"
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = "Prepare For The Inevitable"}
+		
+		x = 7
+		y = 5
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 9764
+}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+
+				add_ideas= ARA_Philosophical_Population
+
+}
+	}
+		focus = {
+		id = "Clash The Bigger"
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = "Aragon Stand"}
+		mutually_exclusive = { focus = "Our Own" }
+		x = 9
+		y = 3
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+	
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 1500
+    producer = ARA
+}
+		create_faction= "Iberia League"
+		ARA = { add_to_faction = POR }
+		
+		}
+		}
+	focus = {
+		id = "Assure The Pact"
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = "Clash The Bigger"}
+		
+		x = 9
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		add_ideas= ARA_Iberia_Brotherhood
+		
+		POR={
+		
+		add_ideas= ARA_Iberia_Brotherhood
+		
+		}
+		
+		}
+		
+	}
+	focus = {
+		id = "Military Bond"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = "Assure The Pact"}
+		
+		x = 9
+		y = 5
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		
+				add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_war_support= 0.1
+	
+		}
+		
+		}
+		focus = {
+		id = "Expand Influence"
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = "Military Bond"focus= "Build Barcelona"}
+		
+		x = 8
+		y = 6
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		
+			add_state_core= 172
+			add_state_core= 792
+			add_state_core= 176
+			add_state_core= 793
+			add_state_core= 168
+			
+	
+		}
+		
+		}
+			focus = {
+		id = "Take The First Step"
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = "Expand Influence"}
+		
+		x = 8
+		y = 7
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		country_exists= SPA
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		
+				create_wargoal = {
+			type = take_state
+			target = SPA
+			generator = { 172 }
+		}
+	
+		}
+		
+		}
+	
+			focus = {
+		id = "Glory Of Aragon"
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = "Expand Influence" focus= "Europe Struggle"}
+		
+		x = 6
+		y = 7
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		num_of_factories > 25
+		has_war=no
+		owns_state= 172
+		
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		
+				add_stability = 0.1
+				add_ideas= ARA_Glory_In_Iberia
+				add_political_power= 50
+				
+		}
+	
+		}
+				focus = {
+		id = "The Other Neighbor"
+		icon = GFX_focus_focus_fra_border
+		prerequisite = { focus = "Glory Of Aragon"}
+		
+		x = 6
+		y = 8
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		country_exists= FRA
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				create_wargoal = {
+			type = take_state
+			target = FRA
+			generator = { 31 }
+		}
+		
+		add_state_core= 19
+		add_state_core=31
+				
+		}
+	
+		}
+		focus = {
+		id = "The Atlantic"
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = "The Other Neighbor"}
+		
+		x = 6
+		y = 9
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		num_of_factories > 35
+		has_war=no
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+
+		
+		set_state_owner= 319
+		set_state_owner= 318
+				
+		}
+	
+		}
+			focus = {
+		id = "Nuevo Aragon"
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = "The Atlantic"}
+		
+		x = 6
+		y = 10
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		has_war=no
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		
+		
+		set_state_owner= 493
+		set_state_owner= 489
+				
+		}
+		
+	
+		}
+		focus = {
+		id = "Build The Nation"
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = "Royal Assembly"}
+		
+		x = 13
+		y = 1
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+				
+		}
+		
+		}
+		focus = {
+		id = "The Farmers"
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = "Build The Nation"}
+		
+		x = 13
+		y = 2
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		add_ideas=ARA_Expanded_Lands	
+				
+		}
+		
+	
+		}
+			focus = {
+		id = "The Cities"
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = "The Farmers"}
+		
+		x = 13
+		y = 3
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				
+		}
+		
+	
+		}
+			focus = {
+		id = "More Hours"
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		prerequisite = { focus = "The Cities"}
+			mutually_exclusive = { focus = "Flexible Hours" }
+		x = 12
+		y = 4
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_stability= -0.05
+			add_ideas= ARA_More_Hours
+				
+		}
+		
+	
+		}
+					focus = {
+		id = "Flexible Hours"
+		icon = GFX_goal_continuous_boost_freedom
+		prerequisite = { focus = "The Cities"}
+			mutually_exclusive = { focus = "More Hours" }
+		x = 14
+		y = 4
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_stability=0.05
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	
+		}
+		
+					focus = {
+		id = "Common Sense"
+		icon = GFX_goal_continuous_research
+		prerequisite = { focus = "More Hours"focus="Flexible Hours"}
+	
+		x = 13
+		y = 5
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+					add_research_slot=1
+			add_ideas= ARA_Thinkers_Allowed
+			
+				
+		}
+		
+	
+		}
+		focus = {
+		id = "New Concepts"
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = "Common Sense"}
+	
+		x = 13
+		y = 6
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			num_of_factories > 30
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				
+			
+				
+		}
+		
+	
+		}
+		focus = {
+		id = "The Underdog"
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { focus = "Royal Assembly"}
+	
+		x = 1
+		y = 1
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			num_of_factories >40
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			
+				remove_ideas= ARA_crown_struggle
+				add_war_support= 0.15
+		}
+		
+	
+		}
+				focus = {
+		id = "Golden Era Of Aragon"
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = "The Underdog"}
+
+		x = 1
+		y = 2
+	
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+			
+
+			
+		}
+		
+		bypass = {
+				
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		
+			add_ideas= ARA_Golder_Era_Of_Aragon
+				
+		}
+		
+	
+		}
+		
+	
+		
+	}
+		
+		
+	
+		
+	
+	

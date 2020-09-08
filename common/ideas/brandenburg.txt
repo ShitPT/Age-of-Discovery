@@ -1,0 +1,26 @@
+ideas = {
+
+	country = {
+
+                BRN_Brandenburg_optimism = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+			        surrender_limit = 0.5
+				conscription = 0.01
+			        production_speed_arms_factory_factor = 0.10
+			}
+		}

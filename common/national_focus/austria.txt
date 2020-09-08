@@ -1,0 +1,293 @@
+focus_tree = {
+	id = aus_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = AUS
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = AUS_Victory_in_Germany
+		icon = GFX_focus_generic_support_the_left_right
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 69
+			controls_state = 9
+			controls_state = 75
+			controls_state = 74
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			AUS = { add_state_core = 69 }
+                        AUS = { add_state_core = 9 }
+                        AUS = { add_state_core = 75 }
+                        AUS = { add_state_core = 74 }
+                        add_ideas = military_youth_focus
+		}
+	}
+	focus = {
+		id = AUS_Dreams_of_a_Austrian_Empire
+		icon = GFX_focus_austrian_empire
+		prerequisite = { focus = AUS_Victory_in_Germany }
+		x = 8
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 69
+			controls_state = 9
+			controls_state = 75
+			controls_state = 74
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = AUS_IMPERIUM
+		}
+	}
+	focus = {
+		id = AUS_Build_up_Austria
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AUS_Dreams_of_a_Austrian_Empire }
+		x = 8
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = HRE_build_up_country
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = AUS_Our_own_empire
+		icon = GFX_goal_demand_sudetenland
+		mutually_exclusive = { focus = AUS_A_dual_monarchy_dream }
+		prerequisite = { focus = AUS_Build_up_Austria }
+		x = 6
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = HRE_Our_Empire
+		}
+	}
+	focus = {
+		id = AUS_A_dual_monarchy_dream
+		icon = GFX_goal_demand_sudetenland
+		mutually_exclusive = { focus = AUS_Our_own_empire }
+		prerequisite = { focus = AUS_Build_up_Austria }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HUN = { country_event = { id = austria.6 } }
+		}
+	}

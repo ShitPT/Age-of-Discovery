@@ -1,0 +1,125 @@
+scripted_gui = {
+	brazil_tribes = {
+	
+		context_type = selected_state_context
+		
+		window_name = "brazil_tribes_container"
+		
+		visible = {
+			AND = {
+				is_fully_controlled_by = BRT
+				FROM = {
+					OR={
+						any_country = {
+							AND = {
+								is_subject_of = ROOT
+								any_owned_state = {
+									any_neighbor_state = {
+										state = PREV.PREV.PREV
+
+									}
+								}
+							}
+						}
+						any_neighbor_state = { is_owned_by = ROOT }
+						AND={
+							is_coastal = yes
+							ROOT = {
+								any_owned_state = {is_coastal = yes}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				ROOT = {
+					has_idea = colonizer
+					OR = {
+					controls_state = 807
+					controls_state = 813
+					controls_state = 500
+					controls_state = 808
+					controls_state = 810
+					controls_state = 809
+					controls_state = 811
+					controls_state = 812
+					}
+					NOT = {
+						tag = BUC
+					}
+				}
+			AND = {
+				country_exists = BRA
+				has_idea = colonizer
+					OR = {
+						controls_state = 831
+						controls_state = 813
+						controls_state = 500
+						controls_state = 832
+						controls_state = 810
+						controls_state = 809
+						controls_state = 811
+						controls_state = 812
+					}
+				}
+			}
+		}
+	
+		effects = {
+			colonizebrazil_click = {
+			ROOT = {
+				transfer_state = PREV
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+				producer = ROOT
+				}
+				add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+				producer = ROOT
+				}
+				add_political_power = -125
+				country_event = {
+				id = colonising.1
+				days = 0
+				}
+				country_event = {
+				id = colonising.2
+				days = 180
+				}
+				add_manpower = -500
+				}
+			}
+		}
+		
+		triggers = {
+			colonizebrazil_click_enabled = {
+				check_variable = { ROOT.political_power > 125 }
+			}
+		}
+	
+		ai_enabled = {
+			always = yes
+		}
+		
+		ai_test_interval = 100
+		ai_test_variance = 0.1
+		
+		ai_check = {
+			has_political_power > 125
+			has_equipment = {
+				infantry_equipment > 3000
+			}
+		}
+		
+		ai_weights = {
+			colonizebrazil_click = {
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+}
+

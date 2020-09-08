@@ -1,0 +1,141 @@
+focus_tree = {
+	id = non_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NON
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = NON
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	
+	default = no
+
+	focus = {
+		id = NON_Startevent
+		icon = GFX_goal_generic_major_war
+		x = 8
+		y = 0
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 0.1
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			POR = {
+                           country_event = { id = startevent.1 }
+			}
+			SPA = {
+                           country_event = { id = startevent.1 }
+			}
+			ARA = {
+                           country_event = { id = startevent.1 }
+			}
+			FRA = {
+                           country_event = { id = startevent.1 }
+			}
+			ITA = {
+                           country_event = { id = startevent.1 }
+			}
+			PAP = {
+                           country_event = { id = startevent.1 }
+			}
+			NAP = {
+                           country_event = { id = startevent.1 }
+			}
+			SIC = {
+                           country_event = { id = startevent.1 }
+			}
+			HRE = {
+                           country_event = { id = startevent.1 }
+			}
+			DEN = {
+                           country_event = { id = startevent.1 }
+			}
+			SWE = {
+                           country_event = { id = startevent.1 }
+			}
+			LAT = {
+                           country_event = { id = startevent.1 }
+			}
+			HUN = {
+                           country_event = { id = startevent.1 }
+			}
+			ROM = {
+                           country_event = { id = startevent.1 }
+			}
+			TUR = {
+                           country_event = { id = startevent.1 }
+			}
+			PER = {
+                           country_event = { id = startevent.1 }
+			}
+			SOV = {
+                           country_event = { id = startevent.1 }
+			}
+			SIK = {
+                           country_event = { id = startevent.1 }
+			}
+			TIB = {
+                           country_event = { id = startevent.1 }
+			}
+			MON = {
+                           country_event = { id = startevent.1 }
+			}
+			MAN = {
+                           country_event = { id = startevent.1 }
+			}
+			VIN = {
+                           country_event = { id = startevent.1 }
+			}
+			LAO = {
+                           country_event = { id = startevent.1 }
+			}
+			CAM = {
+                           country_event = { id = startevent.1 }
+			}
+			SIA = {
+                           country_event = { id = startevent.1 }
+			}
+			MAJ = {
+                           country_event = { id = startevent.1 }
+			}
+			ENG = {
+                           country_event = { id = startevent.1 }
+			}
+			MAM = {
+                           country_event = { id = startevent.1 }
+			}
+			SCO = {
+                           country_event = { id = startevent.1 }
+			}
+			IRE = {
+                           country_event = { id = startevent.1 }
+			}
+		}
+	}

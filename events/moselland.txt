@@ -1,0 +1,43 @@
+add_namespace = moselland
+
+country_event = {
+	id = moselland.1
+	title = moselland.1.t
+	desc = moselland.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = moselland.1.a
+                add_manpower = 25000
+		MOS = { add_state_core = 42 }
+		MOS = { add_state_core = 28 }
+		MOS = { add_state_core = 8 }
+		8 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = MOS
+				allow_spawning_on_enemy_provs = no
+				count = 2
+
+			      
+			}
+		}
+		42 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = MOS
+				allow_spawning_on_enemy_provs = no
+				count = 3
+			}
+		}
+		28 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = MOS
+				allow_spawning_on_enemy_provs = no
+				count = 5				
+		}
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=804
+	name="STATE_804"
+		history={
+		owner = NON
+		add_core_of = NON
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+
+		}
+	}
+	provinces={
+		1101 1538 1579 1622 4513 7090 7372 7428 7465 7574 9946 10060 10358 10428 10469 11924 12241 12307 12490 
+	}
+	manpower=5000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
+}

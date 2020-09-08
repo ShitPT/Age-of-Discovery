@@ -1,0 +1,36 @@
+state={
+	id=799
+	name="STATE_799"
+	resources={
+		steel=1 # was: 20.000
+	}
+
+	state_category = town
+
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 5
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 2
+			air_base = 0
+			6361 = {
+				naval_base = 6
+			}
+
+		}
+		add_core_of = DEN
+		victory_points = {
+			6361 20 
+		}
+
+	}
+
+	provinces={
+		6361
+	}
+	manpower=21000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,1652 @@
+focus_tree = {
+	id = spa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SPA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = SPA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+	focus = {
+		id = SPA_Dominate_on_land
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = }
+		x = 24
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			118 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			792 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+		}
+	}
+	focus = {
+		id = SPA_Quantity
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Dominate_on_land }
+		mutually_exclusive = { focus = SPA_Quality }
+		x = 22
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = SPA_Equipment
+		}
+	}
+	focus = {
+		id = SPA_Quality
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Dominate_on_land }
+		mutually_exclusive = { focus = SPA_Quantity }
+		x = 26
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = SPA_Dominate_on_sea
+		icon = GFX_goal_generic_navy_submarine
+		x = 24
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			118 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			792 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+		}
+	}
+	focus = {
+		id = SPA_Better_fleet_technology
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Dominate_on_sea }
+		x = 26
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	focus = {
+		id = SPA_Large_fleet
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Dominate_on_sea }
+		x = 24
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.2
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+                        }
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.2
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = SPA_Naval_strategies
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Large_fleet }
+		x = 24
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		        navy_experience = 20
+		}
+	}
+	focus = {
+		id = SPA_Prepare_to_invade_through_sea
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPA_Dominate_on_sea }
+		x = 22
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = SPA_Spanish_plans
+		}
+	}
+
+	focus = {
+		id = SPA_Claims_in_benelux
+		icon = GFX_focus_spanish_claims
+		prerequisite = { focus = SPA_A_greater_Spain}
+		x = 17
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		date > 1503.3.1	
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			SPA = { add_state_claim = 36 }
+			SPA = { add_state_claim = 7 }
+			SPA = { add_state_claim = 35 }
+			SPA = { add_state_claim = 34 }
+			SPA = { add_state_claim = 8 }
+			SPA = { add_state_claim = 6 }
+		}
+	}
+
+	focus = {
+		id = SPA_Spanish_taxes
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = SPA_Claims_in_benelux }
+		x = 16
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                      
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = SPA_Spanish_taxing_idea
+		}
+	}
+	focus = {
+		id = SPA_New_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPA_Spanish_taxes }
+		x = 16
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                      
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = SPA_Spanish_Roadbuilding
+		}
+	}
+	focus = {
+		id = SPA_Better_weapon_technology
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPA_Glory_of_a_empire }
+		x = 18
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                      
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+				add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = SPA_Improve_our_cities
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPA_Better_weapon_technology }
+		prerequisite = { focus = SPA_New_roads }
+		x = 17
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                      
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.5
+				uses = 2
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_Glory_of_a_empire
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = SPA_Claims_in_benelux }
+		x = 18
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+                      
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = SPA_A_greater_Spain
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+                        add_stability = 0.05
+                        add_war_support = 0.05
+                        add_ideas = military_youth_focus
+		}
+	}
+	focus = {
+		id = SPA_Support_the_french
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = SPA_A_greater_Spain }
+		mutually_exclusive = { focus = SPA_Support_the_germans }
+		x = 5
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = FRA 
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = SPA_Join_the_french
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SPA_Support_the_french }
+		x = 2
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		date > 1501.1.1	
+                        is_puppet = no
+	 		is_in_faction = no
+	 		has_war = no
+ 			FRA = {
+ 				exists = yes
+ 				is_faction_leader = yes
+ 			}
+		}
+		
+		bypass = {
+			ENG = {
+				is_in_faction_with = FRA
+                	}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			FRA = { country_event = { id = spa.17 } }
+		}
+	}
+	focus = {
+		id = SPA_Prepare_our_fleets
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = SPA_Support_the_french}
+		x = 4
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+		}
+	}
+	focus = {
+		id = SPA_Help_the_lower_classes
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = SPA_Support_the_french }
+		x = 6
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = SPA_Train_more_for_the_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = SPA_Help_the_lower_classes }
+		x = 6
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = militarized_schools
+		}
+	}
+	focus = {
+		id = SPA_Educated_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SPA_Prepare_our_fleets }
+		x = 4
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			army_experience = 25
+                        navy_experience = 25
+			air_experience = 25
+		}
+	}
+	focus = {
+		id = SPA_A_strong_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = SPA_Educated_army  }
+		prerequisite = { focus = SPA_Train_more_for_the_army  }
+		x = 5
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = british_austerity_idea
+		}
+	}
+	focus = {
+		id = SPA_War_preperations
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = SPA_A_strong_king focus = SPA_The_will_of_Carlos }
+		x = 8
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	
+	focus = {
+		id = SPA_Support_the_germans
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = SPA_A_greater_Spain }
+		mutually_exclusive = { focus = SPA_Support_the_french }
+		x = 11
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = HRE 
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = SPA_Join_the_germans
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SPA_Support_the_germans }
+		x = 14
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+                        is_puppet = no
+	 		is_in_faction = no
+	 		has_war = no
+ 			HRE = {
+ 				exists = yes
+ 				is_faction_leader = yes
+ 			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HRE = { country_event = { id = spa.17 } }
+		}
+	}
+	focus = {
+		id = SPA_A_larger_army_and_stronger_army
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = SPA_Support_the_germans }
+		x = 10
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = SPA_Larger_army
+		}
+	}
+	focus = {
+		id = SPA_Prepare_for_war_between_europe
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = SPA_Support_the_germans }
+		x = 12
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                       	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = SPA_Educate_our_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SPA_Prepare_for_war_between_europe }
+		x = 12
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			army_experience = 25
+                        navy_experience = 25
+			air_experience = 25
+		}
+	}
+	focus = {
+		id = SPA_Prepare_our_empire
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SPA_A_larger_army_and_stronger_army }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        41 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			171 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			173 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = SPA_The_will_of_Carlos
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SPA_Prepare_our_empire }
+		prerequisite = { focus = SPA_Educate_our_army }
+		x = 11
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_stability = 0.10
+		}
+	}
+	focus = {
+		id = SPA_Secure_Aragon
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		prerequisite = { focus = SPA_Support_the_germans focus = SPA_Support_the_french }
+		x = 8
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 70
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ARA }
+		}
+	}
+	focus = {
+		id = SPA_Stop_Venice_from_expanding
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = SPA_Secure_Aragon }
+		x = 8
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 275000 } #100 div			
+			#Make custom trigger tooltip here
+			2 = {
+				owner = {
+					original_tag = ITA
+				}
+				controller = {
+					original_tag = ITA
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			117 = { add_claim_by = SPA }
+			156 = { add_claim_by = SPA }
+			115 = { add_claim_by = SPA }
+			1 = { add_claim_by = SPA }
+		}
+	}
+	
+	focus = {
+		id = SPA_Conquer_the_aztec_empire
+		prerequisite = { focus = SPA_Prepare_to_invade_through_sea }
+		icon = GFX_focus_usa_focus_on_europe
+		x = 22
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = AZE
+ 				expire = 0
+ 				generator = { 277 }
+				}
+			}

@@ -1,0 +1,74 @@
+scripted_gui = {
+	player4 = {
+	
+		context_type = selected_state_context
+		
+		window_name = "player4_container"
+		
+		visible = {
+			AND = {
+				is_fully_controlled_by = CEA
+				FROM = {
+					OR={
+						any_country = {
+							AND = {
+								is_subject_of = ROOT
+								any_owned_state = {
+									any_neighbor_state = {
+										state = PREV.PREV.PREV
+
+									}
+								}
+							}
+						}
+						any_neighbor_state = { is_owned_by = ROOT }
+						AND={
+							is_coastal = yes
+							ROOT = {
+								any_owned_state = {is_coastal = yes}
+							}
+						}
+					}
+				}
+			}
+			ROOT = {
+				has_idea = colonizer
+			}
+		}
+		
+		effects = {
+			colonize14_click = {
+			ROOT = {
+				transfer_state = PREV
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+				producer = ROOT
+				}
+				add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+				producer = ROOT
+				}
+				add_political_power = -150
+				country_event = {
+				id = colonising.1
+				days = 0
+				}
+				country_event = {
+				id = colonising.2
+				days = 180
+				}
+				add_manpower = -500
+				}
+			}
+		}
+		triggers = {
+			colonize14_click_enabled = {
+				check_variable = { ROOT.political_power > 150 }
+			}
+		}
+	}
+}
+		
+

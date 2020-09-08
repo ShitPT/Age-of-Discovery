@@ -1,0 +1,28 @@
+
+state={
+	id=842
+	name="STATE_842"
+
+	history={
+		owner = DUL
+		victory_points = {
+			9893 1 
+		}
+		victory_points = {
+			886 1 
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = DUL
+
+	}
+
+	provinces={
+		3889 3890 3921 6813 6888 9761 9823 9893 9912 
+	}
+	manpower=440805
+	buildings_max_level_factor=1.000
+	state_category=town
+}

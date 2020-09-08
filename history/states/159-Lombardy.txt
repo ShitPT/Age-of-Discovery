@@ -1,0 +1,36 @@
+
+state={
+	id=159
+	name="STATE_159"
+
+	history={
+		owner = HRE
+		victory_points = {
+			3780 15 
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 10
+
+		}
+		add_core_of = HRE
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 7
+				industrial_complex = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		607 969 3780 6661 9584 11587 
+	}
+	manpower=5597704
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

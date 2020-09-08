@@ -1,0 +1,21 @@
+state={
+	id=810
+	name="STATE_810"
+	history={
+		owner = BUC
+		add_core_of = BUC
+		buildings = {
+			infrastructure = 4
+			2175 = {
+				naval_base = 4
+
+			}
+		}
+	}
+	provinces={
+		2175 8179 10933 
+	}
+	manpower=500000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

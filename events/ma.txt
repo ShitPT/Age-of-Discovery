@@ -1,0 +1,22 @@
+add_namespace = ma
+
+country_event = {
+	id = ma.1
+	title = ma.1.t
+	desc = ma.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ma.1.a
+			declare_war_on = {
+				target = MIN
+				type = annex_everything
+				generator = { 594 } 
+                                }
+		}
+		hidden_effect = {
+
+	}
+}

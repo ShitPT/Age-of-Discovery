@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_ideology_catholic_group"
+		texturefile = "gfx/interface/ideologies/catholic_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_islam_group"
+		texturefile = "gfx/interface/ideologies/islam_group.dds"
+	}
+}	
+	

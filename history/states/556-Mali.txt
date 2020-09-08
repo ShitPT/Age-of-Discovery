@@ -1,0 +1,27 @@
+
+state={
+	id=556
+	name="STATE_556"
+
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = {
+			4927 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+
+	}
+
+	provinces={
+		2012 4927 4957 5045 8008 8071 8116 10829 10836 12751 12794 12802 12851 
+	}
+	manpower=2624782
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,145 @@
+focus_tree = {
+	id = man_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MAN
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = MAN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = MAN_Trigger_civil_war
+		icon = GFX_focus_generic_support_the_left_right
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			MIN = { add_state_core = 747 }
+			MIN = { add_state_core = 325 }
+			MIN = { add_state_core = 559 }
+			MIN = { add_state_core = 594 }
+			MIN = { add_state_core = 591 }
+			MIN = { add_state_core = 592 }
+			MIN = { add_state_core = 599 }
+			MIN = { add_state_core = 593 }
+			MIN = { add_state_core = 595 }
+			MIN = { add_state_core = 600 }
+			MIN = { add_state_core = 602 }
+			MIN = { add_state_core = 603 }
+			MIN = { add_state_core = 748 }
+			MIN = { add_state_core = 751 }
+			MIN = { add_state_core = 434 }
+			MIN = { add_state_core = 601 }
+			MIN = { add_state_core = 605 }
+			MIN = { add_state_core = 750 }
+			MIN = { add_state_core = 620 }
+			MIN = { add_state_core = 606 }
+			MIN = { add_state_core = 607 }
+			MIN = { add_state_core = 613 }
+			MIN = { add_state_core = 749 }
+			MIN = { add_state_core = 596 }
+			MIN = { add_state_core = 598 }
+			MIN = { add_state_core = 606 }
+			MIN = { add_state_core = 607 }
+			MIN = { add_state_core = 620 }
+			MIN = { add_state_core = 744 }
+			MIN = { add_state_core = 753 }
+			MIN = { add_state_core = 754 }
+			MIN = { add_state_core = 604 }
+			MIN = { add_state_core = 755 }
+			MIN = { add_state_core = 283 }
+			MIN = { add_state_core = 622 }
+			MIN = { add_state_core = 614 }
+			MIN = { add_state_core = 615 }
+			MIN = { add_state_core = 597 }
+			MIN = { add_state_core = 599 }
+			MIN = { add_state_core = 593 }
+			MIN = { add_state_core = 608 }
+			MIN = { add_state_core = 609 }
+			MIN = { add_state_core = 610 }
+			MIN = { add_state_core = 716 }
+			MIN = { add_state_core = 745 }
+			MIN = { add_state_core = 621 }
+			MIN = { add_state_core = 746 }
+			MIN = { add_state_core = 593 }
+			MIN = { add_state_core = 616 }
+			MIN = { add_state_core = 756 }
+			MIN = { add_state_core = 755 }
+			MAN = { country_event = { id = man.1 } }
+			MAN = { country_event = { id = ma.1 } }
+			MIN = { country_event = { id = min.1 } }
+			}
+			hidden_effect = {
+				news_event = { hours = 12 id = news.402 }
+		}
+	}

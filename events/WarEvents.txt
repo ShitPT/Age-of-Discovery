@@ -1,0 +1,36 @@
+add_namespace = warevents
+
+country_event = {
+	id = warevents.1
+	title = warevents.1.t
+	desc = warevents.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	trigger = {
+		original_tag = FRA
+		date > 1503.2.1
+		has_start_date < 1500.01.02
+                HRE = {
+                     has_completed_focus = HRE_Devalue_the_currency                     
+	}	
+
+	mean_time_to_happen = {
+		days = 7
+		modifier = {
+			factor = 1.0
+			date > 1503.4.1
+                        }
+		}
+	}
+	option = {
+		name = warevents.1.a
+			declare_war_on = {
+				target = HRE
+				type = annex_everything
+				generator = { 594 } 
+                                }
+		}
+		hidden_effect = {
+
+	}
+}

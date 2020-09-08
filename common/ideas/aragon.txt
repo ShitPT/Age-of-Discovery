@@ -1,0 +1,328 @@
+ideas = {
+
+	country = {
+		ARA_military_incompetence = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org = -60
+				planning_speed = -0.5
+			}
+		
+			
+		}
+		
+		ARA_crown_struggle = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+political_power_gain = -0.5
+stability_factor = -0.40
+			}
+			
+			
+		}	
+		ARA_selective_army = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15		
+			}
+			
+			
+		}	
+			ARA_all_welcome = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription = 0.05
+				
+			}
+			
+			
+		}	
+		ARA_the_crown = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			planning_speed = 0.1
+			army_speed_factor =0.05	
+				
+			}
+			
+			
+		}	
+			ARA_morale_boost = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+				
+			}
+			
+			
+		}
+		ARA_constant_paranoia = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+			consumer_goods_factor = 0.1
+				
+			}
+			
+			
+		}
+		
+			AR_rage_to_the_spanish_crown= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+				
+			}
+			 }
+			 ARA_Big_Little_Nation= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+				conscription = 0.025
+			}
+			 }
+			 ARA_We_Are_Prepared= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+				
+			}
+			 }
+			 
+			 
+			ARA_Philosophical_Population= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			research_speed_factor=0.1
+				
+			}
+			 }
+			 ARA_Iberia_Brotherhood= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+				
+			}
+			 }
+			 	 ARA_Glory_In_Iberia= {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+			consumer_goods_factor = -0.10
+			conscription= 0.05
+		
+			
+				
+			}
+			 }
+			 ARA_Expanded_Lands= {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+			consumer_goods_factor = -0.05
+			
+		
+			
+				
+			}
+			 }
+			 		 ARA_More_Hours= {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+					production_factory_max_efficiency_factor= 0.15
+		
+			}
+			 }
+			 
+			 ARA_Thinkers_Allowed= {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+					research_speed_factor= 0.05
+		
+			}
+			 }
+			 	 ARA_Golder_Era_Of_Aragon= {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+					justify_war_goal_time=-0.5
+		
+			}
+			 }
+			 
+			

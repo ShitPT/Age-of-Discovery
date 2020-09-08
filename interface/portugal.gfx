@@ -1,0 +1,239 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_goal_allow_merchants_to_trade"
+	texturefile = "gfx/interface/goals/allow_merchants_to_trade.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_goal_brazil_autonomy"
+	texturefile = "gfx/interface/goals/brazil_autonomy.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_break_treaty"
+	texturefile = "gfx/interface/goals/break_treaty.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_portugal_companies"
+	texturefile = "gfx/interface/goals/portugal_companies.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_economy_boom"
+	texturefile = "gfx/interface/goals/economy_boom.dds"		
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_brazil_infrastructure"
+	texturefile = "gfx/interface/goals/brazil_infrastructure.dds"		
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_brazil_military"
+	texturefile = "gfx/interface/goals/brazil_military.dds"		
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_choose_a_path"
+	texturefile = "gfx/interface/goals/por_choose_a_path.dds"	
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_colonize_argentina"
+	texturefile = "gfx/interface/goals/colonize_argentina.dds"		
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_colonize_in_indian_ocean"
+	texturefile = "gfx/interface/goals/colonize_in_indian_ocean.dds"	
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_colonize_island_in_africa"
+	texturefile = "gfx/interface/goals/colonize_island_in_africa.dds"	
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_colonize_spice_islands"
+	texturefile = "gfx/interface/goals/colonize_spice_islands.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_control_red_sea"
+	texturefile = "gfx/interface/goals/control_red_sea.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_cooperate_with_spain"
+	texturefile = "gfx/interface/goals/cooperate_with_spain.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_defend_colonies"
+	texturefile = "gfx/interface/goals/defend_colonies.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_contact_with_ethiopia"
+	texturefile = "gfx/interface/goals/contact_with_ethiopia.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_portugal_india_company"
+	texturefile = "gfx/interface/goals/portugal_india_company.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_trade_ports_in_America"
+	texturefile = "gfx/interface/goals/trade_ports_in_America.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_brazil_civilian"
+	texturefile = "gfx/interface/goals/brazil_civilian.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_brazil_military_production"
+	texturefile = "gfx/interface/goals/brazil_military_production.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_expand_portugese_navy"
+	texturefile = "gfx/interface/goals/expand_portugese_navy.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_expedition_to_india"
+	texturefile = "gfx/interface/goals/expedition_to_india.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_help_in_case_of_war"
+	texturefile = "gfx/interface/goals/help_in_case_of_war.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_improve_relations_with_spain"
+	texturefile = "gfx/interface/goals/improve_relations_with_spain.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_integrate_brazil"
+	texturefile = "gfx/interface/goals/integrate_brazil.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_invest_in_brazil"
+	texturefile = "gfx/interface/goals/invest_in_brazil.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_invite_other_nations"
+	texturefile = "gfx/interface/goals/invite_other_nations.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_oficial_alliance"
+	texturefile = "gfx/interface/goals/oficial_alliance.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_millitary_exercise"
+	texturefile = "gfx/interface/goals/millitary_exercise.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_more_resources_into_colonization"
+	texturefile = "gfx/interface/goals/more_resources_into_colonization.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_respect_treaty"
+	texturefile = "gfx/interface/goals/respect_treaty.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_royal_marriage"
+	texturefile = "gfx/interface/goals/royal_marriage.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_atlantic_slave_trade"
+	texturefile = "gfx/interface/goals/atlantic_slave_trade.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ivory_coast"
+	texturefile = "gfx/interface/goals/ivory_coast.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_start_the_spice_trade"
+	texturefile = "gfx/interface/goals/start_the_spice_trade.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_subjugate_yemen_oman"
+	texturefile = "gfx/interface/goals/subjugate_yemen_oman.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_trade_with_oman"
+	texturefile = "gfx/interface/goals/trade_with_oman.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_trade_with_yemen"
+	texturefile = "gfx/interface/goals/trade_with_yemen.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_transport_slaves"
+	texturefile = "gfx/interface/goals/transport_slaves.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_use_slaves_for_work"
+	texturefile = "gfx/interface/goals/use_slaves_for_work.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_a_new_power_in_the_west"
+	texturefile = "gfx/interface/goals/a_new_power_in_the_west.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_non_aggresion"
+	texturefile = "gfx/interface/goals/non_aggresion.dds"
+	}
+	
+	spriteType = {
+	name = "GFX_goal_portugal_army"
+	texturefile = "gfx/interface/goals/portugal_army.dds"
+	}
+	
+	spriteType = {
+	name = "GFX_idea_unrest"
+	texturefile = "gfx/interface/ideas/unrest.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_idea_economy_boom_idea"
+	texturefile = "gfx/interface/ideas/economy_boom_idea.dds
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_por_army_expansion"
+	texturefile = "gfx/interface/goals/army_expansion.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_por_naval_expansion"
+	texturefile = "gfx/interface/goals/naval_expasion.dds"
+	}
+}	
+	
+

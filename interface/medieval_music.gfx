@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_medieval_album"
+		texturefile = "gfx/medieval_album.dds"
+		noOfFrames = 2
+	}	
+
+}

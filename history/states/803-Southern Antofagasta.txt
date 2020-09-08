@@ -1,0 +1,14 @@
+state={
+	id=803
+	name="STATE_803"
+	history={
+	owner = INE
+	add_core_of = INE
+	}
+	provinces={
+		5191 8194 
+	}
+	manpower=83000
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

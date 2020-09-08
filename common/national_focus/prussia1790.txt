@@ -1,0 +1,705 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = prussian_focus_1790
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PRS
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = PRS
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+	focus = {
+		id = "Reform Of 1790"
+		icon = GFX_focus_secret_rearmament
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_political_power = 75
+                        add_stability = 0.05
+		}
+	}
+	focus = {
+		id = "Seek A Alternative Government"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Reform Of 1790" }
+		mutually_exclusive = { focus = "Continue The Prussian Monarchy" }
+		x = 5
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = PRS_Prussian_democracy
+		}
+	}
+	focus = {
+		id = "Continue The Prussian Monarchy"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Reform Of 1790" }
+		mutually_exclusive = { focus = "Seek A Alternative Government" }
+		x = 11
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = PRS_Prussian_monarchy
+		}
+	}
+	focus = {
+		id = "Prussian Glory!"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Continue The Prussian Monarchy" }
+		x = 10
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = PRS_Prussian_Glory
+		}
+	}
+	focus = {
+		id = "Dig For Resources"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Continue The Prussian Monarchy" }
+		x = 12
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 763 64 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = "Befriend Austria"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Dig For Resources" focus = "Prussian Glory!" }
+		mutually_exclusive = { focus = "Befriend The Ottomans" }
+		x = 12
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        AUS = { 
+                           add_opinion_modifier = { target = PRS modifier = large_increase } 
+                        }
+                        TUR = { 
+                           add_opinion_modifier = { target = PRS modifier = large_decrease } 
+                        }
+			diplomatic_relation = { 
+	                country = AUS 
+	                relation = non_aggression_pact
+}
+
+		}
+	}
+	focus = {
+		id = "Support Austrian Claim"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Befriend Austria" }
+		x = 12
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        AUS = { 
+                           add_opinion_modifier = { target = PRS modifier = large_increase } 
+                        }
+                        AUS = {
+                             add_manpower = 8000
+			}
+                        PRS = {
+                             add_manpower = -8000
+			}
+		}
+	}
+	focus = {
+		id = "Treat Old Wounds"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Support Austrian Claim" }
+		x = 12
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_stability = 0.10    
+		}
+	}
+	focus = {
+		id = "Create A Coalition Against The Ottomans"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Treat Old Wounds" }
+		x = 12
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_rule = { can_create_factions = yes }
+			create_faction = Against_Ottoman
+			AUS = { country_event = { id = prs1790.1 } }	
+		}
+	}
+	focus = {
+		id = "Befriend The Ottomans"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Dig For Resources" focus = "Prussian Glory!" }
+		mutually_exclusive = { focus = "Befriend Austria" }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        TUR = { 
+                           add_opinion_modifier = { target = PRS modifier = large_increase } 
+                        }
+                        AUS = { 
+                           add_opinion_modifier = { target = PRS modifier = large_decrease } 
+                        }
+			diplomatic_relation = { 
+	                country = TUR 
+	                relation = non_aggression_pact
+}
+
+		}
+	}	
+        focus = {
+		id = "Support Ottoman Claim"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Befriend The Ottomans" }
+		x = 10
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        TUR = { 
+                           add_opinion_modifier = { target = PRS modifier = large_increase } 
+                        }
+                        TUR = {
+                             add_manpower = 8000
+			}
+                        PRS = {
+                             add_manpower = -8000
+			}
+		}
+	}
+        focus = {
+		id = "Ottoman War Hunger"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Support Ottoman Claim" }
+		x = 10
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_war_support = 0.10
+		}
+	}
+        focus = {
+		id = "Create A Coalition Against Austria"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Ottoman War Hunger" }
+		x = 10
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        set_rule = { can_create_factions = yes }
+			create_faction = Against_Ottoman
+			TUR = { country_event = { id = prs1790.1 } }	
+		}
+	}
+        focus = {
+		id = "Calm The Tensions In Gdansk"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Continue The Prussian Monarchy" focus = "Seek A Alternative Government" }
+		x = 8
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        remove_ideas = PRS_Tensions_In_Gdansk
+                        hidden_effect = {
+                                 add_ideas = PRS_Tensions_In_Gdansk2
+		        }
+		}
+	}
+        focus = {
+		id = "Prussian Urbanisation"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Calm The Tensions In Gdansk" }
+		x = 8
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		        add_ideas = PRS_Urbanisation
+		}
+	}
+        focus = {
+		id = "Settle The Tensions In Gdansk"
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = "Prussian Urbanisation" }
+		x = 8
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        remove_ideas = PRS_Tensions_In_Gdansk2
+		}
+	}
+
+
+

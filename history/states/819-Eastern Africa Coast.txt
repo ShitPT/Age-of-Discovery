@@ -1,0 +1,26 @@
+
+state={
+	id=819
+	name="STATE_819"
+
+	history={
+		owner = AFC
+		add_core_of = AFC
+		buildings = {
+			infrastructure = 3
+
+		}
+		2196 = {
+			naval_base = 3
+
+		}
+
+	}
+
+	provinces={
+		2196 2202 5210 8182 8183 10976 12944 
+	}
+	manpower=700000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

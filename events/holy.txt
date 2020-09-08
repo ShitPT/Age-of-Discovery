@@ -1,0 +1,19 @@
+
+add_namespace = holy
+
+country_event = {
+	id = holy.10
+	title = holy.10.t
+	desc = holy.10.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holy.10.a
+                HRE = {
+			set_cosmetic_tag = HUN_EMPIRE
+
+		}
+	}
+}

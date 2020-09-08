@@ -1,0 +1,26 @@
+
+state={
+	id=816
+	name="STATE_816"
+
+	history={
+		owner = AFC
+		add_core_of = AFC
+		buildings = {
+			infrastructure = 3
+			12958 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		5158 8138 8202 8248 10966 12958 12985 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

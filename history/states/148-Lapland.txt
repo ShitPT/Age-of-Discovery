@@ -1,0 +1,24 @@
+
+state={
+	id=148
+	name="STATE_148"
+	manpower = 121737
+	
+	state_category = rural
+	
+	resources={
+		steel=7 # was: 8
+		chromium=2 # was: 2
+	}
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		103 167 2992 3026 3069 3097 3107 3153 3156 3158 6045 6061 6128 6137 6142 6179 9112 9223 11030 11167 11204 
+	}
+}

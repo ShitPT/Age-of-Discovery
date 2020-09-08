@@ -1,0 +1,32 @@
+colonization = {
+	colonize = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+			NOT = {
+				has_idea = colonizer
+			}
+			NOT = {
+				OR = {
+					tag = POR
+					tag = HRE
+					tag = ENG
+					tag = FRA
+					tag = SPA
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = colonizer
+		}
+	}

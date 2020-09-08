@@ -1,0 +1,26 @@
+
+state={
+	id=203
+	name="STATE_203"
+
+	history={
+		victory_points = {
+			488 5 
+		}
+		owner = LIT
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = LIT
+
+	}
+
+	provinces={
+		409 434 458 488 754 3403 3452 3468 3575 3757 6451 6478 6597 9451 9491 9573 9714 11409 11424 11438 11454 11530 
+	}
+	manpower=2405190
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

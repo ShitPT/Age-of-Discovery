@@ -1,0 +1,16 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_colonizer"
+		texturefile = "gfx/interface/ideas/colonizer.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lacking_an_economy"
+		texturefile = "gfx/interface/ideas/lacking_an_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_unwesternized"
+		texturefile = "gfx/interface/ideas/unwesternized.dds"
+	}
+}	
+	

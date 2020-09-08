@@ -1,0 +1,29 @@
+ideas = {
+
+	country = {
+		NON_Unorganised_tribes = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = yes # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			research_bonus = {
+				
+			}
+
+			modifier = {
+			        training_time_factor = 1.00
+				army_org_factor = -1.00
+                                conscription_factor = -1.00
+                                enemy_justify_war_goal_time = 1000000
+                                justify_war_goal_cost_factor = 20000
+			}
+		}
+
+		

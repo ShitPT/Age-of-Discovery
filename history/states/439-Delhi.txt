@@ -1,0 +1,28 @@
+
+state={
+	id=439
+	name="STATE_439"
+
+	history={
+		owner = DEL
+		add_core_of = DEL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 6
+			arms_factory = 2
+			air_base = 4
+
+		}
+		victory_points = {
+			2086 15 
+		}
+
+	}
+
+	provinces={
+		2002 2032 2076 2086 5002 5157 7106 7998 10021 10066 10729 10772 11955 12005 12041 12708 12822 12868 
+	}
+	manpower=31136800
+	buildings_max_level_factor=1.000
+	state_category=city
+}

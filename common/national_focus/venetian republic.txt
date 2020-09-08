@@ -1,0 +1,685 @@
+focus_tree = {
+	id = ita_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = ITA_A_strong_state
+		icon = GFX_focus_generic_support_the_left_right
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+                        add_ideas = militarism_focus
+		}
+	}
+	focus = {
+		id = ITA_Side_with_the_germans
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = ITA_A_strong_state }
+		mutually_exclusive = { focus = ITA_Side_with_the_french }
+		x = 11
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = HRE 
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = ITA_Join_the_germans
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = ITA_Side_with_the_germans }
+		x = 13
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+                        is_puppet = no
+	 		is_in_faction = no
+	 		has_war = no
+ 			HRE = {
+ 				exists = yes
+ 				is_faction_leader = yes
+ 			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HRE = { country_event = { id = ita.4 } }
+                        set_politics = { ruling_party = protestant }
+                        add_timed_idea = { idea = ITA_Protestantism days = 720 }
+		}
+	}
+	focus = {
+		id = ITA_Come_to_an_agreement_with_the_germans
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ITA_Side_with_the_germans }
+		x = 11
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			controls_state = 159
+			controls_state = 158
+			controls_state = 735
+			controls_state = 162
+			controls_state = 1
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HRE = { country_event = { id = ita.1 } }
+		}
+	}
+	focus = {
+		id = ITA_Realize_Rome
+		icon = GFX_focus_spqr
+		prerequisite = { focus = ITA_Come_to_an_agreement_with_the_germans }
+		x = 12
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 159
+			controls_state = 158
+			controls_state = 735
+			controls_state = 162
+			controls_state = 1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        ITA = { add_state_core = 159 }
+                        ITA = { add_state_core = 158 }
+                        ITA = { add_state_core = 735 }
+                        ITA = { add_state_core = 162 }
+                        ITA = { add_state_core = 1 }
+
+		}
+	}
+	focus = {
+		id = ITA_Prepare_for_a_war_with_the_pope
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_Realize_Rome }
+		x = 11
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			controls_state = 161
+			controls_state = 157
+			controls_state = 2
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        create_wargoal = { type = annex_everything target = PAP }
+
+		}
+	}
+	focus = {
+		id = ITA_Prepare_for_war_with_the_southern_states
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = ITA_Realize_Rome }
+		x = 13
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			controls_state = 117
+			controls_state = 156
+			controls_state = 115
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        create_wargoal = { type = annex_everything target = NAP }
+                        create_wargoal = { type = annex_everything target = SIC }
+
+		}
+	}
+	focus = {
+		id = ITA_Integrate_southern_Italy
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = ITA_Prepare_for_war_with_the_southern_states }
+		x = 13
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 117
+			controls_state = 156
+			controls_state = 115
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        ITA = { add_state_core = 117 }
+                        ITA = { add_state_core = 156 }
+                        ITA = { add_state_core = 115 }
+
+		}
+	}
+	focus = {
+		id = ITA_Integrate_middle_Italy
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = ITA_Prepare_for_a_war_with_the_pope }
+		x = 11
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 161
+			controls_state = 157
+			controls_state = 2
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        ITA = { add_state_core = 161 }
+                        ITA = { add_state_core = 157 }
+                        ITA = { add_state_core = 2 }
+
+		}
+	}
+	focus = {
+		id = ITA_A_united_Italy
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = ITA_Integrate_middle_Italy }
+		prerequisite = { focus = ITA_Integrate_southern_Italy }
+		x = 12
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 161
+			controls_state = 157
+			controls_state = 2
+			controls_state = 117
+			controls_state = 156
+			controls_state = 115
+			controls_state = 159
+			controls_state = 158
+			controls_state = 735
+			controls_state = 162
+			controls_state = 1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = ITA_SPRQ
+                        add_stability = 0.10
+			ITA = { country_event = { id = ita.7 } }
+			add_named_threat = { threat = 5 name = GER_rhineland }
+			set_flag = form_spqr
+
+			}
+			hidden_effect = {
+				news_event = { hours = 6 id = news.400 }
+		}
+	}
+	focus = {
+		id = ITA_Demand_Sardinia
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = ITA_A_united_Italy }
+		x = 12
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			SPA = { country_event = { id = i.1 } }
+			add_named_threat = { threat = 3 name = GER_rhineland }
+
+		}
+	}
+	
+	focus = {
+		id = ITA_Side_with_the_french
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = ITA_A_strong_state }
+		mutually_exclusive = { focus = ITA_Side_with_the_germans  }
+		x = 5
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = FRA 
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = ITA_Join_the_french_alliance
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = ITA_Betrayal_by_Germany }
+		x = 8
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+                        is_puppet = no
+	 		is_in_faction = no
+	 		has_war = no
+ 			HRE = {
+ 				exists = yes
+ 				is_faction_leader = yes
+ 			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			FRA = { country_event = { id = ita.4 } }
+		}
+	}
+	focus = {
+		id = ITA_Our_claims_in_Germany
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ITA_Join_the_french_alliance }
+		x = 8
+		y = 5
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        ITA = { add_state_claim = 102 }
+                        ITA = { add_state_claim = 153 }
+                        ITA = { add_state_claim = 152 }
+                        ITA = { add_state_claim = 4 }
+                        ITA = { add_state_claim = 151 }			
+		}
+	}
+
+	focus = {
+		id = ITA_Betrayal_by_Germany
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ITA_Come_to_an_agreement_with_the_germans }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+		        HRE = {
+                             controls_state = 159
+                             controls_state = 158
+                             controls_state = 735
+                             controls_state = 162
+                             controls_state = 1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        ITA = { add_state_core = 159 }
+                        ITA = { add_state_core = 158 }
+                        ITA = { add_state_core = 735 }
+                        ITA = { add_state_core = 162 }
+                        ITA = { add_state_core = 1 }
+			
+		}
+	}

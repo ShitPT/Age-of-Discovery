@@ -1,0 +1,25 @@
+
+state={
+	id=513
+	name="STATE_513"
+
+	history={
+		owner = TUN
+		add_core_of = TUN
+		victory_points = {
+			12034 1 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1128 3991 4018 4150 7008 7033 7040 7149 9960 10045 10059 12020 12888 
+	}
+	manpower=211486
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,36 @@
+add_namespace = italy
+
+country_event = {
+	id = italy.1
+	title = italy.1.t
+	desc = italy.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.1.a
+		ai_chance = { factor = 75 }
+		ITA = { 
+			transfer_state = 183
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = italy.1.b
+                ITA = {
+		create_wargoal = {
+			type = take_state
+			target = ENG
+			generator = { 183 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}

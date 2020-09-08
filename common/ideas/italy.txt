@@ -1,0 +1,21 @@
+ideas = {
+
+country = {
+
+		ITA_Protestantism = {
+			picture = generic_oppression
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				protestant_drift = 0.1
+			}
+		}

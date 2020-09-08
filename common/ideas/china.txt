@@ -1,0 +1,24 @@
+ideas = {
+
+country = {
+	partially_westernized_nation = {
+	
+		allowed = {
+			original_tag = CHI
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.10
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.10
+		}
+	}

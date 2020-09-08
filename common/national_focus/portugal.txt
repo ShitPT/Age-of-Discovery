@@ -1,0 +1,3821 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### 
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = portuguese_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = POR_colonial_plans
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 5
+		y = 0
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_travel_beyond_the_cape_of_good_hope
+		prerequisite = { focus = POR_colonial_plans }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 3
+		y = 1
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 704
+			navy_experience = 25
+		}
+	}
+	
+	focus = {
+		id = POR_establish_contact_with_ethiopia
+		prerequisite = { focus = POR_travel_beyond_the_cape_of_good_hope }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_contact_with_ethiopia
+		x = 1
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ETH
+				modifier = improving_relations
+			}
+			add_command_power = 30
+		}
+	}
+	
+	focus = {
+		id = POR_trade_with_ethiopia
+		prerequisite = { focus = POR_establish_contact_with_ethiopia }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = trading_with_ethiopia
+				days = 180
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_control_the_red_sea
+		prerequisite = { focus = POR_establish_contact_with_ethiopia }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_control_red_sea
+		x = 1
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 268
+		}
+	}
+	
+	focus = {
+		id = POR_trade_with_yemen
+		prerequisite = { focus = POR_control_the_red_sea }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_trade_with_yemen
+		x = 1
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = YEM
+				modifier = improving_relations
+			}
+			add_timed_idea = {
+				idea = trading_with_yemen
+				days = 180
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_trade_with_oman
+		prerequisite = { focus = POR_control_the_red_sea }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_trade_with_oman
+		x = -1
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = OMA
+				modifier = improving_relations
+			}
+			add_timed_idea = {
+				idea = trading_with_oman
+				days = 180
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_subjugate_oman_and_yemen
+		prerequisite = { focus = POR_trade_with_oman }
+		prerequisite = { focus = POR_trade_with_yemen }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_subjugate_yemen_oman
+		x = 0
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			YEM = {
+				country_event = {
+					id = portugal.6
+					days = 1
+				}
+			}
+			OMA = {
+				country_event = {
+					id = portugal.7
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_colonize_islands_in_the_indian_ocean
+		prerequisite = { focus = POR_travel_beyond_the_cape_of_good_hope }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_colonize_in_indian_ocean
+		x = 4
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 709
+			transfer_state = 710
+			transfer_state = 706
+		}
+	}
+	
+	focus = {
+		id = POR_expedition_to_india
+		prerequisite = { focus = POR_colonize_islands_in_the_indian_ocean }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_expedition_to_india
+		x = 4
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 321
+		}
+	}
+	
+	focus = {
+		id = POR_establish_the_portugal_india_company
+		prerequisite = { focus = POR_expedition_to_india }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_portugal_india_company
+		x = 5
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = portugal_india_company
+		}
+	}
+	
+		focus = {
+		id = POR_colonize_the_spice_islands
+		prerequisite = { focus = POR_expedition_to_india }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_colonize_spice_islands
+		x = 3
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 721
+		}
+	}
+
+	focus = {
+		id = POR_start_the_spice_trade
+		prerequisite = { focus = POR_colonize_the_spice_islands }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_start_the_spice_trade
+		x = 3
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = spice_trade
+		}
+	}
+	
+	focus = {
+		id = POR_invest_in_brazil
+		prerequisite = { focus = POR_colonial_plans }
+		available = {
+			controls_state = 809
+			controls_state = 811
+			controls_state = 810
+			controls_state = 832
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_invest_in_brazil
+		x = 8
+		y = 1
+
+		cost = 5
+		
+		completion_reward = {
+		809 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		811 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		810 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		808 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_infrastructure
+		prerequisite = { focus = POR_invest_in_brazil }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_infrastructure
+		x = 7
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			809 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			811 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			810 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			808 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_a_small_economy
+		prerequisite = { focus = POR_invest_in_brazil }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_civilian
+		x = 9
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+		809 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		811 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		810 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_millitary_factories
+		prerequisite = { focus = POR_invest_in_brazil }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_military
+		x = 11
+		y = 2
+
+		cost = 10
+	
+		completion_reward = {
+		809 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		811 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_expand_millitary_production
+		prerequisite = { focus = POR_build_millitary_factories }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_military_production
+		x = 11
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			808 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_expand_civilian_production
+		prerequisite = { focus = POR_build_a_small_economy }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_civilian
+		x = 9
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+		808 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_bring_portugal_companies
+		prerequisite = { focus = POR_build_infrastructure }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_portugal_companies
+		x = 7
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+		112 = {
+			add_manpower = -8000
+			}
+		810 = {
+			add_manpower = 3000
+			}
+		809 = {
+			add_manpower = 2000
+			}
+		808 = {
+			add_manpower = 3000
+			}			
+		}
+	}
+	
+	focus = {
+		id = POR_give_brazil_autonomy
+		prerequisite = { focus = POR_expand_civilian_production }
+		prerequisite = { focus = POR_expand_millitary_production }
+		prerequisite = { focus = POR_bring_portugal_companies }
+		mutually_exclusive = { focus = POR_integrate_brazil_into_the_empire }
+		available = {
+			controls_state = 809
+			controls_state = 810
+			ccontrols_state = 831
+			controls_state = 811
+			controls_state = 832
+			controls_state = 500
+			controls_state = 813
+			controls_state = 812
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_brazil_autonomy
+		x = 8
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			809 = {
+				add_core_of = BRA
+			}
+			810 = {
+				add_core_of = BRA
+			}
+			831 = {
+				add_core_of = BRA
+			}
+			811 = {
+				add_core_of = BRA
+			}
+			832 = {
+				add_core_of = BRA
+			}
+			500 = {
+				add_core_of = BRA
+			}
+			813 = {
+				add_core_of = BRA
+			}
+			812 = {
+				add_core_of = BRA
+			}
+			release_puppet = BRA
+		}
+	}
+	
+	focus = {
+		id = POR_integrate_brazil_into_the_empire
+		prerequisite = { focus = POR_expand_civilian_production }
+		prerequisite = { focus = POR_expand_millitary_production }
+		prerequisite = { focus = POR_bring_portugal_companies }
+		mutually_exclusive = { focus = POR_give_brazil_autonomy }
+		available = {
+			controls_state = 809
+			controls_state = 810
+			ccontrols_state = 831
+			controls_state = 811
+			controls_state = 832
+			controls_state = 500
+			controls_state = 813
+			controls_state = 812
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_integrate_brazil
+		x = 10
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_state_core = 809
+			add_state_core = 810
+			add_state_core = 831
+			add_state_core = 811
+			add_state_core = 832
+			add_state_core = 500
+			add_state_core = 813
+			add_state_core = 812
+		}
+	}
+	
+	focus = {
+		id = POR_colonize_the_islands_off_of_africa_coast
+		prerequisite = { focus = POR_colonial_plans }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_colonize_island_in_africa
+		x = 15
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 705
+			transfer_state = 703
+		}
+	}
+	
+	focus = {
+		id = POR_settle_in_the_ivory_coast
+		prerequisite = { focus = POR_colonial_plans }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_ivory_coast
+		x = 13
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 818
+		}
+	}
+	
+	focus = {
+		id = POR_establish_the_atlantic_slave_trade
+		prerequisite = { focus = POR_settle_in_the_ivory_coast }
+		prerequisite = { focus = POR_colonize_the_islands_off_of_africa_coast }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_atlantic_slave_trade
+		x = 14
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = atlantic_slave_trade
+		}
+	}
+	
+	focus = {
+		id = POR_convince_others_nations_to_join
+		prerequisite = { focus = POR_establish_trade_ports_in_america }
+		prerequisite = { focus = POR_use_slaves_for_work }
+		prerequisite = { focus = POR_establish_the_atlantic_slave_trade }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_invite_other_nations
+		x = 15
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			ENG = {
+				add_ideas = atlantic_slave_trade
+			}
+			HRE = {
+				add_ideas = atlantic_slave_trade
+			}
+			SPA = {
+				add_ideas = atlantic_slave_trade
+			}
+			FRA= {
+				add_ideas = atlantic_slave_trade
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_use_slaves_for_work
+		prerequisite = { focus = POR_establish_the_atlantic_slave_trade }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_use_slaves_for_work
+		x = 16
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = construction_slavery
+		}
+	}
+	
+	focus = {
+		id = POR_establish_trade_ports_in_america
+		prerequisite = { focus = POR_establish_the_atlantic_slave_trade }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_trade_ports_in_America
+		x = 12
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			transfer_state = 691
+		}
+	}
+	
+	focus = {
+		id = POR_transport_slaves_to_amaerica
+		prerequisite = { focus = POR_establish_trade_ports_in_america }
+		prerequisite = { focus = POR_use_slaves_for_work }
+		prerequisite = { focus = POR_establish_the_atlantic_slave_trade }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_transport_slaves
+		x = 13
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			818 = {
+				add_manpower = -300000
+			}
+			691 = {
+				add_manpower = 300000
+			}
+		}
+	}
+
+	focus = {
+		id = POR_choose_a_path
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_choose_a_path
+		x = 27
+		y = 0
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = POR_respect_the_treaty_of_tordesillas
+		prerequisite = { focus = POR_choose_a_path }
+		mutually_exclusive = { focus = POR_break_the_treaty_of_tordesillas }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_respect_treaty
+		x = 21
+		y = 1
+
+		cost = 5
+		
+		completion_reward = {
+			add_opinion_modifier = {
+			target = SPA
+			modifier = huge_increase
+			}
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_break_the_treaty_of_tordesillas
+		prerequisite = { focus = POR_choose_a_path }
+		mutually_exclusive = { focus = POR_respect_the_treaty_of_tordesillas }
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_break_treaty
+		x = 33
+		y = 1
+
+		cost = 5
+		
+		completion_reward = {
+		SPA = {
+			add_opinion_modifier = {
+			target = POR
+			modifier = unilateral_war
+			}
+		}
+			add_opinion_modifier = {
+			target = SPA
+			modifier = unilateral_war
+			}
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_begin_countering_castile_colonization
+		prerequisite = { focus = POR_break_the_treaty_of_tordesillas }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 32
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_colonization_tt
+		}
+	}
+	
+	focus = {
+		id = POR_break_ties_with_castile
+		prerequisite = { focus = POR_break_the_treaty_of_tordesillas }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 34
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+		SPA = {
+			add_opinion_modifier = {
+			target = POR
+			modifier = hostile_status
+			}
+		}
+			add_opinion_modifier = {
+			target = SPA
+			modifier = hostile_status
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_economy_boom
+		prerequisite = { focus = POR_break_the_treaty_of_tordesillas OR = POR_respect_the_treaty_of_tordesillas }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = GFX_goal_economy_boom
+		x = 27
+		y = 2
+
+		cost = 10
+		
+		completion_reward = {
+			add_timed_idea = {
+			idea = economy_boom
+			days = 360
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_expand_naval_production
+		prerequisite = { focus = POR_economy_boom }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 27
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_new_factories
+		prerequisite = { focus = POR_economy_boom }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 25
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_increase_millitary_spendings
+		prerequisite = { focus = POR_economy_boom }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 29
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_portugal_army
+		prerequisite = { focus = POR_expand_naval_production }
+		prerequisite = { focus = POR_increase_millitary_spendings}
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 28
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = portugal_army
+		}
+	}
+	
+	focus = {
+		id = POR_build_a_university
+		prerequisite = { focus = POR_build_new_factories }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = GFX_focus_research
+		x = 25
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = POR_reinvoke_the_anglo_portugese_alliance
+		prerequisite = { focus = POR_break_the_treaty_of_tordesillas }
+		mutually_exclusive = { focus = POR_go_solo}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			is_in_faction_with = ENG
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 40
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_rival_france
+		prerequisite = { focus = POR_reinvoke_the_anglo_portugese_alliance }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 40
+		y = 3
+
+		cost = 5
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = hostile_status
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_convince_england_to_rival_castile
+		prerequisite = { focus = POR_rival_france }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 40
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = SPA
+					modifier = hostile_status
+				}	
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_learn_navy_strategies
+		prerequisite = { focus = POR_convince_england_to_rival_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 39
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			create_navy_leader = {
+				name = "Fernando Mihaelo"
+				picture = "Portrait_France_Francois_Darlan.dds"
+				traits = { superior_tactician }
+				skill = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_train_with_england
+		prerequisite = { focus = POR_convince_england_to_rival_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 41
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+	
+	focus = {
+		id = POR_mare_nostrum
+		prerequisite = { focus = POR_train_with_england}
+		prerequisite = { focus = POR_learn_navy_strategies}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 40
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = mare_nostrum
+		}
+	}
+	
+	focus = {
+		id = POR_go_solo
+		prerequisite = { focus = POR_break_the_treaty_of_tordesillas }
+		mutually_exclusive = { focus = POR_reinvoke_the_anglo_portugese_alliance}
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 47
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_fortify_the_border
+		prerequisite = { focus = POR_go_solo }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 45
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			179 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			795 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			181 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			180 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_prepare_for_a_possible_invasion
+		prerequisite = { focus = POR_fortify_the_border }
+		prerequisite = { focus = POR_fortify_the_coast}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 47
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	
+	focus = {
+		id = POR_learn_defence_strategies
+		prerequisite = { focus = POR_prepare_for_a_possible_invasion }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 45
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = defence_strategies
+		}
+	}
+	
+	focus = {
+		id = arm_the_population
+		prerequisite = { focus = POR_prepare_for_a_possible_invasion }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_generic_small_arms
+		x = 47
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_fortify_the_capital
+		prerequisite = { focus = POR_prepare_for_a_possible_invasion }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 49
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 11805
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_conscript_men
+		prerequisite = { focus = POR_learn_defence_strategies}
+		prerequisite = { focus = arm_the_population}
+		prerequisite = { focus = fortify_the_capital}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 48
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = men_conscription
+		}
+	}
+	
+	focus = {
+		id = POR_train_generals
+		prerequisite = { focus = POR_learn_defence_strategies}
+		prerequisite = { focus = arm_the_population}
+		prerequisite = { focus = POR_fortify_the_capital}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 46
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_never_surrender
+		prerequisite = { focus = POR_train_generals}
+		prerequisite = { focus = POR_conscript_men}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 47
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = never_surrender
+		}
+	}
+	
+	focus = {
+		id = POR_fortify_the_coast
+		prerequisite = { focus = POR_go_solo }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 49
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 3790
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 11805
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 9817
+				}
+			}
+		}
+	}	
+	
+	focus = {
+		id = POR_embargo_castile
+		prerequisite = { focus = POR_break_ties_with_castile }
+		prerequisite = { focus = POR_begin_countering_castile_colonization }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 33
+		y = 3
+
+		cost = 5
+		
+		completion_reward = {
+		SPA = {
+			add_opinion_modifier = {
+			target = POR
+			modifier = embargo
+			}
+		}
+			add_opinion_modifier = {
+			target = SPA
+			modifier = embargo
+			}
+		}
+	}
+
+	focus = {
+		id = POR_raid_castile_coast
+		prerequisite = { focus = POR_begin_countering_castile_colonization }
+		prerequisite = { focus = POR_break_ties_with_castile }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			unlock_decision_category_tooltip = raid
+		}
+	}
+	
+	focus = {
+		id = POR_raid_castile_colonies
+		prerequisite = { focus = POR_raid_castile_coast }
+		prerequisite = { focus = POR_embargo_castile }
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 32
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			unlock_decision_category_tooltip = raid_colonies
+		}
+	}
+	
+	focus = {
+		id = POR_put_more_resources_into_colonization
+		prerequisite = { focus = POR_embargo_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_more_resources_into_colonization
+		x = 35
+		y = 4
+
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_colonization1_tt
+		}
+	}
+	
+	focus = {
+		id = POR_colonize_argentina
+		prerequisite = { focus = POR_put_more_resources_into_colonization}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_colonize_argentina
+		x = 34
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_colonization3_tt
+		}
+	}
+	
+	focus = {
+		id = POR_colonize_central_america
+		prerequisite = { focus = POR_put_more_resources_into_colonization}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_colonization2_tt
+		}
+	}
+	
+	focus = {
+		id = POR_expand_the_portugese_navy_even_more
+		prerequisite = { focus = POR_colonize_central_america}
+		prerequisite = { focus = POR_colonize_argentina}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_expand_portugese_navy
+		x = 35
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_defend_the_colonies_from_castile
+		prerequisite = { focus = POR_colonize_central_america}
+		prerequisite = { focus = POR_colonize_argentina}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_defend_colonies
+		x = 33
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+		809 = {
+			create_unit = {
+					division = "name = \"1. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"2. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"3. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"4. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"5. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"6. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"7. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			create_unit = {
+					division = "name = \"8. Divisão de Coloniale\" division_template = \"Divisão de Coloniale\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_conscript_the_natives
+		prerequisite = { focus = POR_colonize_central_america}
+		prerequisite = { focus = POR_colonize_argentina}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 37
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = natives_army
+		}
+	}
+	
+	focus = {
+		id = POR_propaganda_against_castile
+		prerequisite = { focus = POR_expand_the_portugese_navy_even_more}
+		prerequisite = { focus = POR_conscript_the_natives}
+		prerequisite = { focus = POR_defend_the_colonies_from_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_generic_propaganda
+		x = 36
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = POR_hurt_castile_reputation
+		prerequisite = { focus = POR_expand_the_portugese_navy_even_more}
+		prerequisite = { focus = POR_conscript_the_natives}
+		prerequisite = { focus = POR_defend_the_colonies_from_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 34
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+				target = SPA
+				modifier = bad_reputation
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+				target = SPA
+				modifier = bad_reputation
+				}
+			}
+			HRE = {
+				add_opinion_modifier = {
+				target = SPA
+				modifier = bad_reputation
+				}
+			}
+			TUR = {
+				add_opinion_modifier = {
+				target = SPA
+				modifier = bad_reputation
+				}
+			}
+			DEN = {
+				add_opinion_modifier = {
+				target = SPA
+				modifier = bad_reputation
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_morra_espanha
+		prerequisite = { focus = POR_propaganda_against_castile}
+		prerequisite = { focus = POR_hurt_castile_reputation}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 35
+		y = 8
+
+		cost = 10
+		completion_reward = {
+			add_ideas = morra_esphana
+		}
+	}
+	
+	focus = {
+		id = POR_create_unrest_in_castile
+		prerequisite = { focus = POR_raid_castile_colonies}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 30
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			SPA = {
+			add_timed_idea = {
+				idea = unrest
+				days = 360
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_prepare_a_galician_uprising
+		prerequisite = { focus = POR_create_unrest_in_castile}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				support_equipment > 99
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 30
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -100
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_supply_the_uprising
+		prerequisite = { focus = POR_prepare_a_galician_uprising}
+		available = {
+			has_equipment = {
+				infantry_equipment > 1999
+			}
+			has_equipment = {
+				support_equipment > 299
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -300
+			}
+			add_manpower = -100000
+		}
+	}
+	
+	focus = {
+		id = POR_sabotage_the_infrastructure
+		prerequisite = { focus = POR_prepare_a_galician_uprising}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 29
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			791 = {
+				damage_building = {
+				type = infrastructure
+				damage = 1
+				}
+			}
+			788 = {
+				damage_building = {
+				type = infrastructure
+				damage = 1
+				}
+			}
+			176 = {
+				damage_building = {
+				type = infrastructure
+				damage = 1
+				}
+			}
+			792 = {
+				damage_building = {
+				type = infrastructure
+				damage = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_arm_the_population
+		prerequisite = { focus = POR_prepare_a_galician_uprising}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_generic_small_arms
+		x = 31
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_start_the_uprising
+		prerequisite = { focus = POR_arm_the_population}
+		prerequisite = { focus = POR_sabotage_the_infrastructure}
+		prerequisite = { focus = POR_supply_the_uprising}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 29
+		y = 8
+
+		cost = 20
+		
+		completion_reward = {
+			SPA = {
+				country_event = {
+					id = portugal.1
+					days = 5
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = POR_intervene_in_the_uprising
+		mutually_exclusive = { focus = POR_support_the_uprising }
+		prerequisite = { focus = POR_start_the_uprising}
+		available = {
+			GLC = {
+				has_war_with = SPA
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 9
+
+		cost = 1
+		
+		completion_reward = {
+			add_to_war = { 
+				targeted_alliance = GLC 
+				enemy = SPA
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_peace_negations
+		prerequisite = { focus = POR_intervene_in_the_uprising}
+		mutually_exclusive = { focus = POR_peace_negationss }
+		available = {
+			always = no
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 10
+
+		cost = 5
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_peace2_tt
+		}
+	}
+	
+	focus = {
+		id = POR_support_the_uprising
+		prerequisite = { focus = POR_start_the_uprising}
+		mutually_exclusive = { focus = POR_intervene_in_the_uprising }
+		available = {
+			GLC = {
+				has_war_with = SPA
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 9
+
+		cost = 1
+		
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1500
+				target = GLC
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_calm_down_with_the_castile_hate
+		prerequisite = { focus = POR_support_the_uprising}
+		mutually_exclusive = { focus = POR_ally_the_galicians }
+		available = {
+		NOT = {
+			country_exists = GLC
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 24
+		y = 10
+
+		cost = 10
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = improving_relations
+			}
+			remove_ideas = morra_esphana
+		}
+	}
+	
+	focus = {
+		id = POR_ally_the_galicians
+		prerequisite = { focus = POR_support_the_uprising}
+		mutually_exclusive = { focus = POR_calm_down_with_the_castile_hate}
+		available = {
+			GLC = {
+				exists = yes
+				NOT = {
+					has_war_with = SPA
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 10
+
+		cost = 10
+		
+		completion_reward = {
+			puppet = GLC
+		}
+	}
+	
+	focus = {
+		id = POR_open_diplomatic_relations_with_castile
+		prerequisite = { focus = POR_calm_down_with_the_castile_hate}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 24
+		y = 11
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = POR_why_did_this_happen
+		prerequisite = { focus = POR_open_diplomatic_relations_with_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 23
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = improving_relations
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_how_did_this_happen
+		prerequisite = { focus = POR_open_diplomatic_relations_with_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 25
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = improving_relations
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_end_the_hate
+		prerequisite = { focus = POR_how_did_this_happen}
+		prerequisite = { focus = POR_why_did_this_happen}
+		available = {
+			POR = {
+				NOT = {
+					is_in_faction_with = ENG
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 24
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			create_faction = Iberia_alliance
+			POR = { add_to_faction = SPA }
+		}
+	}
+	
+	focus = {
+		id = POR_prepare_integrating_galicia
+		prerequisite = { focus = POR_ally_the_galicians}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 11
+
+		cost = 10
+		
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = POR_integrate_galicia_into_the_empire
+		prerequisite = { focus = POR_prepare_integrating_galicia}
+		available = {
+			GLC = {
+				is_puppet = yes
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = galicia_annexation
+				days = 360
+			}
+			annex_country = {
+				target = GLC
+				transfer_troops = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_the_new_portugese_empireee
+		prerequisite = { focus = POR_integrate_galicia_into_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 27
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = the_new_portugese_empiree
+		}
+	}
+	
+	focus = {
+		id = POR_make_peace_with_castile
+		prerequisite = { focus = POR_peace_negations}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 11
+
+		cost = 5
+		
+		completion_reward = {
+		add_ideas = { 
+			army_suspicionss
+			riots_in_the_streetss
+		}
+		add_timed_idea = {
+			idea = war_reparationss
+			days = 240
+		}
+		POR = {
+			add_building_construction = {
+				type = industrial_complex
+				level = -2
+				instant_build = yes
+			}
+		}
+		SPA = {
+			transfer_state = 697
+			transfer_state = 178
+			add_offsite_building = { type = industrial_complex level = 2 }
+			annex_country = { 
+				target = GLC
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_accept_castile_surrender
+		prerequisite = { focus = POR_peace_negationss}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 11
+
+		cost = 5
+		
+		completion_reward = {
+			transfer_state = 308
+			transfer_state = 694
+			transfer_state = 692
+			add_offsite_building = { type = industrial_complex level = 2 }
+			SPA = {
+			add_timed_idea = {
+				idea = war_reparationss
+				days = 240
+			}
+			add_building_construction = {
+					type = industrial_complex
+					level = -2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_peace_negationss
+		prerequisite = { focus = POR_intervene_in_the_uprising}
+		mutually_exclusive = { focus = POR_peace_negations }
+		available = {
+			always = no
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 10
+
+		cost = 5
+		
+		completion_reward = {
+			custom_effect_tooltip = POR_peace_tt
+		}
+	}
+	
+	focus = {
+		id = POR_pupet_galicia
+		prerequisite = { focus = POR_accept_castile_surrender}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			puppet = GLC
+		}
+	}
+	
+	focus = {
+		id = POR_begin_integrating_galicia_into_the_empire
+		prerequisite = { focus = POR_pupet_galicia}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = POR_integrate_galicia
+		prerequisite = { focus = POR_begin_integrating_galicia_into_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 14
+
+		cost = 10
+		
+		completion_reward = {
+			annex_country = {
+				target = GLC
+				transfer_troops = yes
+			}
+			add_timed_idea = {
+				idea = galicia_annexation
+				days = 360
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_reform_the_empire
+		prerequisite = { focus = POR_accept_castile_surrender}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 42
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = POR_reform_the_army
+		prerequisite = { focus = POR_reform_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 40
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			add_manpower = 5000
+			army_experience = 50
+			add_temporary_buff_to_units = {
+				combat_offense = 0.25
+				combat_breakthrough = 0.25
+				org_damage_multiplier = -1.0
+							
+				days = 150
+				tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_reform_the_navy
+		prerequisite = { focus = POR_reform_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 42
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			navy_experience = 100
+			add_manpower = 50000
+		}
+	}
+	
+	focus = {
+		id = POR_build_more_universities
+		prerequisite = { focus = POR_reform_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_research2
+		x = 44
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = POR_a_new_power_in_the_west
+		prerequisite = { focus = POR_build_more_universities}
+		prerequisite = { focus = POR_reform_the_navy}
+		prerequisite = { focus = POR_reform_the_army}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_a_new_power_in_the_west
+		x = 42
+		y = 14
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = a_new_power_in_the_west
+		}
+	}
+	
+	focus = {
+		id = POR_conquer_castile
+		prerequisite = { focus = POR_prove_the_world}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 42
+		y = 16
+
+		cost = 10
+		
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPA
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_prove_the_world
+		prerequisite = { focus = POR_a_new_power_in_the_west}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 42
+		y = 15
+
+		cost = 10
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_the_new_portugese_empireee
+		prerequisite = { focus = POR_conquer_castile}
+		prerequisite = { focus = POR_integrate_galicia}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 36
+		y = 17
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = the_new_portugese_empiree
+		}
+	}
+	
+	focus = {
+		id = POR_stabilise_the_empire
+		prerequisite = { focus = POR_make_peace_with_castile}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 12
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = POR_stop_the_riots
+		prerequisite = { focus = POR_stabilise_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			remove_ideas = riots_in_the_streetss
+		}
+	}
+	
+	focus = {
+		id = POR_purge_the_army
+		prerequisite = { focus = POR_stabilise_the_empire}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 33
+		y = 13
+
+		cost = 10
+		
+		completion_reward = {
+			remove_ideas = army_suspicionss
+		}
+	}
+	
+	focus = {
+		id = POR_give_colonies_autonomy
+		prerequisite = { focus = POR_purge_the_army}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 33
+		y = 14
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	
+	focus = {
+		id = POR_apologize_to_the_population
+		prerequisite = { focus = POR_stop_the_riots}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 14
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = POR_stabilty_in_the_country
+		prerequisite = { focus = POR_give_colonies_autonomy}
+		prerequisite = { focus = POR_apologize_to_the_population}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 32
+		y = 15
+
+		cost = 15
+		
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.2
+		}
+	}
+	
+	focus = {
+		id = POR_isolate_from_the_rest_of_the_world
+		prerequisite = { focus = POR_stabilty_in_the_country}
+		mutually_exclusive = { focus = POR_take_revenge}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 31
+		y = 16
+
+		cost = 10
+		
+		completion_reward = {
+			add_stability = 0.25
+		}
+	}
+	
+	focus = {
+		id = POR_take_revenge
+		prerequisite = { focus = POR_stabilty_in_the_country}
+		mutually_exclusive = { focus = POR_isolate_from_the_rest_of_the_world}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 33
+		y = 16
+
+		cost = 10
+		
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPA
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_increase_relations_with_spain
+		prerequisite = { focus = POR_respect_the_treaty_of_tordesillas}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_improve_relations_with_spain
+		x = 20
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = increased_relations
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_cooperate_with_spain
+		prerequisite = { focus = POR_respect_the_treaty_of_tordesillas}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_cooperate_with_spain
+		x = 22
+		y = 2
+
+		cost = 5
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPA
+				modifier = cooperation_with_spain
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_royale_marriage_between_our_nations
+		prerequisite = { focus = POR_increase_relations_with_spain}
+		prerequisite = { focus = POR_cooperate_with_spain}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_royal_marriage
+		x = 19
+		y = 3
+
+		cost = 10
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = SPA
+				relation = guarantee
+				active = yes
+			}
+		SPA = {	
+				diplomatic_relation = {
+					country = POR
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_sign_a_non_agression_pact
+		prerequisite = { focus = POR_increase_relations_with_spain}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_non_aggresion
+		x = 21
+		y = 3
+
+		cost = 5
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = SPA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_sign_the_militares_acesso_pact
+		prerequisite = { focus = POR_increase_relations_with_spain}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 23
+		y = 3
+
+		cost = 5
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = SPA
+				relation = military_access
+				active = yes
+			}
+		SPA = {	
+				diplomatic_relation = {
+					country = POR
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_military_exercise_between_our_nations
+		prerequisite = { focus = POR_sign_the_militares_acesso_pact}
+		prerequisite = { focus = POR_royale_marriage_between_our_nations}
+		prerequisite = { focus = POR_sign_a_non_agression_pact}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_millitary_exercise
+		x = 20
+		y = 4
+
+		cost = 5
+		
+		completion_reward = {
+			army_experience = 75
+			SPA = {
+			army_experience = 75
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_allow_merchants_to_trade_in_eachother_country
+		prerequisite = { focus = POR_sign_the_militares_acesso_pact}
+		prerequisite = { focus = POR_royale_marriage_between_our_nations}
+		prerequisite = { focus = POR_sign_a_non_agression_pact}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_allow_merchants_to_trade
+		x = 22
+		y = 4
+
+		cost = 5
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = SPA
+				relation = docking_rights
+				active = yes
+			}
+		SPA = {
+				diplomatic_relation = {
+					country = POR
+					relation = docking_rights
+					active = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_make_an_official_alliance
+		prerequisite = { focus = POR_military_exercise_between_our_nations}
+		prerequisite = { focus = POR_allow_merchants_to_trade_in_eachother_country}
+		mutually_exclusive = { focus = POR_help_just_in_case_of_war}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_oficial_alliance
+		x = 19
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			create_faction = Iberia_alliance
+			POR = { add_to_faction = SPA }
+		}
+	}
+	
+	focus = {
+		id = POR_help_just_in_case_of_war
+		prerequisite = { focus = POR_military_exercise_between_our_nations}
+		prerequisite = { focus = POR_allow_merchants_to_trade_in_eachother_country}
+		mutually_exclusive = { focus = POR_make_an_official_alliance}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_help_in_case_of_war
+		x = 23
+		y = 5
+
+		cost = 10
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = POR_propose_a_joint_military_treatyy
+		prerequisite = { focus = POR_help_just_in_case_of_war}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_por_army_expansion
+		x = 23
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = millitary_treaty
+			SPA = {
+				add_ideas = millitary_treaty
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_propose_a_joint_naval_treaty
+		prerequisite = { focus = POR_help_just_in_case_of_war}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_por_naval_expansion
+		x = 25
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = navy_treaty
+			SPA = {
+				add_ideas = navy_treaty
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_universitiess
+		prerequisite = { focus = POR_propose_a_joint_naval_treaty}
+		prerequisite = { focus = POR_propose_a_joint_military_treatyy}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_research2
+		x = 25
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+			SPA = {
+				add_research_slot = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_make_an_economic_programm
+		prerequisite = { focus = POR_propose_a_joint_naval_treaty}
+		prerequisite = { focus = POR_propose_a_joint_military_treatyy}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 23
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			41 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_share_technologyy
+		prerequisite = { focus = POR_build_universitiess}
+		prerequisite = { focus = POR_make_an_economic_programm}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 24
+		y = 8
+
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			SPA = {
+					add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = industry
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_propose_a_joint_military_treaty
+		prerequisite = { focus = POR_make_an_official_alliance}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_por_army_expansion
+		x = 19
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = millitary_treaty
+			SPA = {
+				add_ideas = millitary_treaty
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_propse_a_joint_naval_treaty
+		prerequisite = { focus = POR_make_an_official_alliance}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_por_naval_expansion
+		x = 17
+		y = 6
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = navy_treaty
+			SPA = {
+				add_ideas = navy_treaty
+			}
+		}
+	}
+
+	focus = {
+		id = POR_make_an_economic_program
+		prerequisite = { focus = POR_propose_a_joint_military_treaty}
+		prerequisite = { focus = POR_propse_a_joint_naval_treaty}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 15
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			41 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_build_universities
+		prerequisite = { focus = POR_propose_a_joint_military_treaty}
+		prerequisite = { focus = POR_propse_a_joint_naval_treaty}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_research2
+		x = 19
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+			SPA = {
+				add_research_slot = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_share_technology
+		prerequisite = { focus = POR_propose_a_joint_military_treaty}
+		prerequisite = { focus = POR_propse_a_joint_naval_treaty}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 17
+		y = 7
+
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			SPA = {
+					add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = industry
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_suggest_uniting_under_one_country
+		prerequisite = { focus = POR_share_technology}
+		prerequisite = { focus = POR_make_an_economic_program}
+		prerequisite = { focus = POR_build_universities}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 17
+		y = 8
+
+		cost = 10
+		
+		completion_reward = {
+			SPA = {
+			country_event = {
+					id = portugal.9
+					days = 5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_united_under_one_flag
+		prerequisite = { focus = POR_suggest_uniting_under_one_country}
+		mutually_exclusive = { focus = POR_friends_forever}
+		available = {
+			SPA = {
+				is_puppet_of = POR
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 14
+		y = 9
+
+		cost = 10
+		
+		completion_reward = {
+			POR = {
+				annex_country = {
+					target = SPA
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_friends_forever
+		prerequisite = { focus = POR_suggest_uniting_under_one_country}
+		mutually_exclusive = { focus = POR_united_under_one_flag}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 20
+		y = 9
+
+		cost = 10
+		
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = POR_proclaim_the_iberian_union
+		prerequisite = { focus = POR_united_under_one_flag}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 14
+		y = 10
+
+		cost = 10
+		
+		completion_reward = {
+			set_cosmetic_tag = SPA_Iberia
+		}
+	}
+	
+	focus = {
+		id = POR_the_iberian_pact
+		prerequisite = { focus = POR_friends_forever}
+		available = {
+			country_exists = ARA
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 20
+		y = 11
+
+		cost = 10
+		
+		completion_reward = {
+			POR = { add_to_faction = ARA }
+		}
+	}
+	
+	focus = {
+		id = POR_conquer_aragon
+		prerequisite = { focus = POR_proclaim_the_iberian_union}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 13
+		y = 11
+
+		cost = 10
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARA
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_expand_south
+		prerequisite = { focus = POR_proclaim_the_iberian_union}
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 15
+		y = 11
+
+		cost = 10
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOR
+			}
+		}
+	}

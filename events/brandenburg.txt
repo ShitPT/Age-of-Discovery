@@ -1,0 +1,98 @@
+add_namespace = brandenburg
+
+country_event = {
+	id = brandenburg.1
+	title = brandenburg.1.t
+	desc = brandenburg.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = brandenburg.1.a
+                add_manpower = 25000
+		BRN = { add_state_core = 64 }
+		BRN = { add_state_core = 68 }
+		64 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 5
+
+			      
+			}
+		}
+		68 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 4
+		        }
+		}
+	}
+}
+country_event = {
+	id = brandenburg.2
+	title = brandenburg.2.t
+	desc = brandenburg.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = brandenburg.2.a
+                add_manpower = 150000
+                add_ideas = BRN_Brandenburg_optimism
+		BRN = { add_state_core = 64 }
+		BRN = { add_state_core = 68 }
+		BRN = { add_state_core = 65 }
+		BRN = { add_state_core = 66 }
+		BRN = { add_state_core = 67 }
+		BRN = { add_state_core = 74 }
+		BRN = { add_state_core = 34 }
+		BRN = { add_state_core = 35 }
+		BRN = { add_state_core = 6 }
+		64 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 5			      
+			}
+		}
+		68 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 7
+			}
+		}
+		65 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 3
+			}
+		}
+		66 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 4
+			}
+		}
+		74 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BRN
+				allow_spawning_on_enemy_provs = no
+				count = 5
+		        }
+		}
+	}
+}

@@ -1,0 +1,94 @@
+
+raid_colonies = {
+	raid_cuba = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+			ROOT = {
+			has_completed_focus = POR_raid_castile_colonies
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		315 = {
+			damage_building = {
+			type = infrastructure
+			damage = 2
+			}
+		}
+	}
+}
+
+raid_haiti = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+			ROOT = {
+			has_completed_focus = POR_raid_castile_colonies
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		318 = {
+			damage_building = {
+			type = infrastructure
+			damage = 2
+			}
+		}
+	}
+}
+
+raid_dominican_republic = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+			ROOT = {
+			has_completed_focus = POR_raid_castile_colonies
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		319 = {
+			damage_building = {
+			type = infrastructure
+			damage = 2
+			}
+		}
+	}
+}

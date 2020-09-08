@@ -1,0 +1,1136 @@
+
+add_namespace = holyroman
+
+country_event = {
+	id = holyroman.1
+	title = holyroman.1.t
+	desc = holyroman.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.1.b
+		HRE = { 
+			transfer_state = 331
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.1.c
+		HRE = { 
+			transfer_state = 299
+			transfer_state = 278
+                        transfer_state = 512
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = holyroman.2
+	title = holyroman.2.t
+	desc = holyroman.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.2.b
+		HRE = { 
+			transfer_state = 300
+			transfer_state = 510
+			transfer_state = 511
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.2.c
+		HRE = { 
+			transfer_state = 466
+			transfer_state = 468
+			transfer_state = 659
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = holyroman.3
+	title = holyroman.3.t
+	desc = holyroman.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.3.a
+		HRE = { 
+			transfer_state = 422
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.3.b
+		HRE = { 
+			transfer_state = 672
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.3.c
+		HRE = { 
+			transfer_state = 524
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {
+	id = holyroman.4
+	title = holyroman.4.t
+	desc = holyroman.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.4.a
+		HRE = { 
+			transfer_state = 623
+			transfer_state = 327
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.4.b
+		HRE = { 
+			transfer_state = 527
+			transfer_state = 525
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.4.c
+		HRE = { 
+			transfer_state = 723
+			transfer_state = 284
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {
+	id = holyroman.5
+	title = holyroman.5.t
+	desc = holyroman.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.5.a
+		HRE = { 
+			transfer_state = 779
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.5.b
+		HRE = { 
+			transfer_state = 559
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.5.c
+		HRE = { 
+			transfer_state = 540
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = holyroman.6
+	title = holyroman.6.t
+	desc = holyroman.6.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.6.a
+		HRE = { 
+			transfer_state = 274
+                        transfer_state = 777
+                        transfer_state = 776
+                        transfer_state = 558
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.6.b
+		HRE = { 
+			transfer_state = 269
+                        transfer_state = 268
+                        transfer_state = 550
+                        transfer_state = 271
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.6.c
+		HRE = { 
+			transfer_state = 541
+                        transfer_state = 295
+                        transfer_state = 681
+                        transfer_state = 538
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+#Empire Disolvation Austria
+country_event = {
+	id = holyroman.8
+	title = holyroman.8.t
+	desc = holyroman.8.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.8.a
+		159 = {
+			remove_core_of = HRE
+			
+		}
+		158 = {
+			remove_core_of = HRE
+			
+		}
+		162 = {
+			remove_core_of = HRE
+			
+		}
+		1 = {
+			remove_core_of = HRE
+			
+		}
+		735 = {
+			remove_core_of = HRE
+			
+		}
+		BRN = { 
+			transfer_state = 64
+			transfer_state = 68
+                }
+		SAX = { 
+			transfer_state = 65
+		}
+		SCH = { 
+			transfer_state = 66
+			transfer_state = 67
+		}
+		HAN = { 
+			transfer_state = 59
+			transfer_state = 57
+			transfer_state = 56
+		}
+		HOL = { 
+			transfer_state = 36
+			transfer_state = 7
+			transfer_state = 35
+			transfer_state = 6
+			transfer_state = 34
+		}
+		BAY = { 
+			transfer_state = 52
+			transfer_state = 50
+			transfer_state = 53
+			transfer_state = 54
+		}
+		MOS = { 
+			transfer_state = 42
+			transfer_state = 28
+			transfer_state = 8
+		}
+		HES = { 
+			transfer_state = 55
+			transfer_state = 51
+			transfer_state = 60
+		}
+		MEK = { 
+			transfer_state = 61
+			transfer_state = 62
+		}
+		PRS = { 
+			transfer_state = 63
+			transfer_state = 85
+			transfer_state = 5
+			transfer_state = 763
+		}
+		SWI = { 
+			transfer_state = 3
+			transfer_state = 151
+		}
+		ITA = { 
+			transfer_state = 159
+			transfer_state = 158
+			transfer_state = 162
+			transfer_state = 1
+			transfer_state = 735
+		}
+		hidden_effect = {
+			BRN = { country_event = { id = brandenburg.1 } }
+			MOS = { country_event = { id = moselland.1 } }
+			BAY = { country_event = { id = bavaria.1 } }
+			SCH = { country_event = { id = schleisen.1 } }
+			PRS = { country_event = { id = prussia.5 } }
+			HRE = { country_event = { id = holyroman.22 } }
+
+		}
+	}
+}
+#Empire Disolvation Prussia
+country_event = {
+	id = holyroman.11
+	title = holyroman.11.t
+	desc = holyroman.11.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.11.a
+		159 = {
+			remove_core_of = HRE
+			
+		}
+		158 = {
+			remove_core_of = HRE
+			
+		}
+		162 = {
+			remove_core_of = HRE
+			
+		}
+		1 = {
+			remove_core_of = HRE
+			
+		}
+		735 = {
+			remove_core_of = HRE
+			
+		}
+		BRN = { 
+			transfer_state = 64
+			transfer_state = 68
+                }
+		SAX = { 
+			transfer_state = 65
+		}
+		SCH = { 
+			transfer_state = 66
+			transfer_state = 67
+		}
+		HAN = { 
+			transfer_state = 59
+			transfer_state = 57
+			transfer_state = 56
+		}
+		HOL = { 
+			transfer_state = 36
+			transfer_state = 7
+			transfer_state = 35
+			transfer_state = 6
+			transfer_state = 34
+		}
+		BAY = { 
+			transfer_state = 52
+			transfer_state = 50
+			transfer_state = 53
+			transfer_state = 54
+		}
+		MOS = { 
+			transfer_state = 42
+			transfer_state = 28
+			transfer_state = 8
+		}
+		HES = { 
+			transfer_state = 55
+			transfer_state = 51
+			transfer_state = 60
+		}
+		MEK = { 
+			transfer_state = 61
+			transfer_state = 62
+		}
+		AUS = { 
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+			transfer_state = 102
+			transfer_state = 69
+			transfer_state = 9
+			transfer_state = 74
+			transfer_state = 75
+		}
+		SWI = { 
+			transfer_state = 3
+			transfer_state = 151
+		}
+		ITA = { 
+			transfer_state = 159
+			transfer_state = 158
+			transfer_state = 162
+			transfer_state = 1
+			transfer_state = 735
+                }
+ 		HRE = { 
+			transfer_state = 85
+			transfer_state = 5
+			transfer_state = 763
+		}
+		hidden_effect = {
+			AUS = { country_event = { id = aus.5 } }
+			BRN = { country_event = { id = brandenburg.1 } }
+			MOS = { country_event = { id = moselland.1 } }
+			BAY = { country_event = { id = bavaria.1 } }
+			SCH = { country_event = { id = schleisen.1 } }
+			AUS = { country_event = { id = holyroman.22 } }
+		}
+	}
+}
+country_event = {
+	id = holyroman.9
+	title = holyroman.9.t
+	desc = holyroman.9.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+ 	immediate = {
+ 		hidden_effect = {
+ 			add_named_threat = { threat = 3 name = holyroman.9.t }
+ 		} 		
+ 	}
+
+	option = {
+		name = holyroman.9.a
+		ai_chance = { factor = 100 }
+		70 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		109 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		104 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		107 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		HUN = {
+			every_unit_leader = {
+				set_nationality = HRE
+			}
+		}
+		HRE = { annex_country = { target = HUN transfer_troops = yes }
+		add_political_power = 75
+		set_country_flag = AUS_annexed
+		add_war_support = 0.1
+		add_stability = 0.05
+		HRE = { country_event = { id = holy.10 } }
+	}
+}
+	option = {
+		name = holyroman.9.b
+		ai_chance = { factor = 0 }
+                HRE = {
+		create_wargoal = {
+			type = annex_everything
+			target = HUN
+			generator = { 155 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+
+#Schleswig-Holstein or war
+country_event = {
+	id = holyroman.14
+	title = holyroman.14.t
+	desc = holyroman.14.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.14.a
+		ai_chance = { factor = 100 }
+		HRE = { 
+			transfer_state = 58
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.14.b
+                HRE = {
+		create_wargoal = {
+			type = take_state
+			target = DEN
+			generator = { 58 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+#Demand Poznan
+country_event = {
+	id = holyroman.15
+	title = holyroman.15.t
+	desc = holyroman.15.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.15.a
+		ai_chance = { factor = 90 }
+		HRE = { 
+			transfer_state = 86
+			transfer_state = 188
+
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.15.b
+                HRE = {
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 86 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+#Annex Hannover
+country_event = {
+	id = holyroman.16
+	title = holyroman.16.t
+	desc = holyroman.16.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.16.a
+		ai_chance = { factor = 50 }
+		HRE = { 
+			transfer_state = 59
+			transfer_state = 56
+			transfer_state = 57
+
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.16.b
+		ai_chance = { factor = 50 }
+                HRE = {
+		create_wargoal = {
+			type = annex_everything
+			target = HAN
+			generator = { 59 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+
+country_event = {
+	id = holyroman.12
+	title = holyroman.12.t
+	desc = holyroman.12.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Move to Königsberg
+	option = {
+		name = holyroman.12.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { 64 = { is_controlled_by = HRE } }
+			}
+		}
+		trigger = {
+
+		}
+		set_capital = 763
+						
+		
+	}
+}
+
+country_event = {
+	id = holyroman.17
+	title = holyroman.17.t
+	desc = holyroman.17.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.17.a
+		ai_chance = { factor = 0 }
+		HRE = { 
+			transfer_state = 103
+			transfer_state = 163
+			transfer_state = 736
+			transfer_state = 39
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.17.b
+		ai_chance = { factor = 100 }
+		HRE = { 
+		       declare_war_on = {
+				target = ITA
+				type = annex_everything
+				generator = { 103 }
+
+                                }
+                        }
+		}
+		hidden_effect = {
+	
+	}
+}
+country_event = {
+	id = holyroman.18
+	title = holyroman.18.t
+	desc = holyroman.18.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = ITA
+		has_war_with = HRE
+		surrender_progress > 0.35
+		has_civil_war = no
+                HRE = { 
+                    controls_state = 104
+		}
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = holyroman.18.a
+		ai_chance = {
+			base = 100
+		}
+		HRE = {
+			country_event = { id = holyroman.19 }
+		}
+		effect_tooltip = {
+			ITA = { 
+				white_peace = {
+					tag = HRE 
+				} 
+			}
+                        HRE = { 
+			     transfer_state = 103
+			     transfer_state = 163
+			     transfer_state = 736
+			     transfer_state = 39
+			     transfer_state = 160
+
+			if = {
+				limit = {
+					
+					}
+				}
+				ITA = { remove_state_core = 103 }
+				ITA = { remove_state_core = 163 }
+				ITA = { remove_state_core = 736 }
+				ITA = { remove_state_core = 39 }
+				ITA = { remove_state_core = 160 }
+			        }
+			}
+		}
+	}
+	#Never give up!
+	option = {
+		name = holyroman.18.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = holyroman.19
+	title = holyroman.19.t
+	desc = holyroman.19.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = holyroman.19.a
+		ai_chance = {
+			base = 10
+		}
+		white_peace = ITA
+		HRE = { transfer_state = 163 }  
+		HRE = { transfer_state = 103 }  
+		HRE = { transfer_state = 736 }  
+		HRE = { transfer_state = 39 } 
+		HRE = { transfer_state = 160 }  
+		if = {
+			limit = {
+
+				}
+			}
+		ITA = { remove_state_core = 163 }  
+		ITA = { remove_state_core = 103 } 
+		ITA = { remove_state_core = 736 } 
+		ITA = { remove_state_core = 39 } 
+		ITA = { remove_state_core = 160 } 
+
+		}
+		ITA = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "HRE"			
+				value = 200
+		hidden_effect = {
+                        }
+			news_event = { id = news.409 }	
+
+
+		}
+	}
+}
+country_event = {
+	id = holyroman.20
+	title = holyroman.20.t
+	desc = holyroman.20.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.20.a
+		ai_chance = {
+			base = 50
+		}
+                HRE = {
+		puppet = ITA
+	}
+}
+	option = {
+		name = holyroman.20.b
+		ai_chance = {
+			base = 50
+		}
+                HRE = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ITA
+			generator = { 162 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+country_event = {
+	id = holyroman.21
+	title = holyroman.21.t
+	desc = holyroman.21.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.21.a
+		ai_chance = {
+			base = 0
+		}
+                HRE = {
+		puppet = SCH
+	}
+}
+	option = {
+		name = holyroman.21.b
+		ai_chance = {
+			base = 100
+		}
+		HRE = { 
+			transfer_state = 67
+			transfer_state = 66		
+		
+	}
+}
+	option = {
+		name = holyroman.21.c
+		ai_chance = { factor = 0 }
+		HRE = { 
+		       declare_war_on = {
+				target = SCH
+				type = annex_everything
+				generator = { 67 }
+
+                                }
+                        }
+		}
+		hidden_effect = {
+	
+	}
+}
+country_event = {
+	id = holyroman.22
+	title = holyroman.22.t
+	desc = holyroman.22.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Move to Wien
+	option = {
+		name = holyroman.22.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		set_capital = 4					
+		
+	}
+}
+#Prussia proposes alliance
+country_event = {
+	id = holyroman.23
+	title = holyroman.23.t
+	desc = holyroman.23.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = holyroman.23.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		PRS = {
+			country_event = { id = prussia.2 }		
+	}
+}
+	#No
+	option = {
+		name = holyroman.23.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		PRS = {
+			country_event = { id = prussia.6 }
+        	}		
+	}
+}
+
+#Prussia proposes alliance
+country_event = {
+	id = holyroman.24
+	title = holyroman.24.t
+	desc = holyroman.24.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = holyroman.24.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		HRE = {
+			country_event = { id = hre.1 }		
+	}
+}
+	#No
+	option = {
+		name = holyroman.24.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		HRE = {
+			country_event = { id = prussia.6 }
+        	}		
+	}
+}
+country_event = {
+	id = holyroman.7
+	title = holyroman.7.t
+	desc = holyroman.7.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = HRE
+		date > 1501.2.1
+		has_start_date < 1500.01.02
+                has_completed_focus = HRE_Devalue_the_currency
+                
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 1.0
+			date > 1501.2.1
+
+		}
+	}
+	option = {
+		name = holyroman.7.a
+		ai_chance = { factor = 0 }
+		AUS = { 
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+			transfer_state = 102
+		}
+		hidden_effect = {
+	}
+}
+	option = {
+		name = holyroman.7.b
+		ai_chance = { factor = 100 }
+		AUS = {
+			country_event = { id = austria.1 }
+		AUS = { 
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+			transfer_state = 102
+		HRE = { 
+                create_wargoal = {
+			type = take_state
+			target = AUS
+			generator = { 153 }
+		}
+		hidden_effect = {
+		}
+	}
+}

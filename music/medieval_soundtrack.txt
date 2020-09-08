@@ -1,0 +1,26 @@
+music_station = "medieval"
+
+music = {
+	song = "village"
+	
+}
+
+music = {
+	song = "construction"
+	
+}
+
+music = {
+	song = "coffin"
+	
+}
+
+music = {
+	song = "egypt"
+	
+}
+
+music = {
+	song = "viking"
+	
+}

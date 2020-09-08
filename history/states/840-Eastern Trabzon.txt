@@ -1,0 +1,22 @@
+
+state={
+	id=840
+	name="STATE_840"
+
+	history={
+		owner = AQQ
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = AQQ
+
+	}
+
+	provinces={
+		789 6976 6991 9886 10472 
+	}
+	manpower=340000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

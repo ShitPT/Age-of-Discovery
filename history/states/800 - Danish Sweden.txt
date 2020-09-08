@@ -1,0 +1,37 @@
+state={
+	id=800
+	name="STATE_800"
+	resources={
+		aluminium=3 # was: 20.000
+	}
+
+	state_category = town
+
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 2
+			air_base = 0
+			6361 = {
+				naval_base = 6
+			}
+
+		}
+		add_core_of = DEN
+		add_core_of = SWE
+		victory_points = {
+			383 5 
+		}
+
+	}
+
+	provinces={
+		3386 383 6310 171
+	}
+	manpower=21000
+	buildings_max_level_factor=1.000
+}

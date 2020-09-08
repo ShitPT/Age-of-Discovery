@@ -1,0 +1,495 @@
+###########################
+# News Events
+###########################
+
+add_namespace = news
+
+news_event = {
+	id = news.400
+	title = news.400.t
+	desc = news.400.d
+	picture = news_event_001
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.400.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+
+			}
+		}
+	}
+	option = {
+		name = news.400.b
+		trigger = {
+			NOT = {
+				TAG = ITA
+
+			}
+		}
+	}
+	option = {
+		name = news.400.c
+		trigger = { TAG = ITA }
+		
+	}
+}
+
+news_event = {
+	id = news.402
+	title = news.402.t
+	desc = news.402.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.402.a
+		trigger = {
+			NOT = { original_tag = MAN }
+		}
+	}
+	option = {
+		name = news.402.b
+		trigger = { 
+			original_tag = MAN
+		}
+	}
+}
+
+news_event = {
+	id = news.403
+	title = news.403.t
+	desc = news.403.d
+	picture = GFX_news_event_generic_parliament
+	
+	is_triggered_only = yes
+
+	option = {
+		name = news.403.a
+		trigger = {
+			NOT = {
+				TAG = TUR
+		}
+	}
+
+	option = { 
+		name = news.403.b
+		trigger = { 
+			TAG = TUR
+                        }
+                }
+	}
+}
+news_event = {
+	id = news.404
+	title = news.404.t
+	picture = GFX_news_event.404
+	desc = news.404.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.404.a
+		trigger = {
+			OR = {
+				tag = HRE
+				tag = DEN
+			}
+		}
+	}
+
+	option = {
+		name = news.404.b
+		trigger = {
+			DEN = {
+				has_war = no
+			}
+			NOT = {
+				OR = {
+					tag = FRA
+					tag = DEN
+					tag = HRE
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = news.405
+	title = news.405.t
+	picture = GFX_news_event.404
+	desc = news.405.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.405.a
+		trigger = {
+			OR = {
+				tag = HRE
+				tag = PRS
+				tag = AUS
+			}
+		}
+	}
+
+	option = {
+		name = news.405.b
+		trigger = {
+			}
+			NOT = {
+				OR = {
+					tag = HRE
+					tag = AUS
+					tag = PRS
+				
+			}
+		}
+	}
+}
+news_event = {
+	id = news.406
+	title = news.406.t
+	picture = GFX_news_event.406
+	desc = news.406.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.406.a
+		trigger = {
+			OR = {
+				tag = TUR
+				tag = FRA
+			}
+		}
+	}
+
+	option = {
+		name = news.406.b
+		trigger = {
+			}
+			NOT = {
+				OR = {
+					tag = TUR
+					tag = FRA
+			}
+		}
+	}
+}
+news_event = {
+	id = news.407
+	title = news.407.t
+	picture = GFX_news_event.406
+	desc = news.407.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.407.a
+		trigger = {
+			OR = {
+				tag = TUR
+				tag = HRE
+			}
+		}
+	}
+
+	option = {
+		name = news.407.b
+		trigger = {
+			}
+			NOT = {
+				OR = {
+					tag = TUR
+					tag = HRE
+			}
+		}
+	}
+}
+news_event = {
+	id = news.408
+	title = news.408.t
+	picture = GFX_news_event.408
+	desc = news.408.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.408.a
+		trigger = {
+			tag = HRE
+			
+		}
+	}
+
+	option = {
+		name = news.408.b
+		trigger = {
+			}
+			NOT = {
+				tag = HRE
+			
+		}
+	}
+}
+news_event = {
+	id = news.409
+	title = news.409.t
+	picture = GFX_news_event.409
+	desc = news.409.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.409.a
+		trigger = {
+			tag = HRE
+			
+		}
+	}
+
+	option = {
+		name = news.409.b
+		trigger = {
+			}
+			NOT = {
+				tag = HRE
+			
+		}
+	}
+}
+
+news_event = {
+	id = news.410
+	title = news.410.t
+	picture = GFX_news_event.410
+	desc = news.410.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.410.a
+		trigger = {
+			tag = HRE
+			tag = ITA
+		        }	
+		}
+	}
+
+	option = {
+		name = news.410.b
+		trigger = {
+			}
+			NOT = {
+				tag = HRE
+				tag = ITA
+                        }
+                }
+	}
+}
+
+news_event = {
+	id = news.411
+	title = news.411.t
+	picture = GFX_news_event.411
+	desc = news.411.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.411.a
+		trigger = {
+			tag = HRE	
+		}
+	}
+
+	option = {
+		name = news.411.b
+		trigger = {
+			}
+			NOT = {
+				tag = HRE
+				tag = ITA
+		}
+	}
+}
+
+news_event = {
+	id = news.412
+	title = news.412.t
+	picture = GFX_news_event.412
+	desc = news.412.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.412.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = TCO
+				TAG = UK1
+			}
+		}
+	}
+
+	option = {
+		name = news.412.b
+		trigger = { TAG = ENG }	
+	}
+	option = {
+		name = news.412.c
+		trigger = { TAG = TCO }
+	}
+	option = {
+		name = news.412.e
+		trigger = { TAG = UK1 }
+	}
+}
+
+news_event = {
+	id = news.413
+	title = news.413.t
+	picture = GFX_news_event.413
+	desc = news.413.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.413.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = UK1
+			}
+		}
+	}
+
+	option = {
+		name = news.413.b
+		trigger = { TAG = ENG }	
+	}
+	option = {
+		name = news.413.c
+		trigger = { TAG = UK1 }
+	}
+}
+news_event = {
+	id = news.414
+	title = news.414.t
+	picture = GFX_news_event.414
+	desc = news.414.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.414.a
+		trigger = {
+			NOT = {
+				TAG = SPA
+				TAG = ENG
+			}
+		}
+	}
+
+	option = {
+		name = news.414.b
+		trigger = { TAG = ENG }	
+	}
+	option = {
+		name = news.414.c
+		trigger = { TAG = SPA }
+	}
+}
+news_event = {
+	id = news.415
+	title = news.415.t
+	picture = GFX_news_event.415
+	desc = news.415.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.415.a
+		trigger = {
+			NOT = {
+				TAG = SPA
+				TAG = ENG
+			}
+		}
+	}
+
+	option = {
+		name = news.415.b
+		trigger = { TAG = ENG }	
+	}
+	option = {
+		name = news.415.c
+		trigger = { TAG = SPA }
+	}
+}
+
+news_event = {
+	id = news.401
+	title = news.401.t
+	desc = news.401.d
+	picture = GFX_news_event_generic_parliament
+
+        fire_only_once = yes
+	
+	trigger = {
+                DEN = has_completed_focus = DEN_Take_control_in_Sweden
+
+	option = {
+		name = news.401.a
+		trigger = {
+			NOT = {
+				TAG = DEN
+		}
+	}
+	option = {
+		name = news.401.b
+		trigger = { 
+			NOT = {
+				TAG = DEN
+		}
+	}
+	option = { 
+		name = news.401.c
+		trigger = { 
+			TAG = DEN
+                        
+                }
+	}
+}
+

@@ -1,0 +1,26 @@
+state={
+	id=812
+	name="STATE_812"
+	
+	resources={
+		steel=17
+	}
+	
+	history={
+		owner = BUC
+		add_core_of = BUC
+		buildings = {
+			infrastructure = 4
+			10874 = {
+				naval_base = 1
+
+			}
+		}
+	}
+	provinces={
+		10874 
+	}
+	manpower=80000
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

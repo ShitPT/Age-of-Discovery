@@ -1,0 +1,18 @@
+focus_tree = {
+	id = sov_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = SOV
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = yes

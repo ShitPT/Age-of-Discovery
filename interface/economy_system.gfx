@@ -1,0 +1,38 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_economysystem1"
+		texturefile = "gfx/interface/economy_system1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_economysystem2"
+		texturefile = "gfx/interface/economy_system2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_economysystembackground"
+		texturefile = "gfx/interface/economysystembackground.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_economysystemframe"
+		texturefile = "gfx/interface/economy_frame.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_economysystemtopbar"
+		texturefile = "gfx/interface/topbar/toolbar/topbar_economyview_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_taxesbutton"
+		texturefile = "gfx/interface/unitcontrol/77x31_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_taxesborder"
+		texturefile = "gfx/interface/taxes_border.dds"
+	}
+}
+	

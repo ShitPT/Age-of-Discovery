@@ -1,0 +1,19 @@
+add_namespace = startevent
+
+country_event = {
+	id = startevent.1
+	title = startevent.1.t
+	desc = startevent.1.d
+	picture = GFX_news_event_generic_naval_treaty
+
+	is_triggered_only = yes
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = startevent.1.a
+
+		}
+	}
+}

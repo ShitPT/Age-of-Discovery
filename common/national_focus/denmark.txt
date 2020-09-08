@@ -1,0 +1,788 @@
+focus_tree = {
+	id = den_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = DEN
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = DEN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = DEN_A_great_union
+		icon = GFX_goal_generic_improve_relations
+		x = 8
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+                        add_stability = 0.05
+                        add_war_support = 0.05
+                        add_ideas = military_youth_focus
+		}
+	}
+	focus = {
+		id = DEN_Side_with_the_germans
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = DEN_A_great_union }
+		mutually_exclusive = { focus = DEN_Side_with_the_french }
+		x = 10
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = HRE 
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = DEN_Join_the_germans
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = DEN_Side_with_the_germans }
+		mutually_exclusive = { focus = DEN_Take_Schleswig_back }
+		x = 12
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+                        controls_state = 58
+                        is_puppet = no
+	 		is_in_faction = no
+	 		}
+	 		has_war = no
+ 			HRE = {
+ 				exists = yes
+ 				is_faction_leader = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			HRE = { country_event = { id = denmark.5 } }
+		}
+	}
+	focus = {
+		id = DEN_Take_Schleswig_back
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = DEN_Side_with_the_germans }
+		mutually_exclusive = { focus = DEN_Join_the_germans }
+		x = 12
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+                        HRE = { 
+                                controls_state = 58
+	 		}
+ 			HRE = {
+	 		        has_war = yes
+	 		}
+ 			FRA = {
+ 				exists = yes
+ 				is_faction_leader = yes
+ 			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			FRA = { country_event = { id = denmark.5 } }
+		}
+	}
+
+	focus = {
+		id = DEN_Side_with_the_french
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = DEN_A_great_union }
+		mutually_exclusive = { focus = DEN_Side_with_the_germans }
+		x = 6
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = FRA
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = DEN_Take_control_in_Sweden
+		icon = GFX_focus_kalmar_union
+		prerequisite = { focus = DEN_Help_sweden }
+		x = 8
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 50
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			annex_country = { target = SWE transfer_troops = yes }
+                        add_named_threat = { threat = 5 name = GER_rhineland }
+			set_cosmetic_tag = DEN_KALMAR
+			140 = { add_core_of = ROOT }
+			139 = { add_core_of = ROOT }
+			141 = { add_core_of = ROOT }
+			38 = { add_core_of = ROOT }
+			666 = { add_core_of = ROOT }
+			148 = { add_core_of = ROOT }
+			149 = { add_core_of = ROOT }
+			111 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { hours = 6 id = news.401 }
+		}
+	} 
+
+	focus = {
+		id = DEN_The_will_of_the_king
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = DEN_Side_with_the_germans }
+		x = 10
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 0.10
+                        add_ideas = DEN_The_will_of_the_King
+
+		}
+	} 
+	focus = {
+		id = DEN_Jobs_for_the_peasants
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = DEN_The_will_of_the_king }
+		x = 10
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_More_money_to_the_army
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = DEN_Jobs_for_the_peasants }
+		x = 10
+		y = 4
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_stability = -0.10
+                        add_equipment_to_stockpile = {
+
+                            type = infantry_equipment_1
+
+                            amount = 20000
+
+                        }
+		}
+	}
+	focus = {
+		id = DEN_Gain_trust_by_the_union_again
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = DEN_More_money_to_the_army }
+		x = 9
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_timed_idea = { idea = FRA_constitutional_revision days = 365 }
+		}
+	}
+	focus = {
+		id = DEN_War_plan_France
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = DEN_Gain_trust_by_the_union_again }
+		x = 9
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			unlock_decision_tooltip = { decision = USA_execute_war_plan_gold show_effect_tooltip = yes show_modifiers = yes }
+                        DEN = { add_state_claim = 15 }
+                        DEN = { add_state_claim = 14 }
+                        DEN = { add_state_claim = 30 }
+                        DEN = { add_state_claim = 23 }
+		}
+	}
+	focus = {
+		id = DEN_Prepare_for_a_great_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = DEN_More_Weapons }
+		x = 8
+		y = 9
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = PRC_focus_on_china
+		}
+	}
+	focus = {
+		id = DEN_Adapt_nordic_mythology_again
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = DEN_More_money_to_the_army }
+		x = 11
+		y = 6
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 1.0
+		}
+	}
+	focus = {
+		id = DEN_Take_our_land_in_the_east
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DEN_Adapt_nordic_mythology_again }
+		x = 11
+		y = 7
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = LAT }
+		}
+	}
+	focus = {
+		id = DEN_More_Weapons
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DEN_Take_our_land_in_the_east focus = DEN_War_plan_France }
+		x = 10
+		y = 8
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = DEN_Help_sweden
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = DEN_Side_with_the_french focus = DEN_Side_with_the_germans }
+		x = 8
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = SWE
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+

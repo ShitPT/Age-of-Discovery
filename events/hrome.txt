@@ -1,0 +1,48 @@
+add_namespace = hrome
+
+#Split Poland
+country_event = {
+	id = hrome.17
+	title = hrome.17.t
+	desc = hrome.17.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hrome.17.a
+		ai_chance = { factor = 75 }
+		HRE = { 
+			transfer_state = 762
+		}
+		AUS = { 
+			transfer_state = 72
+			transfer_state = 88
+			transfer_state = 89
+			transfer_state = 91
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = hrome.17.b
+		ai_chance = { factor = 25 }
+		HRE = { 
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 762 }
+		}
+		AUS = { 
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 72 88 89 91 }
+		}
+		hidden_effect = {
+
+		}
+	}
+}

@@ -1,0 +1,128 @@
+add_namespace = denmark
+
+country_event = {
+	id = denmark.1
+	title = denmark.1.t
+	desc = denmark.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.1.a
+		DEN = { 
+			transfer_state = 148
+		}
+		hidden_effect = {
+
+
+		}
+	}
+}
+country_event = {
+	id = denmark.2
+	title = denmark.2.t
+	desc = denmark.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.2.a
+		DEN = { 
+			transfer_state = 304
+			transfer_state = 316
+			transfer_state = 317
+		}
+		hidden_effect = {
+
+
+		}
+	}
+}
+country_event = {
+	id = denmark.3
+	title = denmark.3.t
+	desc = denmark.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.3.a
+		DEN = { 
+			transfer_state = 294
+			transfer_state = 659
+			transfer_state = 293
+		}
+		hidden_effect = {
+
+
+		}
+	}
+}
+country_event = {
+	id = denmark.4
+	title = denmark.4.t
+	desc = denmark.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.4.a
+		DEN = { 
+			transfer_state = 543
+			transfer_state = 544
+			transfer_state = 719
+		}
+		hidden_effect = {
+
+
+		}
+	}
+}
+
+
+country_event = {
+	id = denmark.5
+	title = denmark.5.t
+	desc = denmark.5.d
+	picture = GFX_News_Event_337
+
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.5.a
+		add_to_faction = DEN
+		HRE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "DEN"
+				value = 200
+			}
+			hidden_effect = {
+				news_event = { hours = 6 id = news.404 }
+			}
+		}
+	}
+
+	
+	option = {
+		name = denmark.5.b
+		ai_chance = { factor = 0 }
+		DEN = { 
+			add_opinion_modifier = {
+				target = HRE
+				modifier = FRA_go_with_britain_reject
+			}
+			country_event = { id = denmark.30 }
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+
+

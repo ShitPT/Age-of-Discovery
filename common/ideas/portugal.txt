@@ -1,0 +1,482 @@
+ideas = {
+
+country = {
+	economy_boom = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = economy_boom_idea
+		
+		modifier = {		
+			consumer_goods_factor = -0.1
+		}
+	}
+	
+	portugal_army = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = portugal_army
+		
+		modifier = {		
+			army_org_factor = 0.05
+			army_morale_factor = 0.1
+		}
+	}
+	
+	unrest = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = unrest 
+		
+		modifier = {		
+			army_org_factor = -0.05
+			consumer_goods_factor = 0.1
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			army_morale_factor = -0.1
+		}
+	}
+	
+	natives_army = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = MEX_politicised_army_2
+		
+		modifier = {		
+			conscription = 0.003
+		}
+	}
+	
+	war_reparationss = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = chi_hyper_inflation2 
+		
+		modifier = {		
+			consumer_goods_factor = 0.2
+			production_speed_industrial_complex_factor = -0.3
+			production_speed_arms_factory_factor = -0.3
+		}
+	}
+	
+	riots_in_the_streetss = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = spr_political_violence 
+		
+		modifier = {		
+			consumer_goods_factor = 0.2
+			surrender_limit = -0.5
+			army_morale_factor = -0.3
+			army_org = -4
+		}
+	}
+	
+	the_new_portugese_empiree = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+		modifier = {		
+			conscription = 0.004
+			consumer_goods_factor = -0.1
+			MONTHLY_POPULATION = 0.1
+		}
+	}
+	
+	a_new_power_in_the_west = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+		modifier = {		
+			stability_weekly = 0.001
+			army_org_factor = 0.1
+			army_attack_factor = 0.05
+			production_speed_industrial_complex_factor = 0.05
+		}
+	}
+	
+	army_suspicionss = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = tfv_can_conscription_crisis 
+		
+		modifier = {		
+			stability_weekly = -0.01
+			war_support_weekly = -0.01
+		}
+	}
+	
+	trading_with_ethiopia = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			modifier = {		
+			consumer_goods_factor = -0.05
+			}
+		}
+		
+	trading_with_yemen = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			modifier = {		
+			consumer_goods_factor = -0.05
+			}
+		}
+		
+	trading_with_oman = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			modifier = {		
+			consumer_goods_factor = -0.05
+			}
+		}
+
+	portugal_india_company = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = can_wartime_prices_and_trade_board
+		
+			modifier = {		
+			consumer_goods_factor = -0.1
+			production_factory_efficiency_gain_factor = 0.02
+			political_power_gain = 0.5
+			economy_cost_factor = -0.25	
+			}
+		}
+
+	spice_trade = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = prc_permit_opium_trade
+		
+			modifier = {		
+			acclimatization_hot_climate_gain_factor = 0.1
+			production_speed_buildings_factor = 0.05
+			local_resources_factor = 0.07
+			}
+		}
+
+	galicia_annexation = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = chi_war_of_resistance2
+		
+			modifier = {		
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.05
+			}
+		}
+
+	atlantic_slave_trade = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			modifier = {		
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
+			political_power_gain = -0.5	
+			}
+		}
+
+	defence_strategies = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = ast_volunteer_defence_corps
+		
+			modifier = {		
+			army_core_defence_factor = 0.2
+			army_org = 5
+			}
+		}
+		
+	men_conscription = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = eng_imperial_conscription
+		
+			modifier = {		
+			conscription = 0.004
+			}
+		}
+		
+	never_surrender = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			modifier = {		
+			surrender_limit = 0.25
+			}
+		}
+		
+	mare_nostrum = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_coastal_navy
+		
+			modifier = {		
+			navy_max_range_factor = 0.1
+			navy_screen_attack_factor = 0.05
+			}
+		}
+		
+	millitary_treaty = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_war_preparation
+		
+			modifier = {		
+			offence = 0.05
+			army_org = 10
+			army_morale_factor = 0.1
+			}
+		}
+		
+	navy_treaty = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_the_london_naval_treaty
+		
+			modifier = {		
+			navy_screen_attack_factor = 0.1
+			}
+		}
+	
+	morra_esphana = {
+			
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus 
+		
+			targeted_modifier = {
+				tag = SPA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			modifier = {		
+				conscription = 0.003
+				army_org = 5
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	

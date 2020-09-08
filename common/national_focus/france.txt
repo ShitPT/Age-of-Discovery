@@ -1,0 +1,2065 @@
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = FRA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	
+	default = no
+
+	focus = {
+		id = FRA_Fund_Canadian_colony
+		icon = GFX_goal_generic_major_war
+		x = 28
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			FRA = {
+                           country_event = { id = france.37 }
+                           country_event = { id = france.38 }
+			}
+		}
+	}
+	focus = {
+		id = FRA_Fund_American_colony
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Fund_Canadian_colony }
+		x = 28
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1501.1.1				
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			FRA = {
+                           country_event = { id = france.39 }
+                           country_event = { id = france.40 }
+			}
+		}
+	}
+	focus = {
+		id = FRA_tensions_in_the_east
+		icon = GFX_goal_generic_major_war
+		mutually_exclusive = { focus = FRA_Restoration_of_the_franks }
+		x = 8
+		y = 0
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+                        add_stability = -0.05
+				
+			
+		}
+	}
+
+	focus = {
+		id = FRA_Restoration_of_the_franks
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = FRA_tensions_in_the_east }
+		x = 20
+		y = 0
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = FRA_Franks
+                        set_cosmetic_tag = FRA_Frank
+		}
+	}
+	focus = {
+		id = FRA_Dominate_europe
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = FRA_Restoration_of_the_franks }
+		x = 20
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = FRA_Frankish_domination
+		}
+	}
+	focus = {
+		id = FRA_Enemies_in_the_south
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = FRA_Dominate_europe }
+		x = 20
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+				114 = {
+					limit = {
+
+					}
+					add_claim_by = FRA
+				}
+				117 = {
+					limit = {
+
+					}
+					add_claim_by = FRA
+				}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPA
+				expire = 0
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARA
+				expire = 0
+			} 
+		}
+	}
+	focus = {
+		id = FRA_Take_back_our_german_clay
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Enemies_in_the_south }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay2 }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay3 }
+		x = 18
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		         HRE = {
+                              has_completed_focus = HRE_Devalue_the_currency
+               		 }	
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HRE
+				expire = 0
+			} 
+		}
+	}
+	focus = {
+		id = FRA_Take_back_our_german_clay2
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Enemies_in_the_south }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay3 }
+		x = 22
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		         HRE = {
+                              has_completed_focus = HRE_Disolve_the_empire_Prussia
+	                 }
+	        }
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOS
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HES
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAY
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PRS
+				expire = 0
+			} 
+		}
+	}
+	focus = {
+		id = FRA_Take_back_our_german_clay3
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Enemies_in_the_south }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay }
+		mutually_exclusive = { focus = FRA_Take_back_our_german_clay2 }
+		x = 20
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		         HRE = {
+                              has_completed_focus = HRE_Disolve_the_empire_Austria
+	                 }
+	        }
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOS
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HES
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAY
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HRE
+				expire = 0
+			} 
+		}
+	}
+
+	focus = {
+		id = FRA_Take_back_Italian_lands
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Take_back_our_german_clay focus = FRA_Take_back_our_german_clay2 focus = FRA_Take_back_our_german_clay3 }
+		x = 20
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		         ITA = {
+                                 controls_state = 159
+                                 controls_state = 158
+                                 controls_state = 735
+                                 controls_state = 162
+               		}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+				expire = 0
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+				expire = 0
+			} 
+		}
+	}
+	focus = {
+		id = FRA_Techonological_advantage
+		icon = GFX_focus_research
+		prerequisite = { focus = FRA_Dominate_europe }
+		x = 24
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_research_slot = 1
+                        add_ideas = FRA_Frankish_technology
+		}
+	}
+	focus = {
+		id = FRA_Better_weapons
+		icon = GFX_focus_research
+		prerequisite = { focus = FRA_Techonological_advantage }
+		x = 24
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+                          
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+                        add_ideas = FRA_Frankish_weapons
+		}
+	}
+	focus = {
+		id = FRA_Jobs_for_the_peasants
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = FRA_Dominate_europe }
+		x = 16
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_More_roads
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = FRA_Jobs_for_the_peasants }
+		x = 16
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+                        add_ideas = FRA_French_Roadbuilding
+		}
+	}
+	focus = {
+		id = FRA_Defend_ourselves
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = FRA_tensions_in_the_east }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		mutually_exclusive = { focus = FRA_Trear_old_wounds }
+		mutually_exclusive = { focus = FRA_Look_to_the_british }
+		x = 7
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
+		}
+	}
+	focus = {
+		id = FRA_Treat_old_wounds
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = FRA_tensions_in_the_east }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		mutually_exclusive = { focus = FRA_Look_to_the_british }
+		x = 4
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = ENG
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = FRA_AngloFrench_Alliance
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = FRA_Treat_old_wounds }
+		x = 4
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = AngloFrench-Alliance
+			ENG = { country_event = { id = france.41 } }
+		}
+	}
+
+	focus = {
+		id = FRA_Ask_for_Calais
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = FRA_AngloFrench_Alliance }
+		x = 4
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			ENG = { country_event = { id = france.47 } }
+		}
+	}
+
+	focus = {
+		id = FRA_Invite_the_hungarians
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = FRA_AngloFrench_Alliance }
+		x = 1
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			HUN = { country_event = { id = france.44 } }
+		}
+	}
+	focus = {
+		id = FRA_Expand_our_cities
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = FRA_Defend_ourselves }
+		x = 6
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = FRA_New_technologies
+		icon = GFX_focus_research
+		prerequisite = { focus = FRA_Expand_our_cities focus= FRA_Ask_for_Calais }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		x = 5
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = FRA_Prepare_for_naval_battles
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = FRA_New_technologies }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		x = 4
+		y = 5
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+		}
+	}
+	focus = {
+		id = FRA_Prepare_for_land_battles
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = FRA_New_technologies }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		x = 6
+		y = 5
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_manpower = 35000
+		}
+	}
+	focus = {
+		id = FRA_Prepare_for_a_war_between_empires
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = FRA_Let_our_colonies_join_our_wars focus = FRA_No_time_to_waste }
+		x = 8
+		y = 7
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1503.3.1				
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			FRA = { add_state_claim = 28 }
+                        FRA = { add_state_claim = 735 }
+                        FRA = { add_state_claim = 158 }
+                        FRA = { add_state_claim = 3 }
+		}
+	}
+	focus = {
+		id = FRA_War_plan_yellow
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = FRA_Prepare_for_a_war_between_empires }
+		x = 8
+		y = 8
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1503.3.1	
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = HRE }
+		}
+	}
+
+	focus = {
+		id = FRA_Let_our_colonies_join_our_wars
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = FRA_Prepare_for_naval_battles }
+		prerequisite = { focus = FRA_Prepare_for_land_battles }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		x = 5
+		y = 6
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = ENG_imperial_conscription_idea
+			every_country = {
+				limit = {
+					is_subject_of = FRA
+				}
+				add_ideas = ENG_imperial_conscription_subject_idea
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = FRA_Fight_for_our_country
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = FRA_tensions_in_the_east }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		mutually_exclusive = { focus = FRA_Treat_old_wounds }
+		mutually_exclusive = { focus = FRA_Look_to_the_british }
+		x = 9
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+
+	focus = {
+		id = FRA_Look_to_the_british
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = FRA_tensions_in_the_east }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		mutually_exclusive = { focus = FRA_Fight_for_our_country }
+		mutually_exclusive = { focus = FRA_Treat_old_wounds }
+		x = 12
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 0
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			diplomatic_relation = { 
+	                country = IRE
+	                relation = non_aggression_pact 
+}
+
+		}
+	}
+	focus = {
+		id = FRA_Create_anti_british_front
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = FRA_Look_to_the_british }
+		x = 12
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = Anti_British-Front
+			IRE = { country_event = { id = france.47 } }
+		}
+	}
+	focus = {
+		id = FRA_Never_mess_with_the_french
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = FRA_Create_anti_british_front }
+		x = 13
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1502.2.1		
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ENG }
+		}
+	}
+	focus = {
+		id = FRA_French_navy
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = FRA_Create_anti_british_front focus = FRA_More_roads }
+		x = 15
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+	
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = FRA_Submarine
+		}
+	}
+	focus = {
+		id = FRA_A_great_competetor
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = FRA_French_navy }
+		x = 15
+		y = 5
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+		controls_state = 14
+                controls_state = 19	
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+                        14 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			19 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+		}
+	}
+	focus = {
+		id = FRA_Expand_jobs
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = FRA_Fight_for_our_country }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		x = 10
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+                            type = infantry_equipment_1
+
+                            amount = 15000
+
+                        }
+		}
+	}
+
+	focus = {
+		id = FRA_More_weapon_designers
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = FRA_Expand_jobs focus = FRA_Create_anti_british_front }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		x = 11
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = FRA_Better_land_strategies
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = FRA_More_weapon_designers }
+		mutually_exclusive = { focus = FRA_Defend_ourselves }
+		x = 12
+		y = 5
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.75
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = FRA_Better_sea_strategies
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = FRA_More_weapon_designers }
+		x = 10
+		y = 5
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.5
+				uses = 3
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	focus = {
+		id = FRA_No_time_to_waste
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = FRA_Better_sea_strategies }
+		prerequisite = { focus = FRA_Better_land_strategies }
+		x = 11
+		y = 6
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+	focus = {
+		id = FRA_Higher_taxes
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = FRA_Defend_ourselves focus = FRA_Fight_for_our_country }
+		x = 8
+		y = 2
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = british_austerity_idea
+		}
+	}
+	focus = {
+		id = FRA_Create_Anti_german_front
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = FRA_Higher_taxes }
+		x = 8
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = Anti_german_front
+		}
+	}
+	focus = {
+		id = FRA_Annex_Avignon
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = FRA_Create_Anti_german_front }
+		x = 8
+		y = 4
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 10
+			ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		        PAP = { country_event = { id = france.51 } }
+		}
+	}
+	focus = {
+		id = FRA_French_concern
+		icon = GFX_goal_demand_sudetenland
+		x = 34
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_stability = 0.05
+                        add_political_power = 50
+		}
+	}
+	focus = {
+		id = FRA_Navy_focus
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_French_concern }
+		x = 30
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        341 = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = FRA_Build_more_ships
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Navy_focus }
+		x = 31
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = FRA_Navy
+		}
+	}
+	focus = {
+		id = FRA_Focus_on_the_army
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_French_concern }
+		x = 34
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        341 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = FRA_Quantity
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Focus_on_the_army }
+		x = 35
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = FRA_Quantity
+		}
+	}
+	focus = {
+		id = FRA_Quality
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Focus_on_the_army }
+		x = 33
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.25
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = FRA_Attack_bonus
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Quality }
+		x = 33
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = FRA_Attack
+		}
+	}
+	focus = {
+		id = FRA_defense_bonus
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Quantity }
+		x = 35
+		y = 3
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = FRA_Defense
+		}
+	}
+	focus = {
+		id = FRA_Focus_on_the_civilians
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_French_concern }
+		x = 38
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}
+	focus = {
+		id = FRA_Road_concern
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Focus_on_the_civilians }
+		x = 39
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_ideas = FRA_Road_concern
+		}
+	}
+	focus = {
+		id = FRA_Construct_great_monuments
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FRA_Focus_on_the_civilians }
+		x = 37
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				not = { has_dlc = "Man the Guns" }
+			}
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+                        add_war_support = 0.15
+		}
+	}
+
+
+
+

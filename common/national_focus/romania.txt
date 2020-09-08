@@ -1,0 +1,18 @@
+focus_tree = {
+	id = rom_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ROM
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = ROM
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = yes

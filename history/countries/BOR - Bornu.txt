@@ -1,0 +1,41 @@
+capital = 820
+
+oob = "BOR_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	gw_artillery = 1
+	trench_warfare = 1
+}
+
+set_research_slots = 2
+set_stability = 0.55
+set_war_support = 0.3
+
+set_politics = {
+	ruling_party = protestant
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	protestant = 100
+}
+
+add_ideas = {
+    lacking_an_economy
+	unwesternized_nation
+}
+
+create_country_leader = {
+	name = "Ali Gazi"
+	desc = "Ruler of Bornu"
+	picture = "generic4africa.dds"
+	expire = "1965.1.1"
+	ideology = protestant_ideology
+	traits = {
+
+	}
+}
+

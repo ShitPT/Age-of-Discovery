@@ -1,0 +1,45 @@
+
+state={
+	id=29
+	name="STATE_29"
+	resources={
+		steel=42.000
+		aluminium=8.000
+	}
+
+	history={
+		owner = HRE
+		victory_points = {
+			575 5 
+		}
+		victory_points = {
+			11483 10 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 3
+			air_base = 10
+			575 = {
+				naval_base = 6
+
+			}
+
+		}
+		add_core_of = HRE
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 6
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		575 3476 3536 6504 11483 11606 
+	}
+	manpower=2976400
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

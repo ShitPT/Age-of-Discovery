@@ -1,0 +1,91 @@
+scripted_gui = {
+	portugalargentina = {
+	
+		context_type = selected_state_context	
+		window_name = "portugalargentina_container"
+		
+		visible = {
+			AND = {
+				is_fully_controlled_by = ART
+				FROM = {
+					OR={
+						any_country = {
+							AND = {
+								is_subject_of = ROOT
+								any_owned_state = {
+									any_neighbor_state = {
+										state = PREV.PREV.PREV
+
+									}
+								}
+							}
+						}
+						any_neighbor_state = { is_owned_by = ROOT }
+						AND={
+							is_coastal = yes
+							ROOT = {
+								any_owned_state = {is_coastal = yes}
+							}
+						}
+					}
+				}
+			}
+			ROOT = {
+				has_idea = colonizer
+				tag = POR
+				has_completed_focus = POR_colonize_argentina
+			}
+		}
+		
+		effects = {
+			colonizeargentina_click = {
+			ROOT = {
+				transfer_state = PREV
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+				producer = ROOT
+				}
+				add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+				producer = ROOT
+				}
+				add_political_power = -125
+				country_event = {
+				id = colonising.1
+				days = 0
+				}
+				country_event = {
+				id = colonising.2
+				days = 180
+				}
+				add_manpower = -500
+				}
+			}
+		}
+	
+		ai_enabled = {
+			always = yes
+		}
+		
+		ai_test_interval = 100
+		ai_test_variance = 0.1
+		
+		ai_check = {
+			has_political_power > 125
+			has_equipment = {
+				infantry_equipment > 3000
+			}
+		}
+		
+		ai_weights = {
+			colonizeargentina_click = {
+				ai_will_do = {
+					factor = 2
+				}
+			}
+		}
+	}
+}
+

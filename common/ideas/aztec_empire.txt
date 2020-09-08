@@ -1,0 +1,290 @@
+ideas = {
+
+country = {
+	unwesternized_nation = {
+	
+		allowed = {
+			original_tag = AZE
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.25
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_org_factor = -0.15
+		}
+	}
+	
+	unwesternized_nation_2 = {
+	
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.20
+				army_attack_factor = -0.4
+				army_defence_factor = -0.4
+				army_org_factor = -0.15
+		}
+	}
+	
+	unwesternized_nation_3 = {
+	
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.15
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				army_org_factor = -0.14
+		}
+	}
+	
+	unwesternized_nation_4 = {
+	
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.14
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_org_factor = -0.13
+		}
+	}
+	
+	lacking_an_economy = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.2
+				local_resources_factor = -0.2
+			}
+		}
+		
+		terrible_economy = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.90
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.15
+			}
+		}
+		
+		small_economy = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.70
+				consumer_goods_factor = 0.10
+				local_resources_factor = -0.10
+			}
+		}
+		
+		improved_economy = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.50
+				consumer_goods_factor = 0.05
+				local_resources_factor = -0.05
+			}
+		}
+		
+		partially_westernized_nation_2 = {
+	
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_morale_factor = -0.05
+				army_org_factor = -0.05
+		}
+	}
+	
+	aztec_warriors = {
+	
+		allowed = {
+			always = no # Added via focus
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+				army_core_defence_factor = 0.2
+				army_org_factor = 0.05
+		}
+	}
+	
+	trading_with_europe = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.50
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		increased_trading_with_europe = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.30
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		construction_slavery = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		slave_armies = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.30
+				consumer_goods_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+		
+		

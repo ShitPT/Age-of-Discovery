@@ -1,0 +1,66 @@
+add_namespace = prs1790
+
+country_event = {
+	id = prs1790.1
+	title = prs1790.1.t
+	desc = prs1790.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = prs1790.1.a
+		ai_chance = { factor = 100 }
+		add_to_faction = ROOT
+		PRS = {
+			country_event = { id = prs1790.2 }
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "PRS"
+				value = 200
+		}
+	}
+	
+	option = {
+		name = prs1790.1.b
+		ai_chance = { factor = 0 }
+		PRS = {
+			country_event = { id = prs1790.3 }
+		}
+		PRS = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+				}
+			}	
+	        }		
+	}
+}
+
+country_event = {
+	id = prs1790.2
+	title = prs1790.2.t
+	desc = prs1790.2.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = prs1790.2.a
+	}
+}
+
+country_event = {
+	id = prs1790.3
+	title = prs1790.3.t
+	desc = prs1790.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = prs1790.3.a
+	}
+}

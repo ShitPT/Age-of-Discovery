@@ -1,0 +1,255 @@
+﻿###########################
+# Spanish Events
+###########################
+
+add_namespace = spa
+
+country_event = {
+	id = spa.11
+	title = spa.11.t
+	desc = spa.11.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.11.a
+		SPA = { 
+			transfer_state = 474
+			transfer_state = 475
+                        transfer_state = 476
+                        transfer_state = 477
+                        transfer_state = 485
+                        transfer_state = 479
+                        transfer_state = 478
+                        transfer_state = 481
+                        transfer_state = 277
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.11.b
+		SPA = { 
+			transfer_state = 279
+                        transfer_state = 508
+                        transfer_state = 506
+                        transfer_state = 302
+		}
+		hidden_effect = {
+
+		
+
+		}
+	}
+}
+country_event = {
+	id = spa.12
+	title = spa.12.t
+	desc = spa.12.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.12.a
+		SPA = { 
+			transfer_state = 479
+			transfer_state = 480
+			transfer_state = 481
+                        transfer_state = 482
+                        transfer_state = 476
+                        transfer_state = 483
+                        transfer_state = 484
+                        transfer_state = 375
+                        transfer_state = 376
+                        transfer_state = 377
+                        transfer_state = 379
+                        transfer_state = 378
+                        transfer_state = 387
+                        transfer_state = 385
+                        transfer_state = 386
+                        transfer_state = 380
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.12.b
+		SPA = { 
+			create_wargoal = { type = annex_everything target = INE }
+		}
+		hidden_effect = {
+
+		
+		}
+	}
+}
+country_event = {
+	id = spa.13
+	title = spa.13.t
+	desc = spa.13.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.13.a
+		SPA = { 
+			transfer_state = 624
+			transfer_state = 625
+			transfer_state = 628
+			transfer_state = 627
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.13.b
+		SPA = { 
+			transfer_state = 333
+			transfer_state = 334
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.13.c
+		SPA = { 
+			transfer_state = 521
+			transfer_state = 520
+			transfer_state = 674
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {
+	id = spa.14
+	title = spa.14.t
+	desc = spa.14.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.14.a
+		SPA = { 
+			transfer_state = 647
+			transfer_state = 684
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.14.b
+		SPA = { 
+			transfer_state = 673
+			transfer_state = 668
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = spa.14.c
+		SPA = { 
+			transfer_state = 522
+			transfer_state = 519
+			transfer_state = 517
+			transfer_state = 285
+			transfer_state = 518
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {
+	id = spa.15
+	title = spa.15.t
+	desc = spa.15.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.15.a
+		SPA = { 
+			transfer_state = 699
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = spa.16
+	title = spa.16.t
+	desc = spa.16.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.16.a
+		SPA = { 
+			transfer_state = 786
+                        transfer_state = 782
+                        transfer_state = 514
+                        transfer_state = 515
+			transfer_state = 273
+			transfer_state = 775
+
+		}
+	}
+}
+
+	
+country_event = {
+	id = spa.17
+	title = spa.17.t
+	desc = spa.17.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = spa.17.a
+		add_to_faction = SPA
+		FRA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SPA"
+				value = 200
+
+		}
+	}
+	
+	option = {
+		name = spa.17.b
+		ai_chance = { factor = 0 }
+		FRA = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = spa.100 }
+		}
+	}
+}

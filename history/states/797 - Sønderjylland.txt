@@ -1,0 +1,41 @@
+state={
+	id=797
+	name="STATE_797"
+	resources={
+		steel=9 # was: 20.000
+	}
+
+	state_category = town
+
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 7
+			arms_factory = 3
+			industrial_complex = 3
+			dockyard = 4
+			air_base = 10
+			332 = {
+				naval_base = 2
+
+			}
+			11251 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = DEN
+		victory_points = {
+			332 7 
+		}
+
+	}
+
+	provinces={
+		332 11251
+	}
+	manpower=120000
+	buildings_max_level_factor=1.000
+}

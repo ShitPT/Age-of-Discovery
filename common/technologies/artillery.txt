@@ -1,0 +1,502 @@
+technologies = {
+
+	gw_artillery = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = interwar_artillery 
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = improved_medieval_artillery
+			research_cost_coeff = 1
+		}
+		
+		enable_equipment_modules = { 
+			ship_anti_air_1
+		}
+		
+		start_year = 1492
+		
+		research_cost = 1.5
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1501.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1502.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1503.1.1"
+			}
+		}
+	}
+	
+	interwar_artillery = {
+
+		artillery = {
+			soft_attack = 0.05
+		}
+		artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = artillery1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1500
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1501.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1502.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1503.1.1"
+			}
+		}
+	}
+	
+	improved_medieval_artillery = {
+
+		artillery = {
+			soft_attack = 0.05
+		}
+		artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = artillery1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1500
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1501.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1502.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1503.1.1"
+			}
+		}
+	}
+	
+	artillery1 = {
+	
+		enable_equipments = {
+			artillery_equipment_2
+		}
+
+		#artillery = {
+		#	soft_attack = 0.1
+		#}
+		#artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		
+		path = {
+			leads_to_tech = artillery2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1501
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1502.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1503.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1503.1.6"
+			}
+		}
+	}
+	
+	artillery2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = artillery3
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = rocket_artillery
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1502
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1504.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1505.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1506.1.1"
+			}
+		}
+	}
+	
+	artillery3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = artillery4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1503
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1505.1.6"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1506.1.1"
+			}
+		}
+	}
+	
+	artillery4 = {
+	
+		enable_equipments = {
+			artillery_equipment_3
+		}
+
+		#artillery = { 
+		#	soft_attack = 0.1
+		#}
+		#artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		
+		path = {
+			leads_to_tech = artillery5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+
+		start_year = 1504
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1505.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1506.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1506.1.6"
+			}
+		}
+	}
+	
+	artillery5 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = improved_medieval_artillery1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = improved_medieval_artillery2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1506
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1507.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1508.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1509.1.1"
+			}
+		}
+	}
+	
+	improved_medieval_artillery1 = {
+
+		artillery = {
+			soft_attack = 0.15
+		}
+		artillery_brigade = {
+			soft_attack = 0.15
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.15
+		}
+		
+		research_cost = 1
+
+		start_year = 1510
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 14 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1507.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1508.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1509.1.1"
+			}
+		}
+	}
+	
+	improved_medieval_artillery2 = {
+
+		artillery = {
+			soft_attack = 0.15
+		}
+		artillery_brigade = {
+			soft_attack = 0.15
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.15
+		}
+		
+		research_cost = 1
+
+		start_year = 1510
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 14 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1507.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1508.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1509.1.1"
+			}
+		}
+	}
+}

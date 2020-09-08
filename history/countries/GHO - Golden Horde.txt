@@ -1,0 +1,39 @@
+﻿capital = 236
+
+oob = "GHO_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.5
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_politics = {
+	ruling_party = protestant
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	protestant = 100
+}
+
+add_ideas = {
+	orthodox_religion
+}
+
+create_country_leader = {
+	name = ""
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}

@@ -1,0 +1,14 @@
+state={
+	id=802
+	name="STATE_802"
+	history = {
+	owner = NON
+	add_core_of = NON
+	}
+	provinces={
+		4991 
+	}
+	manpower=880000
+	buildings_max_level_factor=1.000
+	state_category = town
+}

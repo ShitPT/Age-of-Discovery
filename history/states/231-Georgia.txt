@@ -1,0 +1,28 @@
+
+state={
+	id=231
+	name="STATE_231"
+
+	history={
+		owner = AQQ
+		victory_points = {
+			1599 5 
+		}
+		victory_points = {
+			3653 3 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = AQQ
+
+	}
+
+	provinces={
+		1530 1599 4534 4605 6436 6669 6671 6763 7454 9626 9702 10403 12309 12441 
+	}
+	manpower=304567
+	buildings_max_level_factor=1.000
+	state_category=town
+}

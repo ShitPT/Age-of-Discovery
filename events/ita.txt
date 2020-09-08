@@ -1,0 +1,82 @@
+add_namespace = ita
+
+country_event = {
+	id = ita.1
+	title = ita.1.t
+	desc = ita.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ita.1.a
+		ITA = { 
+			transfer_state = 159
+			transfer_state = 158
+			transfer_state = 735
+			transfer_state = 162
+			transfer_state = 1
+			add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.5
+			uses = 2
+			category = infantry_weapons
+			category = artillery
+		}
+		hidden_effect = {
+        	}
+	}
+}
+	option = {
+		name = ita.1.b
+		ai_chance = { factor = 0 }
+		ITA = { 
+			add_opinion_modifier = {
+				target = HRE
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = ita.100 }
+		}
+	}
+}
+country_event = {
+	id = ita.4
+	title = ita.4.t
+	desc = ita.4.d
+	picture = GFX_News_Event_337
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ita.4.a
+		add_to_faction = ITA
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ITA"
+				value = 200
+			}
+			hidden_effect = {
+				news_event = { hours = 12 id = news.337 }
+	}
+}
+
+	
+	option = {
+		name = ita.4.b
+		ai_chance = { factor = 0 }
+		ITA = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			}
+			country_event = { id = ita.100 }
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+

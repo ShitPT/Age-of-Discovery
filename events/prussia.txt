@@ -1,0 +1,211 @@
+add_namespace = prussia
+
+#Demand Poznan
+country_event = {
+	id = prussia.4
+	title = prussia.4.t
+	desc = prussia.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.4.a
+		ai_chance = { factor = 90 }
+		PRS = { 
+			transfer_state = 86
+			transfer_state = 188
+
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = prussia.4.b
+                PRS = {
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 86 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+
+#Schleswig-Holstein or war
+country_event = {
+	id = prussia.3
+	title = prussia.3.t
+	desc = prussia.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.3.a
+		ai_chance = { factor = 100 }
+		PRS = { 
+			transfer_state = 58
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = holyroman.14.b
+                PRS = {
+		create_wargoal = {
+			type = take_state
+			target = DEN
+			generator = { 58 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+		}
+	}
+}
+country_event = {
+	id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.2.a
+		add_to_faction = HRE
+		PRS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "AUS"
+				value = 200
+		}
+	}
+	
+	option = {
+		name = prussia.2.b
+		ai_chance = { factor = 0 }
+		PRS = { 
+			add_opinion_modifier = {
+				target = HRE
+				modifier = FRA_go_with_britain_reject
+				}
+			}	
+	        }		
+	}
+}
+country_event = {
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.6.a
+		PRS = { 
+			add_opinion_modifier = {
+				target = HRE
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = prussia.1
+	title = prussia.1.t
+	desc = prussia.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.1.a
+		ai_chance = { factor = 75 }
+		PRS = { 
+			transfer_state = 762
+		}
+		HRE = { 
+			transfer_state = 72
+			transfer_state = 88
+			transfer_state = 89
+			transfer_state = 91
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = prussia.1.b
+		ai_chance = { factor = 25 }
+		PRS = { 
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 762 }
+		}
+		HRE = { 
+		create_wargoal = {
+			type = take_state
+			target = POL
+			generator = { 72 88 89 91 }
+		}
+		hidden_effect = {
+                        	}
+                	}
+		}	
+	}
+}
+country_event = {
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = prussia.5.a
+                add_manpower = 75000
+		763 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = PRS
+				allow_spawning_on_enemy_provs = no
+				count = 6
+
+			      
+			}
+		}
+		85 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = PRS
+				allow_spawning_on_enemy_provs = no
+				count = 3
+
+			      
+			}
+		}
+		63 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = PRS
+				allow_spawning_on_enemy_provs = no
+				count = 7
+		}
+	}
+}

@@ -1,0 +1,1728 @@
+add_namespace = eng
+
+country_event = {
+	id = eng.53
+	title = eng.53.t
+	desc = eng.53.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.53.a	
+	}
+}
+
+country_event = {
+	id = eng.52
+	title = eng.52.t
+	desc = eng.52.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = eng.52.a
+		ai_chance = {
+			base = 100
+		}
+ 		ENG = { 
+			transfer_state = 366
+		}
+		white_peace = SPA
+		if = {
+			limit = {
+
+				}
+			}
+		}
+		SPA = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+		hidden_effect = {
+                        }
+			news_event = { id = news.415 }	
+		}
+	}
+}
+
+country_event = {
+	id = eng.51
+	title = eng.51.t
+	desc = eng.51.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = SPA
+		has_war_with = ENG
+		ENG = {
+			controls_state = 366
+	        }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = eng.51.a
+		ai_chance = {
+			base = 80
+		}
+		ENG = {
+			country_event = { id = eng.52 }
+		}
+		effect_tooltip = {
+			SPA = { 
+				white_peace = {
+					tag = ENG 
+	                }
+	        }
+	}
+	option = {
+		name = eng.51.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+		                }
+		        }
+		}
+	}
+}
+
+country_event = {
+	id = eng.50
+	title = eng.50.t
+	desc = eng.50.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.50.a
+ 		ENG = {
+		        create_wargoal = {
+			      target = MIN
+			      type = take_state_focus
+			      generator = { 728 591 }
+			      expire = 0
+                        }
+                }
+	}
+}
+country_event = {
+	id = eng.49
+	title = eng.49.t
+	desc = eng.49.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.49.a
+	}
+}
+
+country_event = {
+	id = eng.48
+	title = eng.48.t
+	desc = eng.48.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.48.a
+		ai_chance = { factor = 45 }
+ 		ENG = { 
+                        transfer_state = 591
+                        transfer_state = 728
+		}
+		hidden_effect = {
+			ENG = { country_event = { id = eng.49 } }
+                }
+	}
+	option = {
+		name = eng.48.b
+		ai_chance = { factor = 55 }
+		ENG = { country_event = { id = eng.50 } }
+                }
+	}
+}
+
+country_event = {
+	id = eng.47
+	title = eng.47.t
+	desc = eng.47.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.47.a
+ 		ENG = {
+			create_wargoal = { type = puppet_wargoal_focus target = FROM }
+                }
+	}
+}
+country_event = {
+	id = eng.46
+	title = eng.46.t
+	desc = eng.46.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.46.a
+	}
+}
+
+country_event = {
+	id = eng.45
+	title = eng.45.t
+	desc = eng.45.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.45.a
+		ai_chance = { factor = 75 }
+ 		ENG = { 
+                        puppet = ROOT
+		}
+		hidden_effect = {
+			ENG = { country_event = { id = eng.46 } }
+                }
+	}
+	option = {
+		name = eng.45.b
+		ai_chance = { factor = 25 }
+		ENG = { country_event = { id = eng.47 } }
+                }
+	}
+}
+
+country_event = {
+	id = eng.3
+	title = eng.3.t
+	desc = eng.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.3.a
+		BRN = { 
+			transfer_state = 64
+			transfer_state = 68
+			transfer_state = 65
+			transfer_state = 66
+			transfer_state = 67
+			transfer_state = 74
+                }
+		BRN = { 
+		declare_war_on = {
+			target = HRE
+			type = annex_everything
+			generator = { 59 } 
+		}
+		hidden_effect = {
+			BRN = { country_event = { id = brandenburg.2 } }
+                        }
+                }
+	}
+}
+
+country_event = {
+	id = eng.44
+	title = eng.44.t
+	desc = eng.44.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.44.a
+	}
+}
+
+country_event = {
+	id = eng.43
+	title = eng.43.t
+	desc = eng.43.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.43.a
+	}
+}
+
+country_event = {
+	id = eng.42
+	title = eng.42.t
+	desc = eng.42.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.42.a
+		add_to_faction = ENG
+		FRA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+		ENG = { country_event = { id = eng.44 } }
+		}
+	}
+	
+	option = {
+		name = eng.42.b
+		ai_chance = { factor = 0 }
+		ENG = { 
+			add_opinion_modifier = {
+				target = FRA
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = eng.43 }
+		}
+	}
+}
+
+country_event = {
+	id = eng.41
+	title = eng.41.t
+	desc = eng.41.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.41.a
+		
+	}
+}
+
+country_event = {
+	id = eng.39
+	title = eng.39.t
+	desc = eng.39.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.39.a
+		SIC = { 
+			add_opinion_modifier = {
+				target = ENG
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.40
+	title = eng.40.t
+	desc = eng.40.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = eng.40.a
+		ai_chance = { factor = 100 }
+		ENG = { 
+		        country_event = { id = eng.41 }
+			transfer_state = 116
+	}
+}
+
+	option = {
+		name = eng.40.b
+		ai_chance = { factor = 0 }
+		ENG = { 
+			create_wargoal = { type = annex_everything target = SIC }
+			}
+			country_event = { id = eng.39 }
+
+	}
+}
+
+
+country_event = {
+	id = eng.38
+	title = eng.38.t
+	desc = eng.38.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes	
+
+	option = {
+		name = eng.38.a
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "Walter"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "Walter.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+                                        goodest_boi	
+			}
+		}
+	}
+	option = {
+		name = eng.38.b
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "The Hamster"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "Hamster.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+                                        small_boi	
+			}
+		}
+	}
+	option = {
+		name = eng.38.c
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "The Cat"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "Cat.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+                                        cat_boi	
+			}
+		}
+	}
+	option = {
+		name = eng.38.e
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "The Council"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "council.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+                                        group_bois
+			}
+		}
+	}
+}
+country_event = {
+	id = eng.35
+	title = eng.35.t
+	desc = eng.35.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = eng.35.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 100
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.36 }		
+	}
+}
+	#No
+	option = {
+		name = eng.35.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.37 }
+        	}		
+	}
+}
+country_event = {
+	id = eng.36
+	title = eng.36.t
+	desc = eng.36.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.36.a
+		add_to_faction = QUE
+		QUE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+        	        }
+	        }		
+	}
+}
+country_event = {
+	id = eng.37
+	title = eng.37.t
+	desc = eng.37.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.37.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = QUE
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.34
+	title = eng.34.t
+	desc = eng.34.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = eng.34.a
+		ai_chance = {
+			base = 100
+		}
+                ENG = {
+		        annex_country = { target = LOU transfer_troops = yes }
+		}
+                ENG = {
+                        add_timed_idea = { idea = BRI_Louisiana_Purchase days = 250 }
+		}
+                FRA = {
+                        add_ideas = FRA_Louisiana_Purchase 
+		}
+                FRA = {
+                        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC
+			}
+		}
+	}		      
+	option = {
+		name = eng.34.b
+		ai_chance = {
+			base = 0
+		}
+                ENG = {
+		create_wargoal = {
+			type = annex_everything
+			target = LOU
+			generator = { 371 }
+	                }
+	        }
+	}
+}
+country_event = {
+	id = eng.33
+	title = eng.33.t
+	desc = eng.33.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes	
+
+	option = {
+		name = eng.33.a
+                set_politics = { ruling_party = catholic }
+                HRE = { 
+                     add_opinion_modifier = { target = ENG modifier = large_increase }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "Philip I"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "PhilipI.dds"
+				expire = "1965.1.1"
+				ideology = catholic_ideology
+				traits = {
+			        }	
+			}
+		}
+	}
+	option = {
+		name = eng.33.b
+                set_politics = { ruling_party = catholic }
+                POL = { 
+                     add_opinion_modifier = { target = ENG modifier = large_increase }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "Alexander I"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "AlexanderI.dds"
+				expire = "1965.1.1"
+				ideology = catholic_ideology
+				traits = {	
+			        }	
+			}
+		}
+	}
+	option = {
+		name = eng.33.c
+                set_politics = { ruling_party = protestant }
+                DEN = { 
+                     add_opinion_modifier = { target = ENG modifier = large_increase }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+		        kill_country_leader = yes
+			create_country_leader = {
+				name = "Frederik II"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "FrederikII.dds"
+				expire = "1965.1.1"
+				ideology = protestant_ideology
+				traits = {	
+			        }	
+			}
+		}
+	}
+}
+country_event = {
+	id = eng.32
+	title = eng.32.t
+	desc = eng.32.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = eng.32.a
+		361 = {
+		create_unit = {
+			        division = "division_template = \"Infantry Division\" start_experience_factor = 0.4" 
+				owner = ENG
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		362 = {
+		create_unit = {
+			        division = "division_template = \"Infantry Division\" start_experience_factor = 0.4" 
+				owner = ENG
+				allow_spawning_on_enemy_provs = no
+				count = 13
+		         }
+		}
+	}
+}
+
+country_event = {
+	id = eng.31
+	title = eng.31.t
+	desc = eng.31.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = eng.31.a
+		ai_chance = {
+			base = 100
+		}
+ 		ENG = { 
+			transfer_state = 357
+			transfer_state = 358
+			transfer_state = 359
+			transfer_state = 360
+		}
+		white_peace = UK1
+		if = {
+			limit = {
+
+				}
+			}
+		}
+		UK1 = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+		hidden_effect = {
+                        }
+			news_event = { id = news.413 }	
+		}
+	}
+}
+
+country_event = {
+	id = eng.30
+	title = eng.30.t
+	desc = eng.30.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = UK1
+		has_war_with = ENG
+		ENG = {
+			controls_state = 359
+			controls_state = 357
+			controls_state = 358
+			controls_state = 359
+			controls_state = 360
+	        }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = eng.30.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			country_event = { id = eng.31 }
+		}
+		effect_tooltip = {
+			UK1 = { 
+				white_peace = {
+					tag = ENG 
+	                }
+	        }
+	}
+	option = {
+		name = eng.30.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+		                }
+		        }
+		}
+	}
+}
+
+country_event = {
+	id = eng.29
+	title = eng.29.t
+	desc = eng.29.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.29.a			
+                UK1 = { set_autonomy = { target = ENG autonomy_state = autonomy_free } }
+ 		ENG = { 
+                        set_cosmetic_tag = ENG_USAFREE
+		}
+ 		TCO = { 
+                        set_cosmetic_tag = ENG_13
+		}
+                TCO = {
+                        country_event = { id = tco.1 
+		}
+ 		TCO = { 
+			transfer_state = 357
+			transfer_state = 358
+			transfer_state = 359
+			transfer_state = 360
+		}
+ 		TCO = { 
+			TCO = { add_state_core = 357 }
+			TCO = { add_state_core = 358 }
+			TCO = { add_state_core = 359 }
+			TCO = { add_state_core = 360 }
+			TCO = { add_state_core = 361 }
+			TCO = { add_state_core = 362 }
+			TCO = { add_state_core = 363 }
+			TCO = { add_state_core = 364 }
+			TCO = { add_state_core = 365 }
+		}
+ 		UK1 = { 
+                        puppet = TCO
+		}
+		ENG = { 
+		       declare_war_on = {
+				target = TCO
+				type = annex_everything
+				generator = { 360 }
+
+                                }
+                        }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.412 }
+	                }
+                }
+	}
+}
+
+
+country_event = {
+	id = eng.28
+	title = eng.28.t
+	desc = eng.28.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.28.a
+		ENG = {
+			delete_units = {
+			    division_template = "Infantry Division"
+			    disband = yes
+			}
+			delete_units = {
+			    division_template = "Cavalry Brigade"
+			    disband = yes
+			}
+			delete_units = {
+			     division_template = "Tank Brigade"
+			     disband = yes
+			}
+			delete_units = {
+			    division_template = "Colonial Garrison"
+			    disband = yes
+			}
+		}
+ 		UK1 = { 
+			transfer_state = 123
+			transfer_state = 338
+			transfer_state = 127
+			transfer_state = 126
+			transfer_state = 125
+			transfer_state = 129
+			transfer_state = 128
+			transfer_state = 122
+			transfer_state = 132
+			transfer_state = 130
+			transfer_state = 131
+		}
+ 		UK1 = { 
+			UK1 = { add_state_core = 123 }
+			UK1 = { add_state_core = 338 }
+			UK1 = { add_state_core = 127 }
+			UK1 = { add_state_core = 126 }
+			UK1 = { add_state_core = 125 }
+			UK1 = { add_state_core = 129 }
+			UK1 = { add_state_core = 128 }
+			UK1 = { add_state_core = 122 }
+			UK1 = { add_state_core = 132 }
+			UK1 = { add_state_core = 130 }
+			UK1 = { add_state_core = 131 }
+		}
+ 		ENG = { 
+			ENG = { remove_state_core = 123 }
+			ENG = { remove_state_core = 338 }
+			ENG = { remove_state_core = 127 }
+			ENG = { remove_state_core = 126 }
+			ENG = { remove_state_core = 125 }
+			ENG = { remove_state_core = 129 }
+			ENG = { remove_state_core = 128 }
+			ENG = { remove_state_core = 122 }
+			ENG = { remove_state_core = 132 }
+			ENG = { remove_state_core = 130 }
+			ENG = { remove_state_core = 131 }
+		}
+ 		ENG = { 
+                        set_cosmetic_tag = ENG_USA
+		}
+ 		ENG = { 
+			transfer_state = 357
+			transfer_state = 358
+			transfer_state = 359
+			transfer_state = 360
+			transfer_state = 361
+			transfer_state = 362
+			transfer_state = 363
+			transfer_state = 364
+			transfer_state = 365
+		}
+ 		ENG = { 
+			ENG = { add_state_core = 357 }
+			ENG = { add_state_core = 358 }
+			ENG = { add_state_core = 359 }
+			ENG = { add_state_core = 360 }
+			ENG = { add_state_core = 361 }
+			ENG = { add_state_core = 362 }
+			ENG = { add_state_core = 363 }
+			ENG = { add_state_core = 364 }
+			ENG = { add_state_core = 365 }
+		}
+ 		UK1 = { 
+                        puppet = ENG
+		}
+ 		UK1 = { 
+                        set_cosmetic_tag = ENG_UK
+		}
+                ENG = {
+                        country_event = { id = eng.32
+		}
+		hidden_effect = {
+
+	                }
+                }
+	}
+}
+
+country_event = {
+	id = eng.27
+	title = eng.27.t
+	desc = eng.27.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.27.a
+	}
+}
+
+country_event = {
+	id = eng.26
+	title = eng.26.t
+	desc = eng.26.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.26.a
+	}
+}
+
+country_event = {
+	id = eng.25
+	title = eng.25.t
+	desc = eng.25.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.25.a	
+	}
+}
+
+country_event = {
+	id = eng.24
+	title = eng.24.t
+	desc = eng.24.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.24.a
+	}
+}
+
+country_event = {
+	id = eng.22
+	title = eng.22.t
+	desc = eng.22.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = POR
+		has_war_with = ENG
+		has_civil_war = no
+             ENG = {
+                  controls_state = 15
+	     }
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = eng.22.a
+		ai_chance = {
+			base = 85
+		}
+		ENG = {
+			country_event = { id = eng.23 }
+		}
+		effect_tooltip = {
+			POR = { 
+				white_peace = {
+					tag = ENG
+				} 
+			}
+                        ENG = { 
+			     transfer_state = 823
+
+			if = {
+				limit = {
+					
+					}
+				}
+				POR = { remove_state_core = 823 }
+        		}
+		}
+	}
+	#Never give up!
+	option = {
+		name = eng.22.b
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+		        }
+		}
+	}
+}
+country_event = {
+	id = eng.23
+	title = eng.23.t
+	desc = eng.23.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = eng.23.a
+		ai_chance = {
+			base = 100
+		}
+		white_peace = POR
+		ENG = { transfer_state = 823 }  
+		if = {
+			limit = {
+
+				}
+			}
+		ENG = { add_ideas = SPA_Atlantic_trade }  
+
+		}
+		POR = { remove_state_core = 823 }  
+
+		}
+		POR = { remove_ideas = SPA_Atlantic_trade }  
+
+		}
+		POR = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+		hidden_effect = {
+                        }
+			news_event = { id = news. }
+		}
+	}
+	#Never give up!
+	option = {
+		name = eng.23.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+		        }
+	        }
+                add_stability = -0.10
+		}
+	}
+}
+
+country_event = {
+	id = eng.21
+	title = eng.21.t
+	desc = eng.21.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.21.a
+		ai_chance = { factor = 45 }
+		ENG = { 
+			transfer_state = 823
+                        add_ideas = SPA_Atlantic_trade
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = eng.21.b
+		ai_chance = { factor = 55 }
+                ENG = {
+		create_wargoal = {
+			type = take_state
+			target = POR
+			generator = { 823 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news. }			
+			
+		}
+	}
+}
+
+country_event = {
+	id = eng.20
+	title = eng.20.t
+	desc = eng.20.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holyroman.17.a
+		ai_chance = { factor = 100 }
+		ENG = { 
+		       declare_war_on = {
+				target = FRA
+				type = annex_everything
+				generator = { 16 }
+
+                                }
+                        }
+		}
+		hidden_effect = {
+	
+	}
+}
+
+country_event = {
+	id = eng.17
+	title = eng.17.t
+	desc = eng.17.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = eng.17.a
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 75
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.18 }		
+	}
+}
+	#No
+	option = {
+		name = eng.17.b
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 25
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.19 }
+        	}		
+	}
+}
+country_event = {
+	id = eng.18
+	title = eng.18.t
+	desc = eng.18.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.18.a
+		add_to_faction = POR
+		POR = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+        	        }
+	        }		
+	}
+}
+country_event = {
+	id = eng.19
+	title = eng.19.t
+	desc = eng.19.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.19.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = POR
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.14
+	title = eng.14.t
+	desc = eng.14.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = eng.14.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 80
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.15 }		
+	}
+}
+	#No
+	option = {
+		name = eng.14.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 20
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.16 }
+        	}		
+	}
+}
+country_event = {
+	id = eng.15
+	title = eng.15.t
+	desc = eng.15.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.15.a
+		add_to_faction = ARA
+		ARA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+        	        }
+	        }		
+	}
+}
+country_event = {
+	id = eng.16
+	title = eng.16.t
+	desc = eng.16.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.16.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = ARA
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.12
+	title = eng.12.t
+	desc = eng.12.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = FRA
+		has_war_with = ENG
+		surrender_progress > 0.40
+		has_civil_war = no
+                controls_state = 15
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = eng.12.a
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			country_event = { id = eng.13 }
+		}
+		effect_tooltip = {
+			FRA = { 
+				white_peace = {
+					tag = ENG
+				} 
+			}
+                        ENG = { 
+			     transfer_state = 15
+
+			if = {
+				limit = {
+					
+					}
+				}
+				FRA = { remove_state_core = 15 }
+        		}
+		}
+	}
+	#Never give up!
+	option = {
+		name = eng.12.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+        		}
+		}
+	}
+}
+country_event = {
+	id = eng.13
+	title = eng.13.t
+	desc = eng.13.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = eng.13.a
+		ai_chance = {
+			base = 100
+		}
+		white_peace = FRA
+		ENG = { transfer_state = 15 }  
+		if = {
+			limit = {
+
+				}
+			}
+		FRA = { remove_state_core = 15 }  
+
+		}
+		FRA = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ENG"			
+				value = 200
+		hidden_effect = {
+                        }
+			news_event = { id = news. }
+		}
+	}
+	#Never give up!
+	option = {
+		name = eng.13.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eng.6
+	title = eng.6.t
+	desc = eng.6.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = eng.6.a
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 100
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.7 }		
+	}
+}
+	#No
+	option = {
+		name = eng.6.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.8 }
+        	}		
+	}
+}
+country_event = {
+	id = eng.7
+	title = eng.7.t
+	desc = eng.7.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.7.a
+		add_to_faction = DEN
+		DEN = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+        	        }
+	        }		
+	}
+}
+country_event = {
+	id = eng.8
+	title = eng.8.t
+	desc = eng.8.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.8.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = DEN
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.9
+	title = eng.9.t
+	desc = eng.9.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	#Yes
+	option = {
+		name = eng.9.a
+		ai_chance = {
+			base = 55
+			modifier = {
+				factor = 55
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.10 }		
+	}
+}
+	#No
+	option = {
+		name = eng.9.b
+		ai_chance = {
+			base = 45
+			modifier = {
+				factor = 45
+			}
+		}
+		trigger = {
+
+		}
+		ENG = {
+			country_event = { id = eng.11 }
+        	}		
+	}
+}
+country_event = {
+	id = eng.10
+	title = eng.10.t
+	desc = eng.10.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.10.a
+		add_to_faction = TUR
+		TUR = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+        	        }
+	        }		
+	}
+}
+country_event = {
+	id = eng.11
+	title = eng.11.t
+	desc = eng.11.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.11.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = TUR
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.5
+	title = eng.5.t
+	desc = eng.5.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.5.a
+		ENG = { 
+			add_opinion_modifier = {
+				target = FRA
+				modifier = FRA_go_with_britain_reject
+        	        }
+	        }		
+	}
+}
+
+country_event = {
+	id = eng.4
+	title = eng.4.t
+	desc = eng.4.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = eng.4.a
+		ai_chance = { factor = 50 }
+		ENG = { 
+		        puppet = NRM
+		        country_event = { id = eng.53 }
+                }
+		NRM = { 
+			transfer_state = 15
+	}
+}
+
+	option = {
+		name = eng.4.b
+		ai_chance = { factor = 50 }
+		ENG = { 
+			create_wargoal = { type = annex_everything target = FRA }
+			
+			}
+			country_event = { id = eng.5 }
+
+	}
+}
+
+country_event = {
+	id = eng.2
+	title = eng.2.t
+	desc = eng.2.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.2.a
+		puppet = TCO
+                }
+		TCO = { 
+			transfer_state = 357
+			transfer_state = 358
+			transfer_state = 359
+			transfer_state = 360
+			transfer_state = 361
+			transfer_state = 362
+			transfer_state = 363
+			transfer_state = 364
+			transfer_state = 365
+		        }
+		}
+	}
+}
+
+country_event = {
+	id = eng.1
+	title = eng.1.t
+	desc = eng.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.1.a
+		add_to_faction = eng
+		HRE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+		HRE = { country_event = { id = eng.100} }
+		}
+	}
+	
+	option = {
+		name = eng.1.b
+		ai_chance = { factor = 0 }
+		HRE = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = eng.1 }
+		}
+	}
+}

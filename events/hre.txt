@@ -1,0 +1,37 @@
+add_namespace = hre
+
+country_event = {
+	id = hre.1
+	title = hre.1.t
+	desc = hre.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hre.1.a
+		add_to_faction = AUS
+		AUS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "HRE"
+				value = 200
+			}
+		}
+		FRA = { country_event = { id = poland.100} }
+		}
+	}
+	
+	option = {
+		name = hre.1.b
+		ai_chance = { factor = 0 }
+		AUS = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = hre.100 }
+		}
+	}
+}

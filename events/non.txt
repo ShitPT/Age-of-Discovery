@@ -1,0 +1,31 @@
+add_namespace = non
+
+country_event = {
+	id = non.1
+	title = non.1.t
+	desc = non.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = non.1.a
+		add_to_faction = DEN
+		DEN = {
+			add_ai_strategy = {
+				type = alliance
+				id = "HRE"
+				value = 200
+		}
+	}
+	
+	option = {
+		name = non.1.b
+		ai_chance = { factor = 0 }
+		HRE = { 
+			add_opinion_modifier = {
+				target = DEN
+				modifier = FRA_go_with_britain_reject
+
+
+

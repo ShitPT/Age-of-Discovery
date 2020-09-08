@@ -1,0 +1,125 @@
+raid = {
+	raid_murcia = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+			ROOT = {
+			has_completed_focus = POR_raid_castile_coast
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		168 = {
+			damage_building = {
+			type = dockyard
+			damage = 1
+			}
+		}
+	}
+}
+
+raid_pais_vasco = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+		ROOT = {
+			has_completed_focus = POR_raid_castile_coast
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		792 = {
+			damage_building = {
+			type = dockyard
+			damage = 1
+			}
+		}
+	}
+}
+
+raid_galicia = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+		ROOT = {
+			has_completed_focus = POR_raid_castile_coast
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		171 = {
+			damage_building = {
+			type = dockyard
+			damage = 1
+			}
+		}
+	}
+}
+
+raid_gibraltar = {
+
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		available = {
+
+		}
+		visible = {
+		ROOT = {
+			has_completed_focus = POR_raid_castile_coast
+			}
+		}
+		
+		cost = 75
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+		118 = {
+			damage_building = {
+			type = dockyard
+			damage = 2
+			}
+		}
+	}
+}
+

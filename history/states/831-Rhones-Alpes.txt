@@ -1,0 +1,22 @@
+state={
+	id=831
+	name="STATE_831"
+	history={
+		owner = HRE
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			641 1 
+		}
+		add_core_of = HRE
+
+	}
+	provinces={
+		641 3650 6639 6668 6784 
+	}
+	manpower=119030
+	buildings_max_level_factor=1.000
+	state_category=town
+}

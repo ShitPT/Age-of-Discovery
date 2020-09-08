@@ -1,0 +1,52 @@
+add_namespace = bavaria
+
+country_event = {
+	id = bavaria.1
+	title = bavaria.1.t
+	desc = bavaria.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = bavaria.1.a
+                add_manpower = 25000
+		BAY = { add_state_core = 54 }
+		BAY = { add_state_core = 53 }
+		BAY = { add_state_core = 50 }
+		BAY = { add_state_core = 52 }
+		54 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BAY
+				allow_spawning_on_enemy_provs = no
+				count = 6
+
+			      
+			}
+		}
+		50 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BAY
+				allow_spawning_on_enemy_provs = no
+				count = 3
+			}
+		}
+		52 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BAY
+				allow_spawning_on_enemy_provs = no
+				count = 5
+			}
+		}
+		53 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = BAY
+				allow_spawning_on_enemy_provs = no
+				count = 6					
+		}
+	}
+}

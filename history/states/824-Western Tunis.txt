@@ -1,0 +1,14 @@
+state={
+	id=824
+	name="STATE_824"
+	history={
+		owner = TUN
+		add_core_of = TUN
+	}
+	provinces={
+		9943 1141 1058 1160 12051 9976 12034 11953 7081
+	}
+	manpower=123000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

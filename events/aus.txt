@@ -1,0 +1,42 @@
+add_namespace = aus
+
+country_event = {
+	id = aus.5
+	title = aus.5.t
+	desc = aus.5.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = aus.5.a
+                add_manpower = 275000
+		153 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		152 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		4 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 8
+		}
+	}
+}

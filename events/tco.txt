@@ -1,0 +1,31 @@
+add_namespace = tco
+
+country_event = {
+	id = tco.1
+	title = tco.1.t
+	desc = tco.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = tco.1.a
+		360 = {
+		create_unit = {
+			        division = "division_template = \"Infantry Division\" start_experience_factor = 0.3" 
+				owner = TCO
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		359 = {
+		create_unit = {
+			        division = "division_template = \"Infantry Division\" start_experience_factor = 0.3" 
+				owner = TCO
+				allow_spawning_on_enemy_provs = no
+				count = 11
+		}
+	}
+}

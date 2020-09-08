@@ -1,0 +1,29 @@
+
+state={
+	id=770
+	name="STATE_770"
+	
+	resources={
+		steel=23
+	}
+
+	history={
+		owner = MAR
+		add_core_of = MAR
+		victory_points = {
+			12986 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		2123 2159 2180 2217 2255 5164 10972 12908 12986 13209 
+	}
+	manpower=2003975
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

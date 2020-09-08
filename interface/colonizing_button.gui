@@ -1,0 +1,556 @@
+guiTypes = {	
+	containerWindowType = {
+		name = "colonize6_container"
+		position = {x=430 y=-600}
+		size = { width=270 height=180 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize6" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE6_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "colonize7_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize7" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE7_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "colonize8_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize8" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE8_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "brazil_tribes_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonizebrazil" 
+			position = {x=10 y=100}
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE9_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "central_tribes_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize10" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE10_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "player_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize11" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE10_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "player2_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize12" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE10_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "player3_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize13" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE10_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "player4_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize14" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE10_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "asia_tribes_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize15" 
+			position = {x=10 y=100}
+
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE6_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "portugal_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize20" 
+			position = {x=10 y=100}
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE11_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "portugal1_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonize21" 
+			position = {x=10 y=100}
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE12_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "portugalargentina_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonizeargentina" 
+			position = {x=10 y=100}
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE9_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "portugalcentral_container"
+		position = {x=430 y=626}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_colonization"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=10 y=75}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonizecentral" 
+			position = {x=10 y=100}
+			spriteType = "GFX_colonizebutton"
+			pdx_tooltip = "COLONIZE9_TOOLTIP"
+			scale = 1.1
+		}
+		
+		iconType = {
+			name ="colonization_settler"
+			spriteType = "GFX_colonizesettler"
+			position = { x= 130 y = 85 }
+			Orientation = "LOWER LEFT"
+		}
+	}
+		

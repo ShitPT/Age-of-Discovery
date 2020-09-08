@@ -1,0 +1,207 @@
+add_namespace = ottoman
+
+country_event = {
+	id = ottoman.1
+	title = ottoman.1.t
+	desc = ottoman.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ottoman.1.a
+		OTO = {
+			transfer_state = 347
+			transfer_state = 340
+			transfer_state = 339
+			transfer_state = 356
+			transfer_state = 355
+			transfer_state = 343
+			transfer_state = 49
+			transfer_state = 348
+			transfer_state = 346
+			transfer_state = 342
+			transfer_state = 345
+                        }
+			declare_war_on = {
+				target = OTO
+				type = annex_everything
+				generator = { 347 } 
+			        }	
+		        }
+	       }
+	}
+}
+
+country_event = {
+	id = ottoman.2
+	title = ottoman.2.t
+	desc = ottoman.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ottoman.2.a
+		ai_chance = { factor = 80 }
+		TUR = { 
+			transfer_state = 137
+		}
+		hidden_effect = {
+
+		
+	}
+}
+	option = {
+		name = ottoman.2.b
+		ai_chance = { factor = 20 }
+                TUR = {
+		create_wargoal = {
+			type = take_state
+			target = SOV
+			generator = { 137 }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.340 }			
+			
+
+		}
+	}
+}
+country_event = {
+	id = ottoman.3
+	title = ottoman.3.t
+	desc = ottoman.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ottoman.3.a
+		add_to_faction = TUR
+		FRA = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TUR"
+				value = 200
+			}
+		}
+		TUR = { country_event = { id = ottoman.5} }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.406 }	
+		}
+	}
+	
+	option = {
+		name = ottoman.3.b
+		ai_chance = { factor = 0 }
+		FRA = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = ottoman.4 }
+                        }
+		}
+	}
+}
+country_event = {
+	id = ottoman.4
+	title = ottoman.4.t
+	desc = ottoman.4.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	#:(
+	option = {
+		name = ottoman.4.a
+		
+	}
+}
+country_event = {
+	id = ottoman.5
+	title = ottoman.5.t
+	desc = ottoman.5.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	#Great!
+	option = {
+		name = ottoman.5.a
+		
+	}
+}
+country_event = {
+	id = ottoman.6
+	title = ottoman.6.t
+	desc = ottoman.6.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ottoman.6.a
+		add_to_faction = TUR
+		HRE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "TUR"
+				value = 200
+			}
+		}
+		TUR = { country_event = { id = ottoman.8} }
+		}
+		hidden_effect = {
+                        }
+			news_event = { id = news.407 }	
+		}
+	}
+	
+	option = {
+		name = ottoman.6.b
+		ai_chance = { factor = 0 }
+		FRA = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = FRA_go_with_britain_reject
+			
+			}
+			country_event = { id = ottoman.7 }
+                        }
+		}
+	}
+}
+country_event = {
+	id = ottoman.7
+	title = ottoman.7.t
+	desc = ottoman.7.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	#:(
+	option = {
+		name = ottoman.7.a
+		
+	}
+}
+country_event = {
+	id = ottoman.8
+	title = ottoman.8.t
+	desc = ottoman.8.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	#Great!
+	option = {
+		name = ottoman.8.a
+		
+	}
+}

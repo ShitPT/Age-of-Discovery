@@ -1,0 +1,382 @@
+add_namespace = austria
+
+country_event = {
+	id = austria.7
+	title = austria.7.t
+	desc = austria.7.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = austria.7.a
+                AUS = {
+			set_cosmetic_tag = HUN_EMPIRE
+
+		}
+	}
+}
+
+country_event = {
+	id = austria.6
+	title = austria.6.t
+	desc = austria.6.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+ 	immediate = {
+ 		hidden_effect = {
+ 			add_named_threat = { threat = 3 name = holyroman.9.t }
+ 		} 		
+ 	}
+
+	option = {
+		name = austria.6.a
+		ai_chance = { factor = 75 }
+		70 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		109 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = HRE
+			}
+		}
+		104 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		107 = {
+			if = {
+				limit = { is_owned_by = HUN }
+				add_core_of = AUS
+			}
+		}
+		HUN = {
+			every_unit_leader = {
+				set_nationality = HRE
+			}
+		}
+		AUS = { annex_country = { target = HUN transfer_troops = yes }
+		add_political_power = 75
+		set_country_flag = AUS_annexed
+		add_war_support = 0.1
+		add_stability = 0.05
+		AUS = { country_event = { id = austria.7 } }
+	}
+}
+country_event = {
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	trigger = {
+		tag = HRE
+		has_war_with = AUS
+		surrender_progress > 0.35
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 7 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = austria.2.a
+		ai_chance = {
+			base = 10
+		}
+		AUS = {
+			country_event = { id = austria.3 }
+		}
+		effect_tooltip = {
+			AUS = { 
+				white_peace = {
+					tag = HRE 
+				} 
+			}
+                        AUS = { 
+			transfer_state = 69
+			transfer_state = 9
+			transfer_state = 75
+			transfer_state = 74
+			if = {
+				limit = {
+					
+					}
+				}
+				HRE = { remove_state_core = 69 }
+				HRE = { remove_state_core = 9 }
+				HRE = { remove_state_core = 75 }
+				HRE = { remove_state_core = 74 }
+			}
+		}
+	}
+	#Never give up!
+	option = {
+		name = austria.2.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = austria.3.a
+		ai_chance = {
+			base = 10
+		}
+		white_peace = HRE
+		AUS = { transfer_state = 69 }  
+		AUS = { transfer_state = 9 }  
+		AUS = { transfer_state = 75 }  
+		AUS = { transfer_state = 74 }  
+		if = {
+			limit = {
+
+				}
+			}
+		HRE = { remove_state_core = 69 }  
+		HRE = { remove_state_core = 9 } 
+		HRE = { remove_state_core = 75 } 
+		HRE = { remove_state_core = 74 } 
+
+		}
+		HRE = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "AUS"			
+				value = 200
+			}
+		}
+		if = {
+			limit = {
+				DEN = {
+					is_subject = no
+					not = { is_in_faction_with = SOV}
+				}
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "DEN"			
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "DEN"			
+				value = 200
+			}
+			DEN = {
+				add_ai_strategy = {
+					type = alliance
+					id = "HRE"			
+					value = 200
+				}
+			}
+		}
+	}
+
+	#Take it all
+	option = {
+		name = austria.3.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}			
+		}
+		HRE = { country_event = { id = austria.4 } }
+	}
+}
+#Soviet says no!
+country_event = {
+	id = austria.4
+	title = austria.4.t
+	desc = austria.4.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = austria.4.a
+	}
+}
+
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = austria.1.a
+                add_manpower = 275000
+		153 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		152 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		4 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 8
+							
+		}
+	}
+}
+
+country_event = {
+	id = austria.5
+	title = austria.5.t
+	desc = austria.5.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+        option = {
+		name = austria.5.a
+                add_manpower = 275000
+		153 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		152 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 10
+
+			      
+			}
+		}
+		4 = {
+		create_unit = {
+			        division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.7" 
+				owner = AUS
+				allow_spawning_on_enemy_provs = no
+				count = 8
+		}
+	}
+}
+
+

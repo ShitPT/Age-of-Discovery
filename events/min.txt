@@ -1,0 +1,153 @@
+add_namespace = min
+
+country_event = {
+	id = min.1
+	title = min.1.t
+	desc = min.1.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+
+	option = {	
+		name = min.1.a
+		594 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 3
+
+			      
+			}
+		}
+		591 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 5
+
+			      
+			}
+		}
+		592 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		599 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		325 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		747 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		603 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 1
+			}
+		}
+		595 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		600 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		602 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		745 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 1
+			}
+		}
+		716 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		610 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 6
+			}
+		}
+		900 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 2
+			}
+		}
+		611 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		608 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 1
+			}
+		}
+		593 = {
+		create_unit = {
+			        division = "division_template = \"Bubing Shi\" start_experience_factor = 0.7" 
+				owner = MIN
+				allow_spawning_on_enemy_provs = yes
+				count = 3
+		}
+	}
+}

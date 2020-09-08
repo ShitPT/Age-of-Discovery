@@ -1,0 +1,1024 @@
+﻿focus_tree = {
+	id = aztec_empire_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AZE
+		}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+	
+	focus = {
+		id = AZE_begin_westernization
+		icon = GFX_focus_usa_focus_on_europe
+		x = 3
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = unwesternized_nation
+			add_ideas = unwesternized_nation_2
+			}
+		}
+	
+	focus = {
+		id = AZE_reform_the_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = AZE_begin_westernization }
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = unwesternized_nation_2
+			add_ideas = unwesternized_nation_3
+			}
+		}
+	
+	focus = {
+		id = AZE_learn_from_europeans
+		icon = GFX_focus_hol_gateway_to_europe
+		prerequisite = { focus = AZE_reform_the_army }
+		x = 1
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = unwesternized_nation_3
+			add_ideas = unwesternized_nation_4
+			}
+		}
+		
+		focus = {
+		id = AZE_build_an_economy
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = AZE_begin_westernization }
+		x = 5
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = lacking_an_economy
+			add_ideas = terrible_economy
+			}
+		}
+		
+		focus = {
+		id = AZE_improve_the_economy
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = AZE_build_an_economy }
+		x = 5
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = terrible_economy
+			add_ideas = small_economy
+			}
+		}
+		
+		focus = {
+		id = AZE_adopt_a_western_style
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		prerequisite = { focus = AZE_learn_from_europeans }
+		prerequisite = { focus = AZE_improve_the_economy }
+		x = 3
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = unwesternized_nation_4
+			add_ideas = partially_westernized_nation
+			}
+		}
+		
+		focus = {
+		id = AZE_improve_the_economy_more
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AZE_adopt_a_western_style}
+		x = 5
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = small_economy
+			add_ideas = improved_economy
+			}
+		}
+		
+		focus = {
+		id = AZE_western_units
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = AZE_adopt_a_western_style }
+		x = 1
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = partially_westernized_nation
+			add_ideas = partially_westernized_nation_2
+			}
+		}
+		
+		focus = {
+		id = AZE_westernize
+		icon = GFX_goal_westernize
+		prerequisite = { focus = AZE_western_units }
+		prerequisite = { focus = AZE_improve_the_economy_more }
+		x = 3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			remove_ideas = partially_westernized_nation_2
+			remove_ideas = improved_economy
+			}
+		}
+		
+		focus = {
+		id = stabilise_contact_with_europeans
+		icon = GFX_focus_generic_military_academy
+		x = 13
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = 100
+			}
+		}
+		
+		focus = {
+		id = expand_our_empire
+		prerequisite = { focus = stabilise_contact_with_europeans }
+		icon = GFX_goal_generic_position_armies
+		x = 9
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = 50
+			}
+		}
+		
+		focus = {
+		id = expand_south
+		prerequisite = { focus = expand_our_empire }
+		icon = GFX_focus_jap_strike_south
+		x = 8
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			set_state_owner = 475
+			set_state_owner = 474
+			set_state_owner = 311
+			set_state_owner = 802
+			}
+		}
+		
+		focus = {
+		id = expand_north
+		prerequisite = { focus = expand_our_empire }
+		icon = GFX_focus_spa_the_war_of_vengeance
+		x = 10
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			set_state_owner = 481
+			set_state_owner = 480
+			}
+		}
+		
+		focus = {
+		id = increase_trading_with_europe
+		prerequisite = { focus = stabilise_contact_with_europeans }
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 17
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = trading_with_europe
+			add_idea = increased_trading_with_europe
+			}
+			
+			}
+		}
+	
+	focus = {
+		id = prepare_for_an_european_invasion
+		prerequisite = { focus = stabilise_contact_with_europeans }
+		icon = GFX_goal_generic_fortify_city
+		x = 13
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			ROOT = { country_event = { id = aztec.1 } }
+			}
+		}
+		
+		focus = {
+		id = expand_civilian_industry
+		icon = GFX_goal_generic_construct_civilian
+		x = 23
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		has_completed_focus = AZE_westernize
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+		focus = {
+		id = build_millitary_factories
+		prerequisite = { focus = expand_civilian_industry }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 22
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = expand_infrastructure
+		prerequisite = { focus = expand_civilian_industry }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 24
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = extra_research
+		icon = GFX_focus_research
+		prerequisite = { focus = build_more_civilian_factories }
+		x = 24
+		y = 3
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = expand_millitary_production
+		prerequisite = { focus = expand_civilian_industry }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 22
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				    add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = build_more_civilian_factories
+		prerequisite = { focus = expand_infrastructure }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 24
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = dig_for_resources
+		prerequisite = { focus = build_millitary_factories }
+		icon = GFX_focus_generic_steel
+		x = 20
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_resource = {
+			type = steel
+			amount = 20
+			state = 476
+			}
+		}
+	}
+	
+	focus = {
+		id = adopt_construction_slavery
+		prerequisite = { focus = increase_trading_with_europe }
+		icon = GFX_focus_generic_africa_factory
+		mutually_exclusive = { focus = adopt_slave_armies }
+		x = 18
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = construction_slavery
+			}
+		}
+	
+	
+		focus = {
+		id = adopt_slave_armies
+		prerequisite = { focus = increase_trading_with_europe }
+		icon = GFX_focus_generic_manpower
+		mutually_exclusive = { focus = adopt_construction_slavery }
+		x = 16
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = slave_armies
+			}
+		}
+	
+		
+		focus = {
+		id = ally_the_incas
+		prerequisite = { focus = stabilise_contact_with_europeans }
+		icon = GFX_goal_generic_alliance
+		x = 15
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			INE = {
+			country_event = {
+			id = aztec.2
+			days = 10
+			random = 50
+			}
+			}
+		}
+	}	
+
+		focus = {
+		id = learn_defence_strategies
+		prerequisite = { focus = prepare_for_an_european_invasion }
+		prerequisite = { focus = fortify_the_coast }
+		prerequisite = { focus = ally_the_incas }
+		icon = GFX_focus_generic_little_entente
+		x = 13
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+ 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = aztec_warriors
+			}
+		}	
+		
+		focus = {
+		id = fortify_the_coast
+		prerequisite = { focus = stabilise_contact_with_europeans }
+		icon = GFX_focus_generic_coastal_fort
+		x = 11
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_completed_focus = expand_south 
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			ROOT = { country_event = { id = aztec.3 } }
+			}
+		}	
+		
+	
+	
+			
+			
+		
+	
+		
+		

@@ -1,0 +1,147 @@
+###########################
+# Aztec Empire Events
+###########################
+
+add_namespace = aztec
+
+country_event = {
+	id = aztec.1
+	title = aztec.1.t
+	desc = aztec.1.d
+	picture = GFX_report_event_coastal_bunker_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aztec.1.a
+		277 = {
+			add_building_construction = {
+				type = coastal_bunker
+				province = 1965
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 9909
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 7913
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 8089
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 10773
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 8236
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 2011
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aztec.2
+	title = aztec.2.t
+	desc = aztec.2.d
+	picture = GFX_report_event_coastal_bunker_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aztec.2.a
+		AZE = {
+			create_faction = The_Empires_pact
+			add_to_faction = INE 
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		option = {
+		name = aztec.2.b
+			}
+		}
+		
+			}
+		}
+	
+
+
+	country_event = {
+	id = aztec.3
+	title = aztec.3.t
+	desc = aztec.3.d
+	picture = GFX_report_event_coastal_bunker_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = aztec.3.a
+		277 = {
+			add_building_construction = {
+				type = coastal_bunker
+				province = 5015
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 5021
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 12810
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 10889
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 4904
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 2077
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 4965
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=665
+	name="STATE_665"
+
+	history={
+		owner = NON
+		add_core_of = NON
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		1105 4992 7154 9983 10067 11957 12000 12039 
+	}
+	manpower=127824
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

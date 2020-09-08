@@ -1,0 +1,35 @@
+add_namespace = man
+
+country_event = {
+	id = man.1
+	title = man.1.t
+	desc = man.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = man.1.a
+		MIN = {
+			transfer_state = 594
+			transfer_state = 591
+			transfer_state = 592
+			transfer_state = 599
+			transfer_state = 325
+			transfer_state = 747
+			transfer_state = 603
+			transfer_state = 595
+			transfer_state = 600
+			transfer_state = 602
+			transfer_state = 745
+			transfer_state = 716
+			transfer_state = 610
+			transfer_state = 900
+                        transfer_state = 611
+			transfer_state = 608
+			transfer_state = 593
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = news.402 }
+	}
+}
