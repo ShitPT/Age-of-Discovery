@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  WHILE_FOCUSING:0 "While focusing on this, there will be the following effects:\n$EFF$"
  generic_focus:0 "National Focus"
  army_effort:0 "Army Effort"
@@ -2065,6 +2065,9 @@
  RAJ_create_unit_sikh_tt:0 "Gain an infantry unit in Delhi."
  RAJ_create_general_rani_tt:0 "\nA §Y3 Skill General§! named §YLakshmi Sahgal§! will appear"
 
+
+### HOLY ROMAN EMPIRE ###
+
  HRE_Devalue_the_currency:1 "Devalue The Currency"
  HRE_Devalue_the_currency_desc:1 "Devaluing our currency, could be benefetial for our new empire."
  HRE_Protect_civil_rights_:1 "Protect Civilian Rights"
@@ -2097,6 +2100,8 @@
  HRE_Defend_our_homeland_desc:1 "We'll need to defend our homeland from invaders!"
  HRE_A_step_away_from_monarchism:1 "A Step Away From Monarchism"
  HRE_A_step_away_from_monarchism_desc:1 "We'll need to put monarchism in the past, and look forward for a better society."
+
+################## FRANCE ######
 
  FRA_Expand_South:0 "Expand South"
  FRA_Expand_South_desc:0 "This focus gives oppurtunity to colonise in Africa"
@@ -2144,6 +2149,23 @@
  FRA_Expand_our_cities_desc:0 "We'll need to expand our cities for the nations population to grow faster."
  FRA_New_technologies:0 "New Technologies"
  FRA_New_technologies_desc:0 "Better technologies are needed for our nation to improve as a whole."
+ FRA_Prepare_for_naval_battles:0 "Prepare For The Next Naval Battles"
+ FRA_Prepare_for_naval_battles_desc:0 "In order for the French Nation to survive the next war, she must have a grasp of experience in naval battles. And to have that she must have ships, and dockyards to make the ships"
+ FRA_Prepare_for_land_battles:0 "Prepare For The Next Land Battles"
+ FRA_Prepare_for_land_battles_desc:0 "France in years to come should be known as the great power in Europe. But for that to happen, we must modernize, introduce conscription to our people, and grow militarily as a nation"
+ FRA_Let_our_colonies_join_our_wars:0 "Introduce Conscription to the Colonies"
+ FRA_Let_our_colonies_join_our_wars_desc:0 "The colonies of France should do their fair share as the repayment of benefits of being French"
+ FRA_Look_to_the_british:0 "Look to the Irish"
+ FRA_Look_to_the_british_desc:0 "An alliance many have not thought of is the Franco-Irish, they are right next to them and even border them. We must secure an alliance with them if we want England to fall"
+ FRA_Create_anti_british_front:0 "Create the Anti-English Alliance"
+ FRA_Create_anti_british_front_desc:0 "For centuries the English have thought of us as enemies as has we thought of them as enenmies. Now that we have improved our relations with the Irish, it is time to announce an alliance to stop the English from expanding into France or Ireland!"
+ FRA_Never_mess_with_the_french:0 "Never Mess with the French"
+ FRA_Never_mess_with_the_french_desc:0 "Now that we have secured the Anti-English Front, we now must put an end to the English threat. It is now or never!"
+ FRA_Higher_taxes:0 "Higher Taxes"
+ FRA_Higher_taxes_desc:0 "We must put more taxes onto the population for the good of our great nation."
+ 
+
+##### CONTINUOUS #####
 
  continuous_naval_production:0 "Naval Production"
  continuous_naval_production_desc:0 "By focusing resources on our shipyards and exempting skilled shipbuilders from military service, we can dramatically reduce production time for ships."
