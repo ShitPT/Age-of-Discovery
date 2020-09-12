@@ -425,3 +425,8 @@ HRE_Empire = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 128 128 128 }
 }
+
+BRI_BRITAIN = {
+	color = rgb { 155 20 77 }
+	color_ui = rgb { 155 20 77 }
+}
