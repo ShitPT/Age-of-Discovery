@@ -1175,3 +1175,12 @@
  BRI_BRITAIN:0 "Great Britain"
  BRI_BRITAIN_DEF:0 "Great Britain"
  BRI_BRITAIN_ADJ:0 "British"
+ ######
+ VIG_ENG_autonomy_integrated_puppet:0 "The British East-India Company"
+ VIG_BRI_autonomy_integrated_puppet:0 "The British East-India Company"
+ VIG_ENG_autonomy_puppet:0 "British Raj"
+ VIG_BRI_autonomy_puppet:0 "British Raj"
+ VIG_ENG_autonomy_colony:0 "British India"
+ VIG_BRI_autonomy_colony:0 "British India"
+ VIG_ENG_autonomy_dominion:0 "India"
+ VIG_BRI_autonomy_dominion:0 "India"
