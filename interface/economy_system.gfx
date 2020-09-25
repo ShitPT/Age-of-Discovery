@@ -34,5 +34,66 @@ spriteTypes = {
 		name = "GFX_taxesborder"
 		texturefile = "gfx/interface/taxes_border.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_economybackground"
+		texturefile = "gfx/interface/mapmode/mapmode_bottom_bg_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_economybar"
+		texturefile = "gfx/interface/edittextbox_bg2hg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_poor"
+		texturefile = "gfx/interface/poor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_middle"
+		texturefile = "gfx/interface/middle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rich"
+		texturefile = "gfx/interface/rich.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scroll_more"
+		texturefile = "gfx/interface/scroll_drager_more.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_add_50"
+		texturefile = "gfx/interface/add_50.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_subtract_50"
+		texturefile = "gfx/interface/subtract_50.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_armybar"
+		texturefile = "gfx/interface/edittextbox_bg3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_smallbox"
+		texturefile = "gfx/interface/generic_box_smallest2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scroll_more2"
+		texturefile = "gfx/interface/scroll_drager_more2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gold"
+		texturefile = "gfx/interface/icon_gold.dds"
+	}
+	
 }
 	
