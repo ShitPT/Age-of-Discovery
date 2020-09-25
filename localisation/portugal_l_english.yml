@@ -234,6 +234,8 @@
  colonising.2.t:0 "Colonizers have arrived home"
  colonising.2.d:0 "This morning a ship has arrived in our dockyards containing all of our colonizers, we can now send them again on to another journey to establish more colonies for our growing empire."
  colonising.2.a:0 "Good"
+ ducats2:0 "§+[?money|G]§!"
+ pikeman:0 "Pikeman" 
  
  
  
