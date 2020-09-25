@@ -10,10 +10,166 @@ scripted_gui = {
 		}
 		
 		effects = {
-			colonize10_click = {
-			
+			taxes_button1_click = {
+				add_to_variable = {
+					var = moneything
+					value = -50
+				}
+				clamp_variable = {
+					var = moneything
+					min = 0
+					max = 400
+				}
+			}
+			taxes_button2_click = {
+				add_to_variable = {
+					var = moneything
+					value = 50
+				}
+				clamp_variable = {
+					var = moneything
+					min = 0
+					max = 400
+				}
+			}
+			taxes_button3_click = {
+				add_to_variable = {
+					var = moneything2
+					value = -50
+				}
+				clamp_variable = {
+					var = moneything2
+					min = 0
+					max = 400
+				}
+			}
+			taxes_button4_click = {
+				add_to_variable = {
+					var = moneything2
+					value = 50
+				}
+				clamp_variable = {
+					var = moneything2
+					min = 0
+					max = 400
+				}
+			}
+			taxes_button5_click = {
+				add_to_variable = {
+					var = moneything3
+					value = -50
+				}
+				clamp_variable = {
+					var = moneything3
+					min = 0
+					max = 400
+				}
+			}
+			taxes_button6_click = {
+				add_to_variable = {
+					var = moneything3
+					value = 50
+				}
+				clamp_variable = {
+					var = moneything3
+					min = 0
+					max = 400
+				}
+			}
+			army_button2_click = {
+				add_to_variable = {
+					var = armythingy
+					value = 50
+				}
+				clamp_variable = {
+					var = armythingy
+					min = 0
+					max = 280
+				}
+			}
+			army_button1_click = {
+				add_to_variable = {
+					var = armythingy
+					value = -50
+				}
+				clamp_variable = {
+					var = armythingy
+					min = 0
+					max = 280
+				}
+			}
+			navy_button2_click = {
+				add_to_variable = {
+					var = navythingy
+					value = 50
+				}
+				clamp_variable = {
+					var = navythingy
+					min = 0
+					max = 280
+				}
+			}
+			navy_button1_click = {
+				add_to_variable = {
+					var = navythingy
+					value = -50
+				}
+				clamp_variable = {
+					var = navythingy
+					min = 0
+					max = 280
+				}
+			}
+			army_button4_click = {
+				add_to_variable = {
+					var = researchthingy
+					value = 50
+				}
+				clamp_variable = {
+					var = researchthingy
+					min = 0
+					max = 280
+				}
+			}
+			army_button3_click = {
+				add_to_variable = {
+					var = researchthingy
+					value = -50
+				}
+				clamp_variable = {
+					var = researchthingy
+					min = 0
+					max = 280
+				}
 			}
 		}
+		
+		properties = {
+            economy_scroolbar3 = {
+                frame = 1
+				x = moneything
+            }
+			economy_scroolbar2 = {
+                frame = 1
+				x = moneything2
+            }
+			economy_scroolbar = {
+                frame = 1
+				x = moneything3
+            }
+			army_scroolbar = {
+                frame = 1
+				x = armythingy
+            }
+			navy_scroolbar = {
+                frame = 1
+				x = navythingy
+            }
+			research_scroolbar = {
+                frame = 1
+				x = researchthingy
+            }
+        }
 	}
 }
 
