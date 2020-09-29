@@ -1078,4 +1078,59 @@ country_event = {
         	}		
 	}
 }
+country_event = {
+	id = holyroman.7
+	title = holyroman.7.t
+	desc = holyroman.7.d
+	picture = GFX_report_event_generic_funeral
 
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = HRE
+		date > 1501.2.1
+		has_start_date < 1500.01.02
+                has_completed_focus = HRE_Devalue_the_currency
+                
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 1.0
+			date > 1501.2.1
+
+		}
+	}
+	option = {
+		name = holyroman.7.a
+		ai_chance = { factor = 0 }
+		AUS = { 
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+			transfer_state = 102
+		}
+		hidden_effect = {
+	}
+}
+	option = {
+		name = holyroman.7.b
+		ai_chance = { factor = 100 }
+		AUS = {
+			country_event = { id = austria.1 }
+		AUS = { 
+			transfer_state = 153
+			transfer_state = 152
+			transfer_state = 4
+			transfer_state = 102
+		HRE = { 
+                create_wargoal = {
+			type = take_state
+			target = AUS
+			generator = { 153 }
+		}
+		hidden_effect = {
+		}
+	}
+}
