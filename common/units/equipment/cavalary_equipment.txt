@@ -1,0 +1,143 @@
+# All equipment based on medium tank chassis
+equipments = {
+
+	cavalry_equipment = {
+		year = 1466
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		maximum_speed = 8
+		reliability = 0.9
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 26
+		hardness = 0.5
+
+		#Offensive Abilities
+		soft_attack = 15
+		hard_attack = 10
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 12 
+		resources = {
+			tungsten = 1
+			steel = 2
+		}
+		
+	}
+
+	cavalry_equipment_1 = {
+		year = 1500
+
+		archetype = cavalry_equipment
+		priority = 50
+		visual_level = 0
+		is_convertable = yes
+	}
+
+
+	cavalry_equipment_2 = {
+		year = 1503
+
+		archetype = cavalry_equipment
+		parent = cavalry_equipment_1
+		priority = 50
+		visual_level = 1
+		is_convertable = yes
+						
+		#Misc Abilities
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 5
+		breakthrough = 30
+		hardness = 0.6
+
+		#Offensive Abilities
+		soft_attack = 18
+		hard_attack = 13
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 12 
+		resources = {
+			tungsten = 1
+			steel = 3
+		}	
+	}
+
+
+	cavalry_equipment_3 = {
+		year = 1506
+
+		archetype = cavalry_equipment
+		parent = cavalry_equipment_2
+		priority = 50
+		visual_level = 2
+		is_convertable = yes
+		
+		#Misc Abilities
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 7
+		breakthrough = 35
+		hardness = 0.9
+
+		#Offensive Abilities
+		soft_attack = 25
+		hard_attack = 19
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 12 
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+	
+	cavalry_equipment_4 = {
+		year = 1510
+
+		archetype = cavalry_equipment
+		parent = cavalry_equipment_3
+		priority = 50
+		visual_level = 2
+		is_convertable = yes
+		
+		#Misc Abilities
+		maximum_speed = 11
+
+		#Defensive Abilities
+		defense = 9
+		breakthrough = 39
+		hardness = 0.9
+
+		#Offensive Abilities
+		soft_attack = 30
+		hard_attack = 24
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 12 
+		resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+}

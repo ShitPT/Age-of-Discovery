@@ -18,169 +18,33 @@ set_war_support = 0.1
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_mountaineers = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_recon = 1
+	improved_infantry_medieval = 1
+	improved_infantry_weapons = 1
+	tech_support = 1
+	equipment_cavlary = 1
 	gw_artillery = 1
-	interwar_antiair = 1
-	gwtank = 1
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
-	trench_warfare = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_destroyer = 1
-		early_submarine = 1	
+		early_battleship = 1
+		transport = 1
 	}
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
 		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	set_technology = {
-		armored_car1 = 1
+		mtg_transport = 1
+		early_ship_hull_light = 1
+		early_ship_hull_heavy = 1
 	}
 }
 
-set_autonomy = {
-	target = SIC
-	autonomous_state = autonomy_integrated_puppet
-}
 set_autonomy = {
 	target = NAP
 	autonomous_state = autonomy_integrated_puppet
-}
-
-1790.1.1 = {
-	add_named_threat = { threat = 0 name = 1939_bookmark_threat }
-	set_war_support = 0.4
-
-	add_political_power = 1
-        set_autonomy = {
-	        target = CAT
-	        autonomous_state = autonomy_integrated_puppet
-	
-	}
-
-
-complete_national_focus = ARA_begin_rearmament
-	complete_national_focus = ARA_form_the_popular_front
-	complete_national_focus = ARA_reform_the_labour_laws
-	complete_national_focus = ARA_the_blum_viollette_proposal
-	complete_national_focus = ARA_review_foreign_policy
-	complete_national_focus = ARA_intervention_in_spain
-	complete_national_focus = ARA_buy_time
-	complete_national_focus = ARA_defensive_focus
-	complete_national_focus = ARA_firepower_kills
-	complete_national_focus = ARA_go_with_britain
-	complete_national_focus = ARA_devalue_the_franc
-	complete_national_focus = ARA_invest_in_the_metropole
-
-	give_guarantee = POL
-	ENG = { add_to_faction = ARA }
-
-	oob = "ARA_1939"
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "ARA_1939_naval_mtg"
-		else = {
-			set_naval_oob = "ARA_1939_naval_legacy"
-		}
-	}
-
-	set_technology = {
-		fighter1 = 1
-		fighter2 = 1
-		heavy_fighter1 = 1
-		tactical_bomber2 = 1
-		strategic_bomber1 = 1
-		cv_fighter1 = 1
-		cv_CAS1 = 1
-		improved_light_tank = 1
-		basic_medium_tank = 1
-		basic_heavy_tank = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-
-		#doctrines
-		#Air
-		force_rotation = 1
-		fighter_baiting = 1
-		low_echelon_support = 1
-		dispersed_fighting = 1
-		
-			grand_battle_plan = 1
-
-		trench_warfare = 1
-		prepared_defense = 1
-		battlefleet_concentration = 1
-		subsidiary_carrier_role = 1
-		convoy_sailing = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_battleship = 1
-			basic_battlecruiser = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			improved_ship_hull_light = 1
-			improved_ship_hull_heavy = 1
-			basic_ship_hull_carrier = 1
-			improved_heavy_armor_scheme = 1
-			improved_light_battery = 1
-			basic_heavy_battery = 1
-			improved_secondary_battery = 1
-			improved_ship_torpedo_launcher = 1
-		}
-	}
 }
 
 set_convoys = 300

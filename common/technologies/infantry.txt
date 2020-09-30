@@ -19,7 +19,7 @@ technologies = {
 		}
 		
 		enable_subunits = {
-			infantry
+			pikeman
 		}
 		
 		path = {
@@ -60,7 +60,7 @@ technologies = {
 		start_year = 1500
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1502 }
+			position = { x = 2 y = @1498 }
 		}
 		
 		categories = {
@@ -83,7 +83,7 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = infantry_weapons2
+			leads_to_tech = improved_infantry_weapons
 			research_cost_coeff = 1
 		}		
 
@@ -119,15 +119,19 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = improved_infantry_weapons
+			leads_to_tech = improved_infantry_weapons_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = professional_generals
 			research_cost_coeff = 1
 		}		
 
 		research_cost = 1.5
-		start_year = 1500
+		start_year = 1503
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1502 }
+			position = { x = 0 y = @1503 }
 		}
 		
 		categories = {
@@ -164,20 +168,20 @@ technologies = {
 			infantry_equipment_2
 		}
 		
-		path = {
-			leads_to_tech = improved_infantry_weapons_2
-			research_cost_coeff = 1
+		enable_subunits = {
+			infantry
 		}
+		
 		path = {
-			leads_to_tech = professional_generals
+			leads_to_tech = infantry_weapons2
 			research_cost_coeff = 1
 		}		
 
 		research_cost = 2
-		start_year = 1503
+		start_year = 1500
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1503 }
+			position = { x = 0 y = @1502 }
 		}
 		
 		categories = {
@@ -932,22 +936,12 @@ technologies = {
 			}			
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
-		
-		path = {
-			leads_to_tech = mechanised_infantry
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = armored_car1
-			research_cost_coeff = 1
-		}
 
 		research_cost = 2
 		start_year = 1466
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1498 }
+			position = { x = -2 y = @1508 }
 		}
 		
 		folder = {
@@ -1109,5 +1103,217 @@ technologies = {
 		enable_subunits = {
 			bicycle_battalion
 		}		
+	}
+	
+	winter_clothes_gw = {
+
+
+		path = {
+			leads_to_tech = winter_clothes_1939
+			research_cost_coeff = 1
+		}		
+
+		modifier = {
+				winter_attrition_factor = -0.10
+				army_morale_factor = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1466
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1500 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	winter_clothes_1939 = {
+
+		path = {
+			leads_to_tech = winter_clothes_1941
+			research_cost_coeff = 1
+		}		
+
+		modifier = {
+				winter_attrition_factor = -0.15
+				army_morale_factor = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1500
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1503 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	winter_clothes_1941 = {
+
+		path = {
+			leads_to_tech = winter_clothes_1944
+			research_cost_coeff = 1
+		}
+
+		modifier = {
+				winter_attrition_factor = -0.20
+				army_morale_factor = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1504
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1505 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	winter_clothes_1944 = {
+
+
+		modifier = {
+				winter_attrition_factor = -0.25
+				army_morale_factor = 0.02
+		}
+
+		research_cost = 1.5
+		start_year = 1510
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1507 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	equipment_cavlary = {
+
+		enable_equipments = {
+			cavalry_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = equipment_cavlary2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1466
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1500 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	equipment_cavlary2 = {
+
+		enable_equipments = {
+			cavalry_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = equipment_cavlary3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1502
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1503 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	equipment_cavlary3 = {
+
+		enable_equipments = {
+			cavalry_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = equipment_cavlary4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1504
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1505 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	equipment_cavlary4 = {
+
+		enable_equipments = {
+			cavalry_equipment_4
+		}
+
+		research_cost = 1.5
+		start_year = 1508
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1507 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }

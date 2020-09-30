@@ -273,7 +273,7 @@ early_battleship = {
 		}
 		
 		research_cost = 1.5
-		start_year = 1922
+		start_year = 1500
 		
 		folder = {
 			name = naval_folder
@@ -322,7 +322,7 @@ early_battleship = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 1504
 		
 		folder = {
 			name = naval_folder
@@ -395,7 +395,7 @@ early_battleship = {
 		naval_invasion_capacity = 100
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 1508
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = 19 }
