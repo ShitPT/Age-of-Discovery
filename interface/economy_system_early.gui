@@ -2,8 +2,8 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "economysystembutton_container"
-		position = {x=1 y=61}
-		size = { width=49 height=44 }
+		position = {x=-79 y=-300}
+		orientation = LOWER_RIGHT
 
 		fade_time = 300
 		fade_type = linear
@@ -11,7 +11,7 @@ guiTypes = {
 		iconType = {
 				name ="economy_background"
 				spriteType = "GFX_economybackground"
-				position = { x = 1435 y = 490}
+				position = { x = 0 y = 0}
 				alwaystransparent = yes
 				frame = 1
 			}
@@ -19,7 +19,7 @@ guiTypes = {
 		buttonType = {
 				name = "economy_button"
 				quadTextureSprite ="GFX_economysystemtopbar"
-				position = { x= 1400 y = 454 }
+				position = { x= 14 y = 8 }
 				Orientation = "LOWER_RIGHT"
 				clicksound = click_close
 				oversound = ui_menu_over
