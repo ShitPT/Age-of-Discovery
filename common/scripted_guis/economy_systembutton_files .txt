@@ -23,6 +23,23 @@ scripted_gui = {
 			}
 		}
 	}
+	
+	total_country_population = {
+	
+		context_type = player_context
+		
+		window_name = "population_container"
+		
+		parent_window_token = top_bar
+		
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			
+		}
+	}
 }
 
 	
