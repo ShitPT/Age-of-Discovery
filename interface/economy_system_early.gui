@@ -26,6 +26,65 @@ guiTypes = {
 				shortcut = "shift+q"
 			}	
 		}
+		
+	containerWindowType = {
+		name = "population_container"
+		position = {x=0 y=0}
+		orientation = UPPER_LEFT
+
+		fade_time = 300
+		fade_type = linear
+		
+		iconType ={
+			name ="unrest_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 322 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="unrest"
+			spriteType = "GFX_unrest_icon"
+			position = { x = 323 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="unrest_text"
+			position = { x= 293 y = 10 }
+			font = "hoi_18mbs"
+			text = "[?unrest|0]%" 
+			format = center
+			maxWidth = 150
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType ={
+			name ="population_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = 200 y = 36 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="population_icon_new"
+			spriteType = "GFX_population_icon_new"
+			position = { x = 203 y = 35 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="countrypopulation"
+			position = { x= 232 y = 39 }
+			maxWidth = 100
+			maxHeight = 30
+			font = "hoi_18mbs"
+			text = "[?country_population|2]M"
+			maxWidth = 90
+			maxHeight = 24
+		}
+	}
 	
 	containerWindowType = {
 		name = "economysystem2_container"

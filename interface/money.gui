@@ -3,7 +3,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "money_container"
-		position = { x = 970 y = 5 } 
+		position = { x = 471 y = 4 } 
 		iconType ={
 			name ="money_bg"
 			spriteType = "GFX_generic_box_smallest"
@@ -13,12 +13,12 @@ guiTypes = {
 		iconType = {
 			name ="money_icon"
 			spriteType = "GFX_ducats"
-			position = { x= 0 y = -2 }
+			position = { x= 0 y = -1 }
 		}
 		
 		instantTextBoxType = {
 			name ="money_text"
-			position = { x= -35 y = 3 }
+			position = { x= -28 y = 6 }
 			font = "hoi_18mbs"
 			text = "[?money|0]" 
 			format = center

@@ -95,5 +95,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/icon_gold.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_population_icon_new"
+		texturefile = "gfx/interface/population_icon_new.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_unrest_icon"
+		texturefile = "gfx/interface/unrest_icon.dds"
+	}
 }
 	
