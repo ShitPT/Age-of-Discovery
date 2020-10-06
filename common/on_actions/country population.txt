@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				set_variable = {
+					var = country_population
+					value = max_manpower_k
+				}
+				
+				divide_variable	 = {
+					var = country_population
+					value = 1000
+				}	
+			}
+		}
+	}
+}
