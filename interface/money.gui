@@ -3,7 +3,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "money_container"
-		position = { x = 471 y = 4 } 
+		position = { x = 528 y = 4 } 
 		iconType ={
 			name ="money_bg"
 			spriteType = "GFX_generic_box_smallest"

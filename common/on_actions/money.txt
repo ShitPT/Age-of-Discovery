@@ -1,9 +1,15 @@
 on_actions = {
-	on_daily = { 
-		effect = {		
-		add_to_variable = {
-			var = money
-			value = 10
+	on_daily = {
+		effect = {
+			add_to_variable = {
+				var = unrest
+				value = 0
+			}
+			clamp_variable = {
+				var = unrest
+				min = 0
+				max = 100
+			}
 		}
-	}	
+	}
 }

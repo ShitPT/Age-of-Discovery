@@ -92,6 +92,7 @@ guiTypes = {
 			}	
 		}
 		
+		
 		### Mapmode 3 button layout w/o LaR/DLC - selected in code
 		
 		containerWindowType = {

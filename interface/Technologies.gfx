@@ -4789,4 +4789,14 @@ spriteTypes = {
 		name = "GFX_airsweep_mines_medium"
 		texturefile = "gfx/interface/technologies/airsweep_mines.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_improved_infantry_medieval_medium"
+		texturefile = "gfx/interface/technologies/improved_infantry_medieval.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_supply_depots_medium"
+		texturefile = "gfx/interface/technologies/supply_depots.dds"
+	}
 }
