@@ -1,0 +1,23 @@
+state={
+	id=865
+	name="STATE_865"
+	history={
+		owner = AFC
+		add_core_of = AFC
+		buildings = {
+			arms_factory = 1
+			infrastructure = 5
+			10946 = {
+				naval_base = 5
+
+				}
+			}
+
+		}
+	provinces={
+		12851 8071 10836
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

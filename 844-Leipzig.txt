@@ -1,0 +1,33 @@
+
+state={
+	id=844
+	name="STATE_844"
+	manpower = 45925
+	resources={
+		steel=53 # was: 90
+	}
+
+	state_category = metropolis
+
+
+	history={
+		owner = HRE
+		add_core_of = HRE
+	        1790.1.1.1 = {
+			owner = LEI
+			controller = LEI
+		        add_core_of = LEI
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+		}
+		victory_points = {
+			3535 5 
+		}
+	}
+
+	provinces={
+		3535
+	}
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=866
+	name="STATE_866" # Lorraine
+	manpower = 451750
+	
+	state_category = city
+	
+	resources={
+		steel=28 # was: 48
+	}
+
+	history={
+		owner = HRE
+		1790.1.1.1 = {
+			owner = AUS
+			controller = AUS
+			add_core_of = AUS
+			add_core_of = FRE
+			add_core_of = FRA
+	        }
+		victory_points = {
+			9642 5 
+		}
+		victory_points = {
+			11516 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			air_base = 5
+		}
+	}
+
+	provinces={
+		9472 3560 5291
+	}
+}

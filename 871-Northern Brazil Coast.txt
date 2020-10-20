@@ -1,0 +1,21 @@
+state={
+	id=871
+	name="STATE_871"
+	history={
+		owner = BUC
+		add_core_of = BUC
+		buildings = {
+			infrastructure = 4
+			5220 = {
+				naval_base = 3
+
+			}
+		}
+	}
+	provinces={
+		2228 5220 12853 12933 
+	}
+	manpower=700000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+}

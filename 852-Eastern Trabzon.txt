@@ -1,0 +1,27 @@
+
+state={
+	id=852
+	name="STATE_852"
+
+	history={
+		owner = AQQ
+		1790.1.1.1 = {
+			owner = TUR
+			controller = TUR
+			add_core_of = TUR
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = AQQ
+
+	}
+
+	provinces={
+		789 6976 6991 9886 10472 
+	}
+	manpower=340000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

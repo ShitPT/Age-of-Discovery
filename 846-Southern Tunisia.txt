@@ -1,0 +1,22 @@
+state={
+	id=846
+	name="STATE_846"
+	history={
+		owner = TUN
+		add_core_of = TUN
+		victory_points = {
+			7005 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	provinces={
+		3987 7005 10026 10082 11935 13145 13179 1141 12034 9943
+	}
+	manpower=105789
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}
