@@ -1,7 +1,9 @@
-version="1.9.3"
+version="1.10"
 tags={
+	"Alternative History"
 	"Fixes"
-	"Graphics"
+	"Sound"
 }
 name="age of doscopo"
-supported_version="1.9.3"
+replace_path = "history/states"
+supported_version="1.10.1"
