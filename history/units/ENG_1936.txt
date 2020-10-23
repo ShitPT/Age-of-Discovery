@@ -1,0 +1,203 @@
+	##### Division Templates #####
+division_template = {
+	name = "Pikemen Regiment"		
+	division_names_group = HRE_INF_01
+	regiments = {
+		pikeman = { x = 0 y = 0 }
+		pikeman = { x = 0 y = 1 }
+		pikeman = { x = 0 y = 2 }
+		pikeman = { x = 1 y = 0 }
+		pikeman = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Infantery Regiment"		
+	division_names_group = HRE_INF_02
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Regiment"		
+	division_names_group = HRE_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	# "1 Cavalry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9297
+		division_template = "Cavalry Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "2 Cavalry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9297
+		division_template = "Cavalry Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "3 Cavalry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 322
+		division_template = "Cavalry Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "1 Infantry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 540
+		division_template = "Infantry Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "2 Infantry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 540
+		division_template = "Infantry Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "3 Infantry Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 540
+		division_template = "Infantry Regiment" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	# "1 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9458
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "2 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9458
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "3 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9458
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "4 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 377
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "5 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 377
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "6 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 377
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "7 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 377
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "8 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 516
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "9 Pikemen Regiment"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 516
+		division_template = "Pikemen Regiment" 	
+		start_experience_factor = 0.2
+	}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+}
+
+	
+
+###################

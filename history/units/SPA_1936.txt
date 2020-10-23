@@ -1,398 +1,253 @@
+	##### Division Templates #####
 division_template = {
-	name = "Infanteri Division"	# represents first part of enlarged divisions
-	division_names_group = SPA_INF_01
+	name = "Regimiento de Piqueros"		
+	division_names_group = HRE_INF_01
+	regiments = {
+		pikeman = { x = 0 y = 0 }
+		pikeman = { x = 0 y = 1 }
+		pikeman = { x = 0 y = 2 }
+		pikeman = { x = 1 y = 0 }
+		pikeman = { x = 1 y = 1 }
+	}
+}
 
+division_template = {
+	name = "Regimiento de Infanteria"		
+	division_names_group = HRE_INF_02
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-	}
-	support = {
-		engineer = { x = 0 y = 0 }   	# Pioneer Bn
-		artillery = { x = 0 y = 1 } 	# Heavy Arty 1x-3x 155mm howitzer battalions
 	}
 }
-division_template = {
-	name = "Binær Division"	# represents second part of enlarged divisions
-	division_names_group = SPA_INF_01
 
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }      # Recon Group ACs comp + cavalry
-	}
-}
 division_template = {
-	name = "Kavaleri Brigade"
-	division_names_group = SPA_CAV_01
-
+	name = "Regimiento de Caballeria"		
+	division_names_group = HRE_CAV_01
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
 	}
 }
 
+##### OOB #####
 units = {
-	##### Kongelige Danske Overkommando #####
-	division = { # "1. Madrid-division"
+	division= {	# "1 Regimiento de Caballeria"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 1
+			is_name_ordered = yes
+			name_order = 1
 		}
-		location = 3938  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 2
-		}
-		location = 3938  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 3
-		}
-		location = 3945  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 4
-		}
-		location = 3891  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 5
-		}
-		location = 11884  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 6
-		}
-		location = 10024  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 7
-		}
-		location = 11766  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 8
-		}
-		location = 9857  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 9
-		}
-		location = 3931  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 10
-		}
-		location = 12070  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 11
-		}
-		location = 6902  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 12
-		}
-		location = 6902  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 13
-		}
-		location = 9877  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 14
-		}
-		location = 9770  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 15
-		}
-		location = 6907  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 16
-		}
-		location = 3725  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 17
-		}
-		location = 6734  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 18
-		}
-		location = 758  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 19
-		}
-		location = 11707  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 20
-		}
-		location = 740  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 21
-		}
-		location = 3933  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 22
-		}
-		location = 885  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 23
-		}
-		location = 11825  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 24
-		}
-		location = 875  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
+		location = 3938
+		division_template = "Regimiento de Caballeria" 	
+		start_experience_factor = 0.2
 	}
 
-	division = { # "1. Madrid-division"
+	division= {	# "2 Regimiento de Caballeria"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 26
+			is_name_ordered = yes
+			name_order = 2
 		}
-		location = 12038  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 27
-		}
-		location = 875  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
+		location = 740
+		division_template = "Regimiento de Caballeria" 	
+		start_experience_factor = 0.2
 	}
 
-	division = { # "1. Madrid-division"
+	division= {	# "3 Regimiento de Caballeria"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 29
+			is_name_ordered = yes
+			name_order = 3
 		}
-		location = 7183  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 30
-		}
-		location = 7183  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
-
-	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 31
-		}
-		location = 7183  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
+		location = 9979
+		division_template = "Regimiento de Caballeria" 	
+		start_experience_factor = 0.2
 	}
 
-	division = { # "1. Madrid-division"
+	division= {	# "1 Regimiento de Infanteria"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 33
+			is_name_ordered = yes
+			name_order = 1
 		}
-		location = 875  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
+		location = 3938
+		division_template = "Regimiento de Infanteria" 	
+		start_experience_factor = 0.2
+	}
 
-	}
-	division = { # "1. Madrid-division"
+	division= {	# "2 Regimiento de Infanteria"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 34
+			is_name_ordered = yes
+			name_order = 2
 		}
-		location = 758  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
+		location = 740
+		division_template = "Regimiento de Infanteria" 	
+		start_experience_factor = 0.2
 	}
-	division = { # "1. Madrid-division"
-		division_name = {
-				is_name_ordered = yes
-				name_order = 35
-		}
-		location = 758  # Madrid
-		division_template = "Infanteri Division"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1.0
 
+	division= {	# "3 Regimiento de Infanteria"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9979
+		division_template = "Regimiento de Infanteria" 	
+		start_experience_factor = 0.2
 	}
+	
+	division= {	# "1 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3938
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "2 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9979
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "3 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9979
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "4 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 7183
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "5 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 7183
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "6 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 7183
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "7 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 7183
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "8 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 11825
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "9 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 11825
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "10 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 11825
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "11 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11825
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "12 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 885
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "13 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 885
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+	division= {	# "14 Regimiento de Piqueros"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 885
+		division_template = "Regimiento de Piqueros" 	
+		start_experience_factor = 0.2
+	}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SPA"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+}
+
+	
+
+###################

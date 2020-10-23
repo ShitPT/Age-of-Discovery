@@ -1,0 +1,298 @@
+ideas = {
+    power_slot = 
+    {
+        nobles = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        church = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 2
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        military = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 3
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+    }
+
+    slavery_slot =
+    {
+        high_slavery = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        medium_slavery = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        low_slavery = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        abolish_slavery = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+    }
+
+    religion_slot =
+    {
+        religious_state = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+
+        laic_state = 
+        {
+            allowed = 
+            {
+                always = yes
+            }
+            #available = 
+            #{
+            
+            #}
+            cost = 150
+            removal_cost = -1
+            level = 1
+
+            modifier = 
+            {
+
+            }
+
+            equipment_bonus = 
+            {
+
+            }
+
+            #allowed_to_remove
+            #{
+
+            #}
+
+            cancel_if_invalid = yes
+        }
+    }
+}
