@@ -1,22 +1,22 @@
 
-state=
-{
+state={
 	id=134
 	name="STATE_134"
-	manpower = 667100
-	
-	state_category = town
 
-	history=
-	{
-		owner = IRE
+	history={
+		owner = CON
 		buildings = {
-			infrastructure = 6
+			infrastructure = 5
+
 		}
-		add_core_of = IRE
+		add_core_of = CON
+
 	}
 
-	provinces=
-	{
-337 3396 9255 9303 9321 9369 11238 11287 11371 	}
+	provinces={
+		9255 9303 9321 9369 
+	}
+	manpower=107100
+	buildings_max_level_factor=1.000
+	state_category=town
 }

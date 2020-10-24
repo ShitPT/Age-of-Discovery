@@ -8,21 +8,19 @@ state={
 	}
 
 	history={
-		owner = IRE
+		owner = LAI
 		buildings = {
-			infrastructure = 5
-			arms_factory = 1
-			industrial_complex = 2
+			infrastructure = 4
 
 		}
-		add_core_of = IRE
+		add_core_of = LAI
 
 	}
 
 	provinces={
-		285 303 369 3342 7377 11303 
+		285 3342 7377 
 	}
-	manpower=650000
+	manpower=95000
 	buildings_max_level_factor=1.000
 	state_category=city
 }

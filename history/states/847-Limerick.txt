@@ -1,0 +1,20 @@
+state={
+	id=847
+	name="STATE_847"
+	history={
+		owner = LIM
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		add_core_of = LIM
+
+	}
+	provinces={
+		303 3396 6313 9310 
+	}
+	manpower=146789
+	buildings_max_level_factor=1.000
+	state_category=town
+}
