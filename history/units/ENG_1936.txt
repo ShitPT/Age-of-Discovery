@@ -167,7 +167,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 8
 		}
-		location = 516
+		location = 11548
 		division_template = "Pikemen Regiment" 	
 		start_experience_factor = 0.2
 	}
@@ -177,7 +177,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 9
 		}
-		location = 516
+		location = 11293
 		division_template = "Pikemen Regiment" 	
 		start_experience_factor = 0.2
 	}
