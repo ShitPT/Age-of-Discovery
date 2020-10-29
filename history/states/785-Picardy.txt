@@ -14,7 +14,7 @@ state={
 		owner = FRA
 		add_core_of = FRA
 		buildings = {
-			infrastructure = 8
+			infrastructure = 7
 			industrial_complex = 1
 
 		}
@@ -24,7 +24,7 @@ state={
 	provinces={
 		454 3402 3447 6585 9500 9561 11420 11549 
 	}
-	manpower=1580000
+	manpower=910000
 	buildings_max_level_factor=1.000
 	state_category=town
 }

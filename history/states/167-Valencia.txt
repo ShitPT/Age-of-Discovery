@@ -14,7 +14,6 @@ state={
 		buildings = {
 			infrastructure = 6
 			dockyard = 1
-			air_base = 3
 			6906 = {
 				naval_base = 3
 
@@ -26,14 +25,13 @@ state={
 
 		}
 		add_core_of = ARA
-		add_core_of = SPA
 
 	}
 
 	provinces={
 		962 1093 3799 3835 3873 4098 6817 6856 6906 6959 9889 9896 10024 11884 
 	}
-	manpower=1979294
+	manpower=321000
 	buildings_max_level_factor=1.000
 	state_category=large_town
 }

@@ -2,7 +2,7 @@
 state={
 	id=136
 	name="STATE_136"
-	manpower = 745466
+	manpower = 90466
 	
 	state_category = town
 	resources={
@@ -14,7 +14,7 @@ state={
 		add_core_of = SCO
 		owner = SCO
 		buildings = {
-			infrastructure = 6
+			infrastructure = 4
 			dockyard = 2
 		}
 		add_core_of = SCO

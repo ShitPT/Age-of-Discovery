@@ -16,8 +16,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 1
-			air_base = 10
+			industrial_complex = 2
 
 		}
 		add_core_of = FRA
@@ -27,7 +26,7 @@ state={
 	provinces={
 		551 3533 3546 6531 6545 9490 9505 11732 13011 
 	}
-	manpower=1370800
+	manpower=921472
 	buildings_max_level_factor=1.000
 	state_category=city
 }
