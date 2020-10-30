@@ -1,0 +1,39 @@
+capital = 428
+
+oob = "DEL_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	improved_infantry_medieval = 1
+	support_weapons = 1
+}
+
+set_research_slots = 2
+set_stability = 0.4
+set_war_support = 0.2
+
+set_politics = {
+	ruling_party = islam
+	last_election = "1495.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	islam = 100
+}
+
+add_ideas = {
+    lacking_an_economy
+	unwesternized_nation
+}
+
+create_country_leader = {
+	name = "Sikandar Lodi"
+	desc = "Ruler of Delhi"
+	picture = "Sikandar Lodi.dds"
+	expire = "1965.1.1"
+	ideology = islam_ideology
+	traits = {
+		#
+	}
+}

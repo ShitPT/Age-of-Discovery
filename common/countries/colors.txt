@@ -110,8 +110,8 @@ FIN = {
 	color_ui = rgb { 255 255 255 }
 }
 IRE = {
-	color = rgb { 0 104 57 }
-	color_ui = rgb { 0 104 57 }
+	color = rgb { 57 110 64 }
+	color_ui = rgb { 57 110 64 }
 }
 HUN = {
 	color = rgb { 142 87 85 }
@@ -924,33 +924,31 @@ TIM = {
 	color = rgb { 57 0 84 }
 	color_ui = rgb { 57 0 84 }
 }
-COR = {
-	color = rgb { 54 76 0 }
-	color_ui = rgb { 54 76 0 }
+RAS = {
+	color = rgb { 120 122 57 }
+	color_ui = rgb { 120 122 57 }
 }
-LAI = {
-	color = rgb { 84 39 0 }
-	color_ui = rgb { 84 39 0 }
+GUJ = {
+	color = rgb { 48 119 15 }
+	color_ui = rgb { 48 119 15 }
 }
-LIM = {
-	color = rgb { 70 70 0 }
-	color_ui = rgb { 70 70 0 }
+BIJ = {
+	color = rgb { 119 40 47 }
+	color_ui = rgb { 119 40 47 }
 }
-DEA = {
-	color = rgb { 104 0 45 }
-	color_ui = rgb { 104 0 45 }
+BER = {
+	color = rgb { 69 79 117 }
+	color_ui = rgb { 69 79 117 }
 }
-CON = {
-	color = rgb { 87 0 127 }
-	color_ui = rgb { 87 0 127 }
+GAJ = {
+	color = rgb { 114 132 198 }
+	color_ui = rgb { 114 132 198 }
 }
-SLI = {
-	color = rgb { 0 55 145 }
-	color_ui = rgb { 0 55 145 }
+GON = {
+	color = rgb { 196 123 135 }
+	color_ui = rgb { 196 123 135 }
 }
-DON = {
-	color = rgb { 107 42 0 }
-	color_ui = rgb { 107 42 0 }
+MEW = {
+	color = rgb { 182 56 196 }
+	color_ui = rgb { 182 56 196 }
 }
-
-
