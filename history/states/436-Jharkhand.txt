@@ -7,7 +7,8 @@ state={
 	}
 
 	history={
-		owner = GON
+		owner = MLA
+		add_core_of = MLA
 		buildings = {
 			infrastructure = 4
 
@@ -16,7 +17,7 @@ state={
 	}
 
 	provinces={
-		1510 4410 4883 4950 4953 5096 7497 8120 10332 10401 10801 10872 12375 12420 12480 12799 12854 
+		1949 4953 5096 11995 12799 
 	}
 	manpower=14123100
 	buildings_max_level_factor=1.000

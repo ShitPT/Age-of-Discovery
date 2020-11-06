@@ -1,0 +1,20 @@
+state={
+	id=852
+	name="STATE_852"
+	history={
+		owner = GON
+		add_core_of = GON
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+
+	}
+	provinces={
+		1510 1538 4513 7497 7574 8120 10358 10401 10428 10801 12307 12375 12420 12480 12854 
+	}
+	manpower=7300147
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

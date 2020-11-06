@@ -1,12 +1,16 @@
+
 state={
 	id=806
 	name="STATE_806"
+
 	history={
-		owner = NON
-		add_core_of = NON
+		owner = MUL
+		add_core_of = MUL
+
 	}
+
 	provinces={
-		10898 
+		1971 4382 7084 10735 10866 10898 12792 
 	}
 	manpower=200000
 	buildings_max_level_factor=1.000

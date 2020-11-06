@@ -1,0 +1,26 @@
+state={
+	id=856
+	name="STATE_856"
+	history={
+		owner = PEG
+		buildings = {
+			infrastructure = 3
+			1330 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = PEG
+		victory_points = {
+			1330 5 
+		}
+
+	}
+	provinces={
+		1330 1403 4336 7254 7295 7382 10223 10267 12125 12127 12197 12267 
+	}
+	manpower=1203709
+	buildings_max_level_factor=1.000
+	state_category=rural	
+}

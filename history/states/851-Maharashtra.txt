@@ -1,0 +1,19 @@
+state={
+	id=851
+	name="STATE_851"
+	history={
+		owner = BIJ
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+
+	}
+	provinces={
+		7232 10210 12142 12182 12269 
+	}
+	manpower=3782461
+	buildings_max_level_factor=1.000
+	state_category=town
+}

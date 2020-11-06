@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = BER
+		add_core_of = BER
 		victory_points = {
 			8087 1 
 		}

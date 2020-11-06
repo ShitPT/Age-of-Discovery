@@ -4,10 +4,8 @@ state={
 	name="STATE_433"
 
 	history={
-		victory_points = {
-			2054 1 
-		}
 		owner = RAS
+		add_core_of = RAS
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -17,7 +15,7 @@ state={
 	}
 
 	provinces={
-		1199 1908 4149 4971 4984 10847 10866 12718 12743 12792 12829 12844 12876 12886 
+		1908 4149 4971 4984 10847 12718 12829 12844 12876 12886 
 	}
 	manpower=11786000
 	buildings_max_level_factor=1.000

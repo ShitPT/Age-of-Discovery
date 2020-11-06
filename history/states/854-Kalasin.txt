@@ -1,0 +1,19 @@
+state={
+	id=854
+	name="STATE_854"
+	history={
+		owner = LAO
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = LAO
+
+	}
+	provinces={
+		1535 1548 4511 7516 7601 10384 10425 12360 12402 12417 12431 
+	}
+	manpower=3457200
+	buildings_max_level_factor=1.000
+	state_category=city
+}

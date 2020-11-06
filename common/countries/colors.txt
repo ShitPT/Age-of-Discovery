@@ -234,8 +234,8 @@ SAU = {
 	color_ui = rgb { 222 247 198 }
 }
 SIA = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 165 135 66 }
+	color_ui = rgb { 165 135 66 }
 }
 SIK = {
 	color = rgb { 71 190 152 }
@@ -335,6 +335,11 @@ XSM = {
 LBA = {
 	color = rgb { 200 180 90 }
 	color_ui = rgb { 200 180 90 }
+}
+
+BRM = {
+	color = rgb { 41 137 0 }
+	color_ui = rgb { 41 137 0 }
 }
 
 EGY = {
@@ -925,12 +930,12 @@ TIM = {
 	color_ui = rgb { 57 0 84 }
 }
 RAS = {
-	color = rgb { 120 122 57 }
-	color_ui = rgb { 120 122 57 }
+	color = rgb { 0 83 142 }
+	color_ui = rgb { 0 83 142 }
 }
 GUJ = {
-	color = rgb { 48 119 15 }
-	color_ui = rgb { 48 119 15 }
+	color = rgb { 120 122 57 }
+	color_ui = rgb { 120 122 57 }
 }
 BIJ = {
 	color = rgb { 119 40 47 }
@@ -949,6 +954,31 @@ GON = {
 	color_ui = rgb { 196 123 135 }
 }
 MEW = {
-	color = rgb { 182 56 196 }
-	color_ui = rgb { 182 56 196 }
+	color = rgb { 127 116 63 }
+	color_ui = rgb { 127 116 63 }
 }
+AHM = {
+	color = rgb { 67 13 135 }
+	color_ui = rgb { 67 13 135 }
+}
+BAH = {
+	color = rgb { 114 95 0 }
+	color_ui = rgb { 114 95 0 }
+}
+MLA = {
+	color = rgb { 135 0 0 }
+	color_ui = rgb { 135 0 0 }
+}
+MUL = {
+	color = rgb { 100  96  197 }
+	color_ui = rgb { 100  96  197 }
+}
+SAM = {
+	color = rgb { 193 180 79 }
+	color_ui = rgb { 193 180 79 }
+}
+PEG = {
+	color = rgb { 135 112 0 }
+	color_ui = rgb { 135 112 0 }
+}
+
